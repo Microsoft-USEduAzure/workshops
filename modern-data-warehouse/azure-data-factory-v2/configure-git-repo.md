@@ -34,4 +34,6 @@
 
 1. Once you select the branch your ADF workspace will now be connected to your Git repo. To publish workspace changes, simply click the **Publish** button in to commit and push changes to your remote repository.
 
+    ![](media/repo/7.png)
+    
 ## Next task: [Build copy pipeline using Azure Data Factory](copy-file-into-adls-gen2.md)
