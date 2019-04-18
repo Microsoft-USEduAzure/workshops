@@ -133,5 +133,6 @@
 
 ### Reference: https://docs.databricks.com/user-guide/notebooks/notebook-use.html
 ### Reference: https://www.markdownguide.org/basic-syntax
+### Reference: https://docs.azuredatabricks.net/user-guide/secrets/secret-scopes.html#akv-ss
 
 ## Next task: [Update Azure Data Factory pipeline to transform data using Databricks](../azure-data-factory-v2/transform-data-using-databricks.md)
