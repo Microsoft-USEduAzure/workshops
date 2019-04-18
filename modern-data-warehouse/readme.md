@@ -17,7 +17,7 @@ This workshop will aim to get you more familiar with the tools used to build a m
 
 ### [Task 6: Build copy pipeline using Azure Data Factory](azure-data-factory-v2/copy-file-into-adls-gen2.md)
 
-### [Task 7: Create Azure Service Principal](azure-data-bricks/create-service-principal)
+### [Task 7: Create Azure Service Principal](azure-ad-service-principal/create-service-principal.md)
 
 ### [Task 8: Create Azure Databricks](azure-databricks/provision-azure-databricks.md)
 
