@@ -4,7 +4,7 @@
 
 ## Task: Copy JSON file to Azure Data Lake Gen 2
 
-1. In Data Factory workspace, click on the **Author** icon, click the **plus** icon, then click **Pipeline**
+1. In Data Factory workspace, click on the **Author** (pencil-shaped) icon, click the **plus** icon, then click **Pipeline**
 
     ![Create new pipeline](media/pipeline/1.png)
 
@@ -12,7 +12,7 @@
 
     ![Add copy data activity](media/pipeline/2.png)
 
-1. Click on the **Copy Data1** activity and click **+ New** from the **Source** tab to configure a new linked service
+1. Click on the **Copy Data1** activity and click the **Source** tab then **+ New** to configure a new linked service
 
     ![Configure source](media/pipeline/3.png)
 
