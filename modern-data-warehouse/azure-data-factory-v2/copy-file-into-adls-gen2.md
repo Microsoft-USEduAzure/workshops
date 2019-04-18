@@ -57,10 +57,16 @@
 
 1. In the connection tab, enter the **File path** and filename
 
+    > **NOTE:** The file path you enter will be the name of the file system in ADLS. Make sure you copy this value to notepad for later use.
+
     ![Configure HTTP dataset](media/pipeline/12.png)
 
 1. Click the **Publish** button to save the pipeline.
 
     ![Configure HTTP dataset](media/pipeline/13.png)
+
+1. Click the **Debug** button to run the copy activity.
+
+    ![Configure HTTP dataset](media/pipeline/13a.png)
 
 ## Next task: [Create Azure Service Principal](../azure-ad-service-principal/create-service-principal.md)
