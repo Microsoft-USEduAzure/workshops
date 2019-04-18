@@ -55,7 +55,7 @@
 
     ![Configure HTTP dataset](media/pipeline/11.png)
 
-1. In the connection tab, enter the **File path** and filename
+1. In the connection tab, enter the **File path**, **file name**, and select the file format to be **JSON**
 
     > **NOTE:** The file path you enter will be the name of the file system in ADLS. Make sure you copy this value to notepad for later use.
 
