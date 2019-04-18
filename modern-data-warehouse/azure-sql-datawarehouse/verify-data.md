@@ -2,7 +2,7 @@
 
 ## Pre-requisite tasks: 
 
- - [Develop Azure Databricks notebook](../azure-databricks/develop-databricks.notebook.md)
+- [Develop Azure Databricks notebook](../azure-databricks/develop-databricks.notebook.md)
 
 - [Azure Data Factory Pipeline](../azure-data-factory-v2/transform-data-using-databricks)
 

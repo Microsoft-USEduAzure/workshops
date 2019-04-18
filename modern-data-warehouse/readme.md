@@ -11,7 +11,7 @@ This workshop will aim to get you more familiar with the tools used to build a m
 
 ### [Task 3: Create Azure Data Lake Gen 2](azure-data-lake-gen2/provision-azure-datalake-gen2.md)
 
-### [Task 4: Create Azure Service Principal](azure-data-bricks/create-service-principal)
+### [Task 4: Create Azure Service Principal](azure-ad-service-principal/create-service-principal.md)
 
 ### [Task 5: Create Azure SQL Data Warehouse](azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
 
