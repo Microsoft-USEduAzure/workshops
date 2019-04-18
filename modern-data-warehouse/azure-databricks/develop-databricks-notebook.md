@@ -102,7 +102,7 @@
         > These are the values you documented in [Task 5: Create Azure SQL Data Warehouse](../azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
 
         ```
-        val dwDatabase = "<ENTER_YOUR_DW_SERVER_NAME>"
+        val dwDatabase = "<ENTER_YOUR_DW_DATABASE_NAME>"
         val dwServer = "<ENTER_YOUR_DW_SERVER_NAME>.database.windows.net"
         val dwUser = "<ENTER_DB_USERNAME>"
         val dwPass = "<ENTER_DB_PASSWORD>"
