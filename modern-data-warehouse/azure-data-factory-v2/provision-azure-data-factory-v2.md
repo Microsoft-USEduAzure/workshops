@@ -17,10 +17,10 @@
 1. Click the **Create** button.
 
 1. Enter the following and click **Create**:
-    - Name: *adfv2demo0419* **(NOTE: Must be globally unique)**
-    - Resource Group: Select **Create new** and enter *adfv2demo-rg*
+    - Name: *Enter a name* **(NOTE: Must be globally unique)**
+    - Resource Group: *Select your resource group*
     - Version: *V2*
-    - Location: *West US 2*
+    - Location: *Select your preferred location*
     - Skip Git integration for now
 
         ![New data factory](media/provision/2.png)
