@@ -4,9 +4,7 @@
 
 ## Task: Create Azure Blob Storage
 
-1. In the [Azure Portal](https://portal.azure.com)
-
-1. Click **+Create a resource** link at top left of the page
+1. In the [Azure Portal](https://portal.azure.com), click **+Create a resource** link at top left of the page
 
 1. In the Azure Marketplace search bar, type **storage** and click on **Storage account** that appears in the drop down list
 
