@@ -93,7 +93,7 @@
     - Load transformed data into SQL Datawarehouse.
 
         > **NOTE**: Make sure your data warehouse is running before executing this command.
-        
+
         ```
         spark.conf.set(
             "spark.sql.parquet.writeLegacyFormat",
@@ -111,4 +111,4 @@
 
 ### Reference: https://docs.databricks.com/user-guide/notebooks/notebook-use.html
 
-## Next task: [Update Azure Data Factory pipeline to transform data using Databricks](azure-data-factory-v2/transform-data-using-databricks.md)
+## Next task: [Update Azure Data Factory pipeline to transform data using Databricks](../azure-data-factory-v2/transform-data-using-databricks.md)
