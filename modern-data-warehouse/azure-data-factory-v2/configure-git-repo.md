@@ -24,12 +24,14 @@
 
     ![Create pipeline from template](media/repo/4.png)
 
-1. If prompted, select the working branch.
+1. If prompted, select the working branch and click the **Save** button.
 
     ![Select working branch](media/repo/5.png)
 
 1. Verify the correct branch is selected.
 
     ![Verify branch](media/repo/6.png)
+
+1. Once you select the branch your ADF workspace will now be connected to your Git repo. To publish workspace changes, simply click the **Publish** button in to commit and push changes to your remote repository.
 
 ## Next task: [Build copy pipeline using Azure Data Factory](copy-file-into-adls-gen2.md)
