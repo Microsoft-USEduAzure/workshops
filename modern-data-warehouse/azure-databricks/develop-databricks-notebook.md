@@ -8,6 +8,8 @@
 
 ## Task: Transform data using Azure Databricks notebook
 
+> **NOTE:** See reference links below for notebook and markdown syntax guidance.
+
 1. Click on the **Workspace** button in the navigation page and click on your notebook.
 
     ![](media/notebook/1.png)
@@ -18,7 +20,19 @@
 
     ![](media/notebook/2.png)
 
-    - Configure Spark to authenticate against ALDS using SPN and Tenant details.
+1. For each command listed below, you can enter them into new cells. To create a new cell, hover your mouse over the bottom edge of the cell to enable the **plus** icon. Clicking this will allow you to add a new cell.
+
+    ![](media/notebook/3.png)
+
+1. You can also add **markdown** to your cells to document the data transformation steps taken along the way. To add markdown, simply begin the cell contents with `%md` and enter your markdown.
+
+    ![](media/notebook/4.png)
+
+    ![](media/notebook/5.png)
+
+1. Proceed to enter the following code in new cells and run along the way to view the data:
+
+    - ### Configure Spark to authenticate against ALDS using SPN and Tenant details.
 
         ```
         spark.conf.set("fs.azure.account.auth.type.<ENTER_YOUR_ALDS_STORAGE_ACCOUNT_NAME>.dfs.core.windows.net", "OAuth")
@@ -28,19 +42,19 @@
         spark.conf.set("fs.azure.account.oauth2.client.endpoint.<ENTER_YOUR_ALDS_STORAGE_ACCOUNT_NAME>.dfs.core.windows.net", "https://login.microsoftonline.com/<ENTER_YOUR_TENANT_ID>/oauth2/token")
         ```
 
-    - Read JSON file using Azure Blob Filesystem (ABFS) driver.
+    - ### Read JSON file using Azure Blob Filesystem (ABFS) driver.
 
         ```
         val df = spark.read.json("abfss://<ENTER_YOUR_FILE_SYSTEM_NAME>@<ENTER_YOUR_ALDS_STORAGE_ACCOUNT_NAME>.dfs.core.windows.net/small_radio_json.json")
         ```
 
-    - Display the data.
+    - ### Display the data.
 
         ```
         df.show()
         ```
 
-    - Load only specific columns.
+    - ### Load only specific columns.
 
         ```
         val specificColumnsDf = df.select("firstname", "lastname", "gender", "location", "level")
@@ -48,14 +62,14 @@
         specificColumnsDf.show()
         ```
 
-    - Rename a column.
+    - ### Rename a column.
 
         ```
         val renamedColumnsDF = specificColumnsDf.withColumnRenamed("level", "subscription_type")
         
         renamedColumnsDF.show()
         ```
-    - Configure access to storage account for temporary storage.
+    - ### Configure access to storage account for temporary storage.
 
         ```
         val blobStorage = "<ENTER_YOUR_BLOB_STORAGE_ACCOUNT_NAME>.blob.core.windows.net"
@@ -63,13 +77,13 @@
         val blobAccessKey =  "<ENTER_YOUR_BLOB_STORAGE_ACCOUNT_KEY>"
         ``` 
 
-    - Configure temporary directory using Windows Azure Storage Blob (WASB) driver.
+    - ### Configure temporary directory using Windows Azure Storage Blob (WASB) driver.
 
         ```
         val tempDir = "wasbs://" + blobContainer + "@" + blobStorage +"/tempDirs"
         ```
     
-    - Configure account access.
+    - ### Configure account access.
 
         ```
         val acntInfo = "fs.azure.account.key."+ blobStorage
@@ -77,7 +91,7 @@
         sc.hadoopConfiguration.set(acntInfo, blobAccessKey)
         ```
 
-    - Configure access to SQL Datawarehouse.
+    - ### Configure access to SQL Datawarehouse.
 
         ```
         val dwDatabase = "<ENTER_YOUR_DW_SERVER_NAME>"
@@ -90,7 +104,7 @@
         val sqlDwUrlSmall = "jdbc:sqlserver://" + dwServer + ":" + dwJdbcPort + ";database=" + dwDatabase + ";user=" + dwUser+";password=" + dwPass
         ```
 
-    - Load transformed data into SQL Datawarehouse.
+    - ### Load transformed data into SQL Datawarehouse.
 
         > **NOTE**: Make sure your data warehouse is running before executing this command.
 
@@ -110,5 +124,6 @@
         ```
 
 ### Reference: https://docs.databricks.com/user-guide/notebooks/notebook-use.html
+### Reference: https://www.markdownguide.org/basic-syntax
 
 ## Next task: [Update Azure Data Factory pipeline to transform data using Databricks](../azure-data-factory-v2/transform-data-using-databricks.md)
