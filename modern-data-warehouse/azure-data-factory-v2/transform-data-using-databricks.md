@@ -26,11 +26,19 @@
 
     ![](media/pipeline/17.png)
 
-1. Click on the notebook activity, click **Azure Databricks**, then **+ New** to configure the linked service.
+1. Click on the notebook activity, click the **Azure Databricks** tab, then **+ New** to configure the linked service.
 
     ![](media/pipeline/18.png)
 
-1. Select **From subscription**, choose your subscription, select **Access token**, select **New job cluster**, enter your Databricks access token, configure the Spark cluster, test the connection, and click **Finish**.
+1. Select **From subscription**, choose your subscription, select **Access token**, select **New job cluster**, enter your Databricks access token, configure the Spark cluster, click **Test connection**, then click **Finish**. 
+
+    - Cluster version: *Select **5.2 (includes Apache Spark 2.4.0, Scala 2.11)***
+    
+    - Cluster node type: *Select **Standard_DS3_V2***
+    
+    - Python Version: *3*
+    
+    - Worker options: *1*
 
     > **NOTE:** New job cluster will provision new clusters for the pipeline activity then terminate as soon as the activity is complete.
 
