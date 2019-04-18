@@ -1,6 +1,6 @@
 # Create Service Principal for Databricks
 
-## Pre-requisite task: [Create Azure Data Lake Gen 2](azure-data-lake-gen2/provision-azure-datalake-gen2.md)
+## Pre-requisite task: [Create Azure Data Lake Gen 2](../azure-data-lake-gen2/provision-azure-datalake-gen2.md)
 
 ## Task: Create service principal and add role assignment for ADLS Gen2.
 
