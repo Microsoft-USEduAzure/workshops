@@ -16,7 +16,7 @@
     - Name: *Enter your data warehouse name*
     - Subscription: *Select your subscription*
     - Resource Group: *Select your resource group*
-    - Select source: *Select blank or select from a sample*
+    - Select source: *Select Blank database*
     - Server: *Click on **Configure required settings** and click the **Create a new server** button, configure the server details then click on the **Select** button in the **New server blade**.*
         
         ![New data warehouse](media/provision/2.png)
