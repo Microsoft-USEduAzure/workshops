@@ -69,4 +69,4 @@
 
     ![Configure HTTP dataset](media/pipeline/13a.png)
 
-## Next task: [Create Azure Service Principal](../azure-ad-service-principal/create-service-principal.md)
+## Next task: [Create Azure Databricks](../azure-databricks/provision-azure-databricks.md)

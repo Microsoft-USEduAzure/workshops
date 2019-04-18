@@ -42,4 +42,4 @@
         --hierarchical-namespace true
     ```
 
-## Next task: [Create Azure SQL Data Warehouse](../azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
+## Next task: [Create Azure Service Principal](../azure-ad-service-principal/create-service-principal.md)

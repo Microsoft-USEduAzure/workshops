@@ -1,6 +1,10 @@
 # Provision Azure Data Factory V2
 
-## Pre-requisite task: [Create Azure Resource Group](../azure-resource-group/create-resource-group.md)
+## Pre-requisite tasks: 
+
+    - [Create Azure Resource Group](../azure-resource-group/create-resource-group.md)
+
+    - [Create Azure Resource Group](../azure-resource-group/create-resource-group.md)
 
 ## Task: Create Azure Data Factory V2
 

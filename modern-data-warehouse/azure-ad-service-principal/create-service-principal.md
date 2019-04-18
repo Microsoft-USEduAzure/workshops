@@ -42,4 +42,4 @@
 
     ![Copy app IDs](media/select-role-for-assignment.png)
 
-## Next task: [Create Azure Databricks](../azure-databricks/provision-azure-databricks.md)
+## Next task: [Create Azure SQL Data Warehouse](../azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
