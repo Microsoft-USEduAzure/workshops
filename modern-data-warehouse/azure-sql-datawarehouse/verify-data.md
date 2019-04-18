@@ -18,4 +18,4 @@
 
     ![](media/query/1.png)
 
-## Next task: [Visualize Data]()
+## Next task: [Visualize data](power-bi/visualize-data.md)

@@ -31,4 +31,4 @@ This workshop will aim to get you more familiar with the tools used to build a m
 
 ### [Task 13: Verify data](azure-sql-datawarehouse/verify-data.md)
 
-### [Task 14: Visualize data]()
+### [Task 14: Visualize data](power-bi/visualize-data.md)
