@@ -3,8 +3,7 @@
 ## Pre-requisite tasks: 
 
     - [Create Azure Resource Group](../azure-resource-group/create-resource-group.md)
-
-    - [Create Azure Resource Group](../azure-resource-group/create-resource-group.md)
+    - [Create Azure Service Principal](../azure-data-bricks/create-service-principal)
 
 ## Task: Create Azure Data Factory V2
 
