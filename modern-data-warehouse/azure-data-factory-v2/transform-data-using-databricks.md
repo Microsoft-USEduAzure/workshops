@@ -2,9 +2,9 @@
 
 ## Pre-requisite tasks: 
  
- - [Create Azure Data Factory V2 pipeline](copy-file-into-alds-gen2.md)
+ - [Create Azure Data Factory V2 pipeline](copy-file-into-adls-gen2.md)
 
- - [Develop Azure Databricks notebook](../azure-databricks/develop-databricks.notebook.md)
+ - [Develop Azure Databricks notebook](../azure-databricks/develop-databricks-notebook.md)
 
 ## Task: Add Azure Databricks notebook activity to pipeline
 
