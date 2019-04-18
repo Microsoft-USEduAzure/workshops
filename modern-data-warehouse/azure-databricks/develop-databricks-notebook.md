@@ -92,6 +92,8 @@
 
     - Load transformed data into SQL Datawarehouse.
 
+        > **NOTE**: Make sure your data warehouse is running before executing this command.
+        
         ```
         spark.conf.set(
             "spark.sql.parquet.writeLegacyFormat",

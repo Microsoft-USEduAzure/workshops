@@ -46,4 +46,7 @@
 
 1. Publish the pipeline and click debug to run.
 
+    > **NOTE**: Make sure your data warehouse is running before executing this command.
+        
+
 ## Next task: [Verify data]()

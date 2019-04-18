@@ -29,3 +29,5 @@
 5. Verify the correct branch is selected.
 
     ![Verify branch](media/repo/6.png)
+
+## Next task: [Build copy pipeline using Azure Data Factory](copy-file-into-adls-gen2.md)
