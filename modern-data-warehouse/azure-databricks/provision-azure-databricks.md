@@ -1,6 +1,6 @@
 # Provision Azure Databricks
 
-## Pre-requisite task: [Create Azure Resource Group]()
+## Pre-requisite task: [Create Azure Resource Group](../azure-resource-group/create-resource-group.md)
 
 ## Task: Provision Azure Databricks service
 

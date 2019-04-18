@@ -1,6 +1,6 @@
 # Azure Modern Data Warehouse Workshop
 
-## [Task 1: Create Azure Resource Group]()
+## [Task 1: Create Azure Resource Group](azure-resource-group/create-resource-group.md)
 
 ## [Task 2: Create Azure Blob Storage](azure-storage/provision-azure-storage-account.md)
 
