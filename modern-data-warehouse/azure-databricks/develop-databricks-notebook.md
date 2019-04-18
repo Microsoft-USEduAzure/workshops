@@ -32,7 +32,9 @@
 
 1. Proceed to enter the following code in new cells and run along the way to view the data:
 
-    - ### Configure Spark to authenticate against ALDS using SPN and Tenant details.
+    - ### Configure Spark to authenticate against ALDS using SPN and Tenant details. 
+    
+        > These are values you documented in [Task 4: Create Azure Service Principal](../azure-ad-service-principal/create-service-principal.md)
 
         ```
         spark.conf.set("fs.azure.account.auth.type.<ENTER_YOUR_ALDS_STORAGE_ACCOUNT_NAME>.dfs.core.windows.net", "OAuth")
@@ -42,7 +44,9 @@
         spark.conf.set("fs.azure.account.oauth2.client.endpoint.<ENTER_YOUR_ALDS_STORAGE_ACCOUNT_NAME>.dfs.core.windows.net", "https://login.microsoftonline.com/<ENTER_YOUR_TENANT_ID>/oauth2/token")
         ```
 
-    - ### Read JSON file using Azure Blob Filesystem (ABFS) driver.
+    - ### Read JSON file using Azure Blob Filesystem (ABFS) driver. 
+    
+        > File system is what you entered in the file path text box while configuring the sink in [Task 7: Build copy pipeline using Azure Data Factory](../azure-data-factory-v2/copy-file-into-adls-gen2.md)
 
         ```
         val df = spark.read.json("abfss://<ENTER_YOUR_FILE_SYSTEM_NAME>@<ENTER_YOUR_ALDS_STORAGE_ACCOUNT_NAME>.dfs.core.windows.net/small_radio_json.json")
@@ -69,7 +73,9 @@
         
         renamedColumnsDF.show()
         ```
-    - ### Configure access to storage account for temporary storage.
+    - ### Configure access to storage account for temporary storage. 
+    
+        > These are values you documented in [Task 2: Create Azure Blob Storage](../azure-storage/provision-azure-storage-account.md)
 
         ```
         val blobStorage = "<ENTER_YOUR_BLOB_STORAGE_ACCOUNT_NAME>.blob.core.windows.net"
@@ -91,7 +97,9 @@
         sc.hadoopConfiguration.set(acntInfo, blobAccessKey)
         ```
 
-    - ### Configure access to SQL Datawarehouse.
+    - ### Configure access to SQL Datawarehouse. 
+    
+        > These are the values you documented in [Task 5: Create Azure SQL Data Warehouse](../azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
 
         ```
         val dwDatabase = "<ENTER_YOUR_DW_SERVER_NAME>"
