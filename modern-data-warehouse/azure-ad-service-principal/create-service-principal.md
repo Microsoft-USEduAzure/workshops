@@ -1,4 +1,4 @@
-# Create Service Principal for Databricks
+# Create Service Principal
 
 ## Pre-requisite task: [Create Azure Data Lake Gen 2](../azure-data-lake-gen2/provision-azure-datalake-gen2.md)
 

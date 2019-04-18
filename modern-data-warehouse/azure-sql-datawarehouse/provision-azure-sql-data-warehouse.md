@@ -4,9 +4,7 @@
 
 ## Task: Create Azure SQL Data Warehouse
 
-1. In the [Azure Portal](https://portal.azure.com)
-
-1. Click **+Create a resource** link at top left of the page
+1. In the [Azure Portal](https://portal.azure.com), click **+Create a resource** link at top left of the page.
 
 1. In the Azure Marketplace search bar, type **data warehouse** and click on **SQL Data Warehouse** that appears in the drop down list
 
@@ -18,7 +16,7 @@
     - Name: *Enter your data warehouse name*
     - Subscription: *Select your subscription*
     - Resource Group: *Select your resource group*
-    - Select source: *Select blank or select from a sample*
+    - Select source: *Select Blank database*
     - Server: *Click on **Configure required settings** and click the **Create a new server** button, configure the server details then click on the **Select** button in the **New server blade**.*
         
         ![New data warehouse](media/provision/2.png)
