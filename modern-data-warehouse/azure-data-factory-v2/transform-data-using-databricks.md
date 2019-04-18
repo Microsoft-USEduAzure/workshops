@@ -49,4 +49,4 @@
     > **NOTE**: Make sure your data warehouse is running before executing this command.
         
 
-## Next task: [Verify data]()
+## Next task: [Verify data](../azure-sql-datawarehouse/verify-data.md)
