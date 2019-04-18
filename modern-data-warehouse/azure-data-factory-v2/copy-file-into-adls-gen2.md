@@ -55,7 +55,7 @@
 
     ![Configure HTTP dataset](media/pipeline/11.png)
 
-1. In the connection tab, enter the **File path**, **file name**, and select the file format to be **JSON**
+1. In the connection tab, enter the **File path**, **file name**, and select the file format to be **JSON format**
 
     > **NOTE:** The file path you enter will be the name of the file system in ADLS. Make sure you copy this value to notepad for later use.
 
@@ -68,5 +68,19 @@
 1. Click the **Debug** button to run the copy activity.
 
     ![Configure HTTP dataset](media/pipeline/13a.png)
+
+1. You can view the Pipeline Run status in the Output tab.
+
+    ![](media/pipeline/22.png)
+    
+1. To validate the file is copied into your ADLS, download and install [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
+
+    - Once Storage Explorer has been installed, open the app and click the *plug* icon to configure your connection.
+    
+    - In the Connect window, ensure **Add an Azure Account** is selected, **Azure** is selected in the **Azure Environment** dropdown, and click the **Sign in..** button.
+
+    - Once you've authenticated, you'll be able to browse your storage accounts and locate your sample JSON file.
+
+    ![](media/pipeline/23.png)
 
 ## Next task: [Create Azure Databricks](../azure-databricks/provision-azure-databricks.md)
