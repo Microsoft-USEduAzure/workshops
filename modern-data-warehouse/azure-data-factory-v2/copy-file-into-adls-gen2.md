@@ -39,7 +39,7 @@
 
     ![Source file format](media/pipeline/7.png)
 
-1. Back in the pipeline editor, click on the **Copy Data** activity, click on **Sink**, and click **+ New** to configure.
+1. Click back to the pipeline editor in your workspace, click on the **Copy Data** activity, click on the **Sink** tab, and click **+ New** to configure.
 
     ![Configure sink](media/pipeline/8.png)
 
