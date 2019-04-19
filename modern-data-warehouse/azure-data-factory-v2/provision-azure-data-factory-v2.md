@@ -31,6 +31,8 @@
 
 1. Click on **Author & Monitor** to navigate to the Azure Data Factory web workspace. This is where ADF development will take place.
 
+    ![Notifications](media/provision/4.png)
+        
 ## Optional task: [Configure Git repository](configure-git-repo.md)
 
 ## Next task: [Build copy pipeline using Azure Data Factory](copy-file-into-adls-gen2.md)
