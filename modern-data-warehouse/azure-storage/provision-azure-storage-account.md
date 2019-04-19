@@ -31,12 +31,12 @@
 
     ![Notifications](media/provision/4.png)
 
-1. In the Blobs blade, click on the **+ Container** button, enter a name, then click the **OK** button. Note the container name for later use.
+1. In the Blobs blade, click on the **+ Container** button, enter a name, then click the **OK** button. Copy the container name to notepad for later use.
 
     ![Notifications](media/provision/5.png)
 
 
-1. Navigate to the **Access keys** Copy the following values to notepad for later use:
+1. Navigate to the **Access keys** blade and copy the following values to notepad for later use:
 
     - Storage URL: **<YOUR_STORAGE_ACCOUNT_NAME>**.blob.core.windows.net
     - Storage Access Key: **<LOCATED_IN_ACCESS_KEYS_BLADE>**
