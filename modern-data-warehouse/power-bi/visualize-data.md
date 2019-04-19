@@ -25,3 +25,19 @@
     ![](media/4.png)
 
     ![](media/5.png)
+
+1. In the Navigator, select the **SampleTable** and click **Load**
+
+    ![](media/6.png)
+
+1. Click the Refresh button and the field listing should be populated and available for use within the report.
+
+    ![](media/7.png)
+
+1. Build reports!
+
+    ![](media/8.png)
+
+## Congratulations, you have completed this Hands-On-Lab! 
+
+> **NOTE:** Don't forget to delete your resource group.
