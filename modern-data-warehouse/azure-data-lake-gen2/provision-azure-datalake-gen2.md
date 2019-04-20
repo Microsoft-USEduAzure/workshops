@@ -3,6 +3,9 @@
 ## Pre-requisite task: [Create Azure Resource Group](../azure-resource-group/create-resource-group.md)
 
 ## Task: Create Azure Data Lake Gen 2
+
+### We'll be creating this resource to store our raw data files.
+
 1. In the Azure Portal, open Azure Cloud Shell
 
 1. Execute either of the following scripts based on your language preference:
