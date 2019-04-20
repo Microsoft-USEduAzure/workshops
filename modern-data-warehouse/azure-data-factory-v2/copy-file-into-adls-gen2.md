@@ -1,6 +1,6 @@
 # Build copy pipeline using Azure Data Factory
 
-## Pre-requisite task: [Create Azure Data Factory V2](azure-data-factory-v2/provision-azure-data-factory-v2.md)
+## Pre-requisite task: [Create Azure Data Factory V2](provision-azure-data-factory-v2.md)
 
 ## Task: Copy JSON file to Azure Data Lake Gen 2
 
