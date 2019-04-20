@@ -4,6 +4,16 @@ This workshop will aim to get you more familiar with the tools used to build a m
 
 ![](media/modern-data-warehouse.png)
 
+### Pre-requisites:
+  - Ensure users are able to create App Registrations within Azure Active AD tenant
+  
+  - Ensure the following Resource providers are registered within subscription
+  
+    - Microsoft.DataFactory
+    
+    - Microsoft.Databricks
+    
+    - Microsoft.Sql
 
 ### [Task 1: Create Azure Resource Group](azure-resource-group/create-resource-group.md)
 
