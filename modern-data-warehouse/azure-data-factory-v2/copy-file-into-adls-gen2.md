@@ -4,6 +4,8 @@
 
 ## Task: Copy JSON file to Azure Data Lake Gen 2
 
+### We'll be creating our initial pipeline project to load a small JSON file from a HTTP endpoint and load into our Azure Data Lake Gen2 storage.
+
 1. In Data Factory workspace, click on the **Author** (pencil-shaped) icon, click the **plus** icon, then click **Pipeline**
 
     ![Create new pipeline](media/pipeline/1.png)
