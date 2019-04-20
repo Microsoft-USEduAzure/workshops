@@ -4,7 +4,7 @@
 
 ## Task: Create Azure Blob Storage
 
-> We'll be creating this blob storage resource to temporarily store our data prior to loading into the data warehouse. 
+### We'll be creating this blob storage resource to temporarily store our data prior to loading into the data warehouse. 
 
 1. In the [Azure Portal](https://portal.azure.com), click **+Create a resource** link at top left of the page
 
