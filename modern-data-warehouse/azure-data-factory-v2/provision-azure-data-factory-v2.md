@@ -8,6 +8,8 @@
 
 ## Task: Create Azure Data Factory V2
 
+### We'll be creating our initial pipeline project to load a small JSON file from a HTTP endpoint and load into our Azure Data Lake Gen2 storage.
+
 1. In Azure Portal, click **+Create a resource** link at top left of the page
 
 1. In the Azure Marketplace search bar, type **data factory** and click on **Data Factory** that appears in the drop down list
