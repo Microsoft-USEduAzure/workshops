@@ -4,6 +4,8 @@
 
 ## Task: Create service principal and add role assignment for ADLS Gen2.
 
+### We'll need to create a new service principal name (SPN) so that we can authenticate from our Databricks notebook to our Azure AD tenant using Oauth2 tokens. 
+
 1. In the Azure Portal search box, type "*azure active*" and click on **Azure Active Directory**.
 
     ![Navigate to Azure AD](media/navigate-to-azure-ad.png)
