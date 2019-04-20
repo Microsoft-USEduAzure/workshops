@@ -4,6 +4,8 @@
 
 ## Task: Create Azure SQL Data Warehouse
 
+### We'll be creating this resource to store our cleaned data which will be loaded from our Azure Databricks notebook.
+
 1. In the [Azure Portal](https://portal.azure.com), click **+Create a resource** link at top left of the page.
 
 1. In the Azure Marketplace search bar, type **data warehouse** and click on **SQL Data Warehouse** that appears in the drop down list
