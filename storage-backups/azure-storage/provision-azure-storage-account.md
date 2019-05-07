@@ -54,6 +54,8 @@
 
 1. Download the file and open to make sure the records are gone
 
+    ![](img/11.png)
+
 1. In the blob list, click on **View snapshots**
 
     ![](img/10.png)
