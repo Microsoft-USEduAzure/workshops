@@ -2,6 +2,8 @@
 
 ## Task: Create Azure App Service Plan
 
+### [Prerequisite task: Create Azure Resource Group](../azure-resource-group/create-resource-group.md)
+
 1. In the Azure Portal, click on **+ Create a resource** and click on **Web App**
 
     ![](img/01.png)
@@ -23,10 +25,6 @@
         ![](img/02.png)
 
 1. Create new app service plan
-
-    - Click the **Create new** link under the **Plan** drop down and enter a new app service plan name
-
-        ![](img/03.png)
 
     - Click the **Change size** link to see the various plan types and pricing
 

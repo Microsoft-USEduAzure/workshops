@@ -2,6 +2,8 @@
 
 ## Task: Create MVC web application using .NET Core SDK
 
+### [Prerequisite task: Create Azure App Service Plan](../azure-app-service/create-azure-app-service-plan.md)
+
 1. Open VS Code, and go to **Terminal** --> **New Terminal**
 
     ![](img/01.png)
@@ -32,7 +34,11 @@
 
     ![](img/05.png)
 
-1. Go back to VS Code and enter `Ctrl + C` to stop the web application
+1. Go back to VS Code and enter `Ctrl + C` to stop the web application, then execute the following code to compile the app for publishing
+
+    ```
+    dotnet publish --configuration Release --runtime win-x86
+    ```
 
 1. Click on the **Extensions** icon in the left navigation column, enter *azure app service* into the search text box, and click the **Install** button when you find **Azure App Service** by Microsoft
 
@@ -48,3 +54,32 @@
 
     ![](img/08.png)
 
+    > Be sure when prompted for the directory to upload, you browse to the `\bin\Release\netcoreapp2.2\win-x86\publish` directory 
+
+1. When the deployment is complete, click the **Browse website** button to validate you can access
+
+    ![](img/09.png)
+
+1. You should be able to navigate the site anonymousely (no authentication)
+
+1. To add authentication to the site, click on the **Authentication / Authorization** button and click the following options
+
+    ![](img/10.png)
+
+1. Configure Azure Active Direcotry Settings
+
+    ![](img/11.png)
+
+1. Click **Save**
+
+    ![](img/12.png)
+
+1. Navigate back to the **Overview** blade, then click the **Restart** button to have the change take effect
+
+1. Open a new web browser in incognito mode and navigate to the website. You should now be challenged to authenticate
+
+    ![](img/13.png)
+
+> Troubleshooting tips if you cannot access the page or recieve permissions issues. Naviage back to teh Azure Active Directory settings, click on **Manage Permissions**, and click **Grant permissions** (You may also need to delete service principals that were created in error and they will be denoted by a caution icon)
+
+![](img/14.png)

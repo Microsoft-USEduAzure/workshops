@@ -18,14 +18,6 @@ This workshop will aim to get you familar with setting up an App Service Plan an
 
 ## [Task 3: Create MVC web application using .NET Core SDK](dotnet-mvc/create-mvc-app.md)
 
-## Task 4: Publish web application to Azure App Service using Kudu
+## Task 4: Secure web application using Azure Active Directory
 
-## Task 5: Secure web application using Azure Active Directory
-
-## Task 6: Secure web application using .NET Core
-
-## Task 7: Publish web application to Azure App Service using VS Code extension
-
-## Task 8: Monitoring
-
-## Task 9: Performance testing
+## Task 5: Secure web application using .NET Core
