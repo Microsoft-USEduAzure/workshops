@@ -83,3 +83,5 @@
 > Troubleshooting tips if you cannot access the page or recieve permissions issues. Naviage back to teh Azure Active Directory settings, click on **Manage Permissions**, and click **Grant permissions** (You may also need to delete service principals that were created in error and they will be denoted by a caution icon)
 
 ![](img/14.png)
+
+## [Next task: Create Azure Active Directory App Registration and secure web application](../azure-app-registration/create-new-app-registration.md)

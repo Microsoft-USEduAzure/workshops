@@ -19,7 +19,7 @@
     ![](img/05.png)
 
 
-1. In VS Code terminal, execute the following commands to create new MVC web application using app registration properties and run the application
+1. In VS Code terminal, execute the following commands to create new MVC web application using app registration properties and run the application. This command will create a new MVC web application and add Azure AD configuration into the appSettings.json file in addition to adding Azure AD authentication middle ware into the Startup.cs class.
 
     ```
     cd ~
@@ -32,5 +32,7 @@
 
     dotnet run
     ```
+
+    > NOTE: The values for the command above can be found on the Overview tab of the newly created app registration. The domain value will be the domain of your Azure Active Directory.
 
 1. Open web browser, and navigate to https://localhost:5001 to verify you are challenged with authentication

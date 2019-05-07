@@ -18,6 +18,4 @@ This workshop will aim to get you familar with setting up an App Service Plan an
 
 ## [Task 3: Create MVC web application using .NET Core SDK](dotnet-mvc/create-mvc-app.md)
 
-## Task 4: Secure web application using Azure Active Directory
-
-## Task 5: Secure web application using .NET Core
+## [Task 4: Create Azure Active Directory App Registration and secure web application](azure-app-registration/create-new-app-registration.md)
