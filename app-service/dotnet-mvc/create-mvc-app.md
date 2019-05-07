@@ -13,7 +13,7 @@
     ```
     mkdir mytestwebapp
     cd mytestwebapp
-    dotnew new mvc
+    dotnet new mvc
     dotnet build
     dotnet run
     ```
