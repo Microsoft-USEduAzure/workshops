@@ -56,6 +56,8 @@
 
 1. In the blob list, click on **View snapshots**
 
+    ![](img/10.png)
+
 1. Select the snapshot and click the **Promote** button then click **OK**
 
     ![](img/9.png)
