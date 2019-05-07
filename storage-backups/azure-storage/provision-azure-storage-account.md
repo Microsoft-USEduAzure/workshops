@@ -44,17 +44,17 @@
 
     ![](img/6.png)
 
+    ![](img/7.png)
+
 1. Select the blob file from the list and click the **Create snapshot** button
 
-    ![](img/7.png)
+    ![](img/8.png)
 
 1. In the original Excel file on your PC, delete all rows and upload the file again, making sure the **Overwrite** checkbox is checked
 
 1. Download the file and open to make sure the records are gone
 
 1. In the blob list, click on **View snapshots**
-
-    ![](img/8.png)
 
 1. Select the snapshot and click the **Promote** button then click **OK**
 
