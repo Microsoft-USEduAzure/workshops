@@ -60,7 +60,7 @@
 
     ![](img/09.png)
 
-1. You should be able to navigate the site anonymousely (no authentication)
+1. You should be able to navigate the site anonymously (no authentication)
 
 1. To add authentication to the site, click on the **Authentication / Authorization** button and click the following options
 
