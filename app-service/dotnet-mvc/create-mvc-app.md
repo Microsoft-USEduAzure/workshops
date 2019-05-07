@@ -50,11 +50,9 @@
 
     ![](img/07.png)
 
-1. Follow the prompts to upload the web application to the previously created app service, and click the **Deploy** button
+1. Follow the prompts to upload the web application to the previously created app service, and click the **Deploy** button. Be sure when prompted for the directory to upload, you browse to the `\bin\Release\netcoreapp2.2\win-x86\publish` directory 
 
     ![](img/08.png)
-
-    > Be sure when prompted for the directory to upload, you browse to the `\bin\Release\netcoreapp2.2\win-x86\publish` directory 
 
 1. When the deployment is complete, click the **Browse website** button to validate you can access
 
