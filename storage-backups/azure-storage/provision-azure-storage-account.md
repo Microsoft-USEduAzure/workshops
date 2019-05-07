@@ -48,7 +48,7 @@
 
     ![](img/7.png)
 
-1. In the original Excel file on your PC, empty the records and upload the file again, making sure the **Overwrite** checkbox is checked
+1. In the original Excel file on your PC, delete all rows and upload the file again, making sure the **Overwrite** checkbox is checked
 
 1. Download the file and open to make sure the records are gone
 
