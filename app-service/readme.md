@@ -2,7 +2,7 @@
 
 This workshop will aim to get you familar with setting up an App Service Plan and deploying a simple MVC web application using .NET Core SDK, Visual Studio Code and Azure App Service Extensions.
 
-## Pre-requisites:
+## Pre-requisites
 
 - Azure Subscription and access to [Azure Portal](https://ms.portal.azure.com/#home)
 
