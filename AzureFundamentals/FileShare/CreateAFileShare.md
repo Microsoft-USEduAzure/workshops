@@ -142,4 +142,4 @@ Further documentation: [Mount Files Share to Linux VM]
 
 [Create a File Share Documentation]: <https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-cli>
 [Mount Files Share to Linux VM]: <https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-linux>
-[Next -> Backup a Virtual Machine]:<https://github.com/MarchingBug/AzureFundamentals/blob/master/Backup/BackupVM.md>
+[Next -> Backup a Virtual Machine]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/Backup/BackupVM.md>
