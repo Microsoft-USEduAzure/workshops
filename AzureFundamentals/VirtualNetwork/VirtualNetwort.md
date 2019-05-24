@@ -91,5 +91,5 @@ nslookup www.USEDUDemo.xyz ns1-06.azure-dns.com
 
 [Create Virtual Network Documentation]: <https://docs.microsoft.com/en-us/azure/virtual-network/quick-create-portal>
 [Create DNS Record Documentation]: <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-cli>
-[Next -> Create a File Share & Mount to VM]:<https://github.com/MarchingBug/AzureFundamentals/blob/master/FileShare/CreateAFileShare.md>
+[Next -> Create a File Share & Mount to VM]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/FileShare/CreateAFileShare.md>
 
