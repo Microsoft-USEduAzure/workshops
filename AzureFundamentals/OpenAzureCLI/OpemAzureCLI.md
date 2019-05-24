@@ -8,5 +8,5 @@
 
 [Next -> Create a Resource Group]
 
- [Next -> Create a Resource Group]:<https://github.com/MarchingBug/AzureFundamentals/blob/master/CreateResourceGroup/CreateResourceGroup.md>
+ [Next -> Create a Resource Group]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/CreateResourceGroup/CreateResourceGroup.md>
 
