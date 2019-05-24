@@ -81,7 +81,7 @@ fe5d0414  ConfigureBackup  Completed   myVm1         2019-09-19T03:03:57  0:00:3
 [Next -> Clean Up]
 
 [Backup VM]: <https://docs.microsoft.com/en-us/azure/backup/quick-backup-vm-cli>
-[Next -> Clean Up]:<https://github.com/MarchingBug/AzureFundamentals/blob/master/Cleanup/Cleanup.md>
+[Next -> Clean Up]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/Cleanup/Cleanup.md>
 
 
 
