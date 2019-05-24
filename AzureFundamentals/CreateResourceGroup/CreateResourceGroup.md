@@ -23,4 +23,4 @@ Where:
 
 [Next -> Create a Virtual Network]
 
- [Next -> Create a Virtual Network]:<https://github.com/MarchingBug/AzureFundamentals/blob/master/VirtualNetwork/VirtualNetwort.md>
+ [Next -> Create a Virtual Network]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/VirtualNetwork/VirtualNetwort.md>
