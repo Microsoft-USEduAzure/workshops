@@ -27,6 +27,8 @@
 
 [App Service Deployment Slots](#app-service-deployment-slots)
 
+[Cleanup](#clean-up)
+
 ___
 
 ## [What you'll need](workshop-environment-setup)
@@ -677,3 +679,14 @@ REFERENCE: https://blogs.msdn.microsoft.com/ukhybridcloud/2018/03/19/azure-devop
 ## Performance testing and autoscaling
 
 ## Authentication using Azure AD
+
+## [Clean up](clean-up)
+Once you've completed exploring the resources we created in this workshop, do not forget to delete your Azure Resource Group to ensure you do not incur any uncessary charges
+
+1. To delete the resource group from the Azure Portal, navigate to the resource group and click the delete button. You will be prompted to type in the name of the resource group to delete.
+
+> Alternatively, you can execute the following command in Cloud Shell
+
+```bash
+az group delete -n $rg -y --no-wait
+```
