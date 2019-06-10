@@ -1,6 +1,35 @@
 # Azure Focus Hours - Web App Migration
 
-## Workshop Environment Setup
+## Table of Contents
+[Workshop Environment Setup](#workshop-environment-setup)
+
+[Install and run solution locally](#install-and-run-solution-locally)
+
+[Azure Cloud Shell](#azure-cloud-shell)
+
+[Azure Resource Group](#azure-resource-group)
+
+[Azure SQL](#azure-sql)
+
+[Azure App Service](#azure-app-service)
+
+[Azure Key Vault](#azure-key-vault)
+
+[Publish Website to Azure App Service](#publish-website-to-azure-app-service)
+
+[Azure Repos](#azure-repos)
+
+[Azure Pipelines Build](#azure-pipelines-build)
+
+[Azure Pipelines Release](#azure-pipelines-release)
+
+[Azure Boards](#azure-boards)
+
+[App Service Deployment Slots](#app-service-deployment-slots)
+
+___
+
+## [Workshop Environment Setup](workshop-environment-setup)
 
 To complete this workshop you will need to have a Windows PC and the following applications installed
 
@@ -32,7 +61,7 @@ To complete this workshop you will need to have a Windows PC and the following a
 
 - [Database Migration Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=53595)
 
-## Install and run solution locally
+## [Install and run solution locally](install-and-run-solution-locally)
 
 The solution consists of a ASP.NET WebForms website and SQL Server database. We'll migrate these components to Azure
 
@@ -78,7 +107,7 @@ The solution consists of a ASP.NET WebForms website and SQL Server database. We'
 
 > You're now ready to proceed with the workshop!
 
-## Azure Cloud Shell
+## [Azure Cloud Shell](azure-cloud-shell)
 
 Azure resources can be provisioned using the Azure Portal website. As an alternative you can provision your resources using the Azure CLI on Azure Cloud Shell. You can click the shell icon in the upper right section of the Azure portal.
 
@@ -107,7 +136,7 @@ connstringkey=TailwindTradersConn
 
 > NOTE: dbserver and appservicename must be globally uniquue to all of Azure
 
-### Azure Resource Group
+## [Azure Resource Group](azure-resource-group)
 
 Create a new resource group which will be a logical container for all our Azure resources for this workshop
 
@@ -127,7 +156,7 @@ Alternatively, enter the following command in Cloud Shell
 az group create -n $rg -l $loc
 ```
 
-## Azure SQL
+## [Azure SQL](azure-sql)
 
 In this exercise, we'll use a tool called Database Migration Assistant to evaluate and migrate both our TailwindTraders database schema and data. Before we start the database migration, we'll need to create a Azure SQL instance first.
 
@@ -221,7 +250,7 @@ az sql server firewall-rule create -g $rg -s $dbserver -n AzureServices --start-
 
 1. You can connect to the Azure SQL database using either SSMS or the Azure Portal to verify the data
 
-## Azure App Service
+## [Azure App Service](azure-app-service)
 
 One half of our solution has been deployed to Azure. Next, we'll create an App service plan and web app and publish our application using Visual Studio.
 
@@ -242,7 +271,7 @@ az appservice plan create -g $rg -n $appserviceplan --sku S1
 az webapp create -g $rg  --plan $appserviceplan --name $appservicename
 ```
 
-## Azure Key Vault
+## [Azure Key Vault](azure-key-vault)
 
 Instead of storing connection strings in web.config or within App Service settings, we'll use a KeyVault to store the secret and use it within our App Service. In this exercise, we'll create a new Azure KeyVault and store our database connection string as a secret. To allow our App Service access to the secret stored in key vault, we'll create a new Managed Service Identity
 
@@ -310,9 +339,9 @@ az keyvault secret show --name $connstringkey --vault-name $kvname
 
 1. In the Azure Portal, go to your app service resource, click on the Identity blade, click On to enabled the system assigned managed identity and click Save
 
-    ![](iamges/34.png)
+    ![](images/34.png)
 
-    ![](iamges/35.png)
+    ![](images/35.png)
 
 ### Assign permissions for your app
 
@@ -326,11 +355,11 @@ az keyvault secret show --name $connstringkey --vault-name $kvname
 
 1. For Secret permissions select Get and List options, click OK then click Save
 
-    ![](imgages/38.png)
+    ![](images/38.png)
 
 1. You should now see two access policies; one for your account, and another for the application
 
-    ![](imgages/39.png)
+    ![](images/39.png)
 
 > Alternatively you can enter the following commands in Cloud Shell. Copy and paste the JSON output into your favorite text editor as we'll need the principalId
 
@@ -343,7 +372,7 @@ az keyvault set-policy --name $kvname --object-id <ENTER_PRINCIPALID_FROM_PREVIO
 
 1. In Azure Portal, navigate back to the app service, click on the Configuration blade, and click + New connection string
 
-    ![](imgages/40.png)
+    ![](images/40.png)
 
 1. For the connection string, enter the name as dbContext and add the value as the Secret Identifier you copied from a previous step wrapped around a special call with Microsoft Key Vault as displayed in the following screen shot. Also make sure the Type is set to SQLAzure and click Update. **BE SURE TO CLICK SAVE IN THE CONFIGURATION BLADE!!**
 
@@ -357,7 +386,7 @@ az webapp config connection-string set -g $rg -n $appservicename -t SQLAzure --s
 
 1. Now that the app service is configured we can publish our code and test
 
-## Deploy Website to Azure App Service using Visual Studio
+## [Publish Website to Azure App Service](publish-website-to-azure-app-service)
 
 We are now ready to deploy the website to Azure App Service. We'll start by publishing the project using Visual Studio. Later in this workshop will set this up for CI/CD
 
@@ -383,7 +412,7 @@ We are now ready to deploy the website to Azure App Service. We'll start by publ
 
 1. Close Visual Studio
 
-## Commit code to Azure Repos
+## [Azure Repos](azure-repos)
 
 Now that we've migrated out application to Azure, let's sprinkle in some DevOps!
 
@@ -448,7 +477,7 @@ Now that we've migrated out application to Azure, let's sprinkle in some DevOps!
 
 1. Navigate back to Azure Repos, refresh the Files page and verify the code has been pushed to the repo
 
-## Continuous Integration using Azure Pipelines
+## [Azure Pipelines Build](azure-pipelines-build)
 So we have published our web application using Visual Studio but in the wise words of Scott Hanselman, "freinds don't let freinds right-click and publish". We will implement a CI pipeline to automate our builds.
 
 1. In Azure DevOps click on Pipelines then Build, and click the New pipeline button
@@ -489,7 +518,7 @@ So we have published our web application using Visual Studio but in the wise wor
 
     ![](images/54.png)
 
-## Continuous Delivery using Azure Pipelines
+## [Azure Pipelines Release](azure-pipelines-release)
 
 To complete our CI/CD automation, we'll configure a continuous delivery pipeline.
 
@@ -519,7 +548,7 @@ To complete our CI/CD automation, we'll configure a continuous delivery pipeline
 
 1. Click Save then Create a new release
 
-## Manage work using Azure Boards
+## [Azure Boards](azure-boards)
 
 If you noticed, there is a bug in our application. As customer information is loaded and displayed on the page, the orders list includes orders for ALL customers. A correction should be made so that only orders for the customer in context is displayed. We'll create a new work item in Azure Boards and assign it to a sprint for fixing.
 
@@ -583,7 +612,9 @@ git pull
 
     ![](images/74.png)
 
-1. Before we queue a new release, we will create a new deployment slot in the App Service and stage our build before releasing to production. This way we can validate our changes in a production environment before we do the final release.
+## [App Service Deployment Slots](app-service-deployment-slots)
+
+Before we queue a new release, we will create a new deployment slot in the App Service and stage our build before releasing to production. This way we can validate our changes in a production environment before we do the final release.
 
 1. In Azure App Portal navigate to the App Service, click on the Deployment slots blade and create a new deployment slot
 
