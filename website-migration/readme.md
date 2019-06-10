@@ -1,5 +1,17 @@
 # Azure Focus Hours - Web App Migration
 
+During this virtual workshop session, you will learn how easy it is to modernize your web applications.  We will start by migrating a legacy ASP.NET Webforms app to Azure App Service and Azure SQL.  We’ll also use Azure DevOps to modernize the development workflow by using Azure Repos and Build+Release Pipelines.
+
+
+**Topics & High-Level Workshop Tasks:**
+
+- Creating Azure App Service Plans
+- Deploying a legacy app to Azure App Service using Visual Studio
+- Migrating an on-premises database to Azure SQL using Data Migration Assistant
+- Securing app secrets with Azure Key Vault
+- Modernizing developer workflow by using Azure Repos (Git) and Azure Boards
+- Modernizing CI/CD operations using Azure Build and Release
+
 ## Table of Contents
 [Tools you will need](#workshop-environment-setup)
 
