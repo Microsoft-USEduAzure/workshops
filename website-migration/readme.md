@@ -1,7 +1,7 @@
 # Azure Focus Hours - Web App Migration
 
 ## Table of Contents
-[Workshop Environment Setup](#workshop-environment-setup)
+[What you'll need](#workshop-environment-setup)
 
 [Install and run solution locally](#install-and-run-solution-locally)
 
@@ -29,7 +29,7 @@
 
 ___
 
-## [Workshop Environment Setup](workshop-environment-setup)
+## [What you'll need](workshop-environment-setup)
 
 To complete this workshop you will need to have a Windows PC and the following applications installed
 
