@@ -81,7 +81,7 @@ The solution consists of a ASP.NET WebForms website and SQL Server database. We'
 
 ### Download sample files
 
-1. Download [TailwindTraders.zip](sample/TailwindTraders.zip)
+1. Download [https://pauyusa.blob.core.windows.net/workshop/TailwindTraders.zip?sp=r&st=2019-07-05T16:46:41Z&se=2019-08-01T00:46:41Z&spr=https&sv=2018-03-28&sig=ad3jfZP2LDPAGJ9fNy3%2Bryti9FJaYwL7Hqt%2F4P%2BlrMQ%3D&sr=b](sample/TailwindTraders.zip)
 
 1. If you have a source code repository path on your machine that you normally use, you can skip this step; otherwise, create a new directory on your machine using Command Prompt
 
@@ -89,7 +89,7 @@ The solution consists of a ASP.NET WebForms website and SQL Server database. We'
     mkdir c:\source\repos
     ```
 
-1. Unzip TailwindTraders.zip to c:\source\repos using Windows Explorer
+1. Unzip TailwindTraders.zip to c:\source\repos\TailwindTraders using Windows Explorer
 
 ### Import TailwindTraders database
 
@@ -119,11 +119,11 @@ The solution consists of a ASP.NET WebForms website and SQL Server database. We'
 
 1. Run the solution and verify the site is running
 
-> You're now ready to proceed with the workshop!
+**You're now ready to proceed with the workshop!**
 
 ## [Azure Cloud Shell](azure-cloud-shell)
 
-Azure resources can be provisioned using the Azure Portal website. As an alternative you can provision your resources using the Azure CLI on Azure Cloud Shell. You can click the shell icon in the upper right section of the Azure portal.
+For this workshop, Azure resources will be provisioned using the [Azure Portal](https://portal.azure.com). As an alternative you can provision your resources using the Azure CLI on Azure Cloud Shell. You can click the shell icon in the upper right section of the Azure portal.
 
 ![Cloud shell](images/07.png)
 
@@ -133,17 +133,26 @@ If this is the first time you are using the shell you will be prompted to select
 
 ![Cloud shell setup](images/09.png)
 
-If wish to follow along with the Azure CLI Bash commands you'll need to enter
+If wish to follow along with the Azure CLI Bash commands you'll need to define and intialize variables that will be used throughout the workshop. 
 
 ```bash
+# resource group name
 rg=<REPLACE_WITH_YOUR_RESOURCE_GROUP_NAME>
+
+# preferred azure region (i.e., westus2, eastus2)
 loc=<REPLACE_WITH_YOUR_PREFERRED_REGION>
+
+# azure sql database settings
 dbserver=<REPLACE_WITH_YOUR_DB_SERVER_NAME>
 dbname=TailwindTraders
 user=<REPLACE_WITH_YOUR_USERNAME>
 pass=<REPLACE_WITH_YOUR_PASSWORD>
+
+# azure app service settings
 appserviceplan=<REPLACE_WITH_YOUR_APP_SERVICE_PLAN_NAME>
 appservicename=<REPLACE_WITH_YOUR_APP_SERVICE_NAME>
+
+# azure key vault settings
 kvname=<REPLACE_WITH_YOUR_KEYVAULT_NAME>
 connstringkey=TailwindTradersConn
 ```
@@ -180,7 +189,7 @@ In this exercise, we'll use a tool called Database Migration Assistant to evalua
 
     ![](images/13.png)
 
-1. Select your resource group, enter TailwindTraders as the database name, then click on Create new and enter the server details then click Select. For now, we'll keep the defaults for the compute and storage settings. Click Review + create, then Create to provision the resource.
+1. Select your resource group, enter TailwindTraders as the database name, then click on Create new and enter the server details then click Select. For database Compute + storage, select the Basic tier with 2 GB of storage. Click Review + create, then Create to provision the resource.
 
     ![](images/14.png)
 
@@ -224,43 +233,43 @@ az sql server firewall-rule create -g $rg -s $dbserver -n AzureServices --start-
 
     ![](images/17.png)
 
-1. Select Migration as the Project Type, enter a project name, keep all defaults, and click Create
+1. Select **Migration** as the Project Type, enter a project name, keep all defaults, and click **Create**
 
     ![](images/18.png)
 
 1. Connect to the source server (local database server)
 
-    1. Enter local database server credentials and click connect
+    1. Enter local database server credentials and click **Connect**
 
-    1. Select TrailwindTraders database and click Next
+    1. Select TrailwindTraders database and click **Next**
 
         ![](images/19.png)
 
 1. Connect to the target server (Azure SQL database server)
 
-    1. Enter Azure SQL database server credentials and click connect
+    1. Enter Azure SQL database server credentials and click **Connect**
 
-    1. Select TrailwindTraders database and click Next
+    1. Select **TrailwindTraders** database and click **Next**
 
         ![](images/20.png)
 
-1. Select all the tables to be migrated and click Generate SQL script
+1. Select all the tables to be migrated and click **Generate SQL script**
 
     ![](images/21.png)
 
-1. Review the generated script then click Deploy schema
+1. Review the generated script then click **Deploy schema**
 
     ![](images/22.png)
 
-1. Review the deployment results then click Migrate data
+1. Review the deployment results then click **Migrate data**
 
     ![](images/23.png)
 
-1. Review the data to be migrated then click Start data migration
+1. Review the data to be migrated then click **Start data migration**
 
-    ![](imags/24.png)
+    ![](images/24.png)
 
-    ![](imags/25.png)
+    ![](images/25.png)
 
 1. You can connect to the Azure SQL database using either SSMS or the Azure Portal to verify the data
 
@@ -270,11 +279,11 @@ One half of our solution has been deployed to Azure. Next, we'll create an App s
 
 ### Create a new app service plan
 
-1. In Azure portal, click on + Create a resource, then Web, then Web App
+1. In Azure portal, click on **+ Create a resource**, then **Web**, then **Web App**
 
-    ![](imags/26.png)
+    ![](images/26.png)
 
-1. In the web app configuration page, select your resource group, enter a globally unique web app name, select Code as the publish mechanism, select ASP.NET V4.7 as the runtime stack, and create a new app plan name
+1. In the web app configuration page, select your resource group, enter a globally unique web app name, select **Code** as the publish mechanism, select **ASP.NET V4.7** as the runtime stack, and create a new app plan name
 
     ![](images/27.png)
 
@@ -293,11 +302,11 @@ REFERENCE: https://docs.microsoft.com/en-us/azure/key-vault/tutorial-net-create-
 
 ### Create a new Key Vault
 
-1. In Azure Portal, click on + Create a resource, type in "key vault" into the search box and click on Key Vault from the list. Click create on the next page.
+1. In Azure Portal, click on **+ Create a resource**, type in "key vault" into the search box and click on Key Vault from the list. Click create on the next page.
 
     ![](images/28.png)
 
-1. Enter a new key vault name, select the resource group, select your resource group, leave the remaining fields at their defaults and click on Create
+1. Enter a new key vault name, select the resource group, select your resource group, leave the remaining fields at their defaults and click on **Create**
 
     ![](images/29.png)
 
@@ -309,7 +318,7 @@ REFERENCE: https://docs.microsoft.com/en-us/azure/key-vault/tutorial-net-create-
 
 ### Get the connection string for the database
 
-1. In the Azure Portal, navigate to your SQL database resource, click on Connection Strings blade and copy the connection string
+1. In the Azure Portal, navigate to your SQL database resource, click on **Connection strings** blade and copy the connection string
 
     ![](images/30.png)
 
@@ -323,11 +332,11 @@ az sql db show-connection-string -s $dbserver -n $dbname -c ado.net
 
 ### Add database connection string as new secret
 
-1. In Azure Portal, navigate back to your KeyVault and click on Secrets to open the blade and click + Generate/Import
+1. In Azure Portal, navigate back to your KeyVault and click on **Secrets** to open the blade and click **+ Generate/Import**
 
     ![](images/31.png)
 
-1. In the Create a secret blade, enter a name, paste in the connection string value and click Create
+1. In the Create a secret blade, enter a name, paste in the connection string value and click **Create**
 
     ![](images/32.png)
 
@@ -339,7 +348,7 @@ az keyvault secret set --vault-name $kvname --name $connstringkey --value "Serve
 
 ### Verify the secret
 
-1. In the Secrets blade, click on the new secret, then click on the current version, then click show secret value to verify the connection string is correct. Copy the Secret identifier value as we will be using this in our app service configuration.
+1. In the Secrets blade, click on the new secret, then click on the current version, then click show secret value to verify the connection string is correct. Copy the Secret identifier value and paste into your favorite text editor as we will be using this in our app service configuration.
 
     ![](images/33.png)
 
@@ -351,7 +360,7 @@ az keyvault secret show --name $connstringkey --vault-name $kvname
 
 ### Create a system managed identity
 
-1. In the Azure Portal, go to your app service resource, click on the Identity blade, click On to enabled the system assigned managed identity and click Save
+1. In the Azure Portal, go to your app service resource, click on the **Identity** blade, click **On** to enable the system assigned managed identity and click **Save**
 
     ![](images/34.png)
 
@@ -359,19 +368,19 @@ az keyvault secret show --name $connstringkey --vault-name $kvname
 
 ### Assign permissions for your app
 
-1. In Azure Portal, navigate back to your Key Vault resource and click on Access Policies then click on Add new
+1. In Azure Portal, navigate back to your Key Vault resource and click on **Access Policies** then click on **Add new**
 
     ![](images/36.png)
 
-1. In the new policy blade click on Select principal and search for your app name. Click on the app name that is found in the directory then click Select
+1. In the new policy blade click on **Select principal** and search for your app name. Click on the app name that is found in the directory then click **Select**
 
     ![](images/37.png)
 
-1. For Secret permissions select Get and List options, click OK then click Save
+1. For **Secret permissions** select **Get** and **List** options, click **OK** then click **Save**
 
     ![](images/38.png)
 
-1. You should now see two access policies; one for your account, and another for the application
+1. You should now see two access policies; one for your account, and another for your app service
 
     ![](images/39.png)
 
@@ -388,7 +397,11 @@ az keyvault set-policy --name $kvname --object-id <ENTER_PRINCIPALID_FROM_PREVIO
 
     ![](images/40.png)
 
-1. For the connection string, enter the name as dbContext and add the value as the Secret Identifier you copied from a previous step wrapped around a special call with Microsoft Key Vault as displayed in the following screen shot. Also make sure the Type is set to SQLAzure and click Update. **BE SURE TO CLICK SAVE IN THE CONFIGURATION BLADE!!**
+1. For the connection string, enter the name as **dbContext** and add the value as the Secret Identifier you copied from a previous step wrapped around a special call with Microsoft Key Vault. 
+
+    `@Microsoft.KeyVault(SecretUri=<ENTER_YOUR_SECRET_URI)`
+
+1. Make sure the Type is set to SQLAzure and click Update. **BE SURE TO CLICK SAVE IN THE CONFIGURATION BLADE!!**
 
     ![](images/41.png)
 
@@ -406,9 +419,9 @@ We are now ready to deploy the website to Azure App Service. We'll start by publ
 
 1. Open TailwindTraders solution in Visual Studio
 
-1. Right click the project and click Publish
+1. Right click the project and click **Publish**
 
-1. Click App Service > Select existing radio button > Publish
+1. Click **App Service** > **Select existing** > **Publish**
 
     ![](images/42.png)
 
@@ -416,25 +429,25 @@ We are now ready to deploy the website to Azure App Service. We'll start by publ
 
 1. Select your subscription
 
-1. Expand the resource group for our workshop, select your App Service, and click OK
+1. Expand the resource group for our workshop, select your App Service, and click **OK** to publish
 
     ![](images/43.png)
 
 1. Verify the app is running by browsing to your app service URL
 
-> NOTE: It will take a few minutes for your application to publish and Visual studio should automatically open your web app in a browser when publishing is complete
+  > NOTE: It will take a few minutes for your application to publish and Visual studio should automatically open your web app in a browser when publishing is complete
 
 1. Close Visual Studio
 
 ## [Azure Repos](azure-repos)
 
-Now that we've migrated out application to Azure, let's sprinkle in some DevOps!
+Now that we've migrated out application to Azure, let's sprinkle in some DevOps! We'll assume this project was never linked to any type of source control so we'll at it to Azure Repos.
 
 1. Open Git Bash
 
 1. Navigate to your TailwindTraders directory
 
-    ``bash
+    ```bash
     cd source/repos/TailwindTraders
     ```
 
@@ -475,13 +488,13 @@ Now that we've migrated out application to Azure, let's sprinkle in some DevOps!
 
 1. Using web browser, navigate to https://dev.azure.com
 
-1 Create an organization (or use existing if you already have one)
+1. Create an organization (or use existing if you already have one)
 
 1. Create a new private project named TailwindTraders using Git version control
 
     ![](images/44.png)
 
-1. Click on Repos, then Files
+1. Click on **Repos**, then **Files**
 
 1. Copy the command to push from an existing repository
 
@@ -492,9 +505,9 @@ Now that we've migrated out application to Azure, let's sprinkle in some DevOps!
 1. Navigate back to Azure Repos, refresh the Files page and verify the code has been pushed to the repo
 
 ## [Azure Pipelines Build](azure-pipelines-build)
-So we have published our web application using Visual Studio but in the wise words of Scott Hanselman, "freinds don't let freinds right-click and publish". We will implement a CI pipeline to automate our builds.
+So we have published our web application using Visual Studio but in the wise words of Scott Hanselman, "friends don't let friends right-click and publish". So, we will implement a CI/CD pipeline to automate our builds and releases.
 
-1. In Azure DevOps click on Pipelines then Build, and click the New pipeline button
+1. In Azure DevOps click on **Pipelines** then **Build**, and click **New pipeline**
 
     ![](images/46.png)
 
@@ -512,7 +525,7 @@ So we have published our web application using Visual Studio but in the wise wor
 
 1. A YAML-based build configuration will be automatically generated and committed into the root of your repository. By default, each commit will trigger a new build. Click Save and run to test.
 
-    > Two options here to go with either YAML or Classic. YAML is good because the release flow is committed to the repo
+    > We chose YAML build configuration but we could have also gone with Classic. YAML is good as the release flow is committed to the repo
 
     ![](images/50.png)
 
@@ -524,23 +537,25 @@ So we have published our web application using Visual Studio but in the wise wor
 
     ![](images/52.png)
 
-1. In the yaml editor, click enter to add new lines, then in the tasks selector, type in the word "artifact" and click on Publish Build Artifacts. Leave all defaults and click Add
+1. In the YAML editor, place your cursor at the bottom of the file to add new tasks
+
+1. In the tasks selector, type in the word "artifact" and click on **Publish Build Artifacts**. Leave all defaults and click **Add**
 
     ![](images/53.png)
 
-1. You should see a new task added to the YAML file. Click Save and the build will be queued for execution
+1. You should see a new task added to the YAML file. Click **Save** and the build will be queued for execution
 
     ![](images/54.png)
 
 ## [Azure Pipelines Release](azure-pipelines-release)
 
-To complete our CI/CD automation, we'll configure a continuous delivery pipeline.
+To complete our CI/CD automation, we'll configure a continuous delivery pipeline which will take our published artifacts and deploy to Azure App Service
 
-1. In Azure DevOps, click on Pipelines then Releases. Click on New pipeline
+1. In Azure DevOps, click on **Pipelines** then **Releases**. Click on **New pipeline**
 
     ![](images/55.png)
 
-1. We'll be deploying to Azure App Service
+1. Click **Apply** button for **Azure App Service deployment**
 
     ![](images/56.png)
 
@@ -548,35 +563,33 @@ To complete our CI/CD automation, we'll configure a continuous delivery pipeline
 
     ![](images/57.png)
 
-1. Select your Azure subscription and click the Authorize button to link the pipeline talk to your Azure subscription
+1. Select your Azure subscription and click the Authorize button to link the pipeline to your Azure subscription
 
     ![](images/58.png)
 
-1. After the subscription has been linked, you may need to click on the refresh button next to App service name drop down then select your app service and click Save
+1. After the subscription has been linked, you may need to click on the refresh button next to App service name drop down then select your app service and click **Save**
 
     ![](images/59.png)
 
-1. Back in the Pipeline tab, add your build artifact and click Add
+1. Back in the **Pipeline** tab, click on **Add and artifact**, select your TailwindTraders build pipeline, and click **Add**
 
     ![](images/60.png)
 
-1. Click Save then Create a new release
+1. Click **Save** > **Create a new release** > **Create**
 
 ## [Azure Boards](azure-boards)
 
 If you noticed, there is a bug in our application. As customer information is loaded and displayed on the page, the orders list includes orders for ALL customers. A correction should be made so that only orders for the customer in context is displayed. We'll create a new work item in Azure Boards and assign it to a sprint for fixing.
 
-1. In Azure DevOps, click on Boards, then Sprint, then on + New Work Item
+1. In Azure DevOps, click on **Boards** > **Sprints**, then on **+ New Work Item**
 
     ![](images/61.png)
 
-1. In Azure DevOps, click on Boards, then Sprint, then on + New Work Item
-
-1. Enter the following items into the work item and click Save & Close
+1. Create a new work item and click **Save & Close**
 
     ![](images/62.png)
 
-1. Open the work item, assign to yourself, and change the state to Doing. Open the work item menu to create a new branch
+1. Open the work item, assign to yourself, change the state to **Doing**, and click Save & Close". Re-open the work item menu to create a new branch
 
     ![](images/63.png)
 
@@ -604,21 +617,21 @@ git pull
 
 1. Run the solution and verify the bug has been resolved
 
-1. Back in Team Explorer, click on changes and commit your change to the local git repo then click Commit All
+1. Back in Team Explorer, click on changes and commit your change to the local git repo then click **Commit All**
 
     ![](images/69.png)
 
-1. Click on the Sync tab and push the change to the remote repo
+1. Click on the **Sync** tab and click **Push** to push the change to the remote repo
 
     ![](images/70.png)
 
-1. Navigate back to Azure DevOps and click on Repos --> Files. You will see that the push has been recorded and here you can create a pull request to merge the change back into the master branch. Click on Create a pull request.
+1. Navigate back to Azure DevOps and click on Repos --> Files. You will see that the push has been recorded and here you can create a pull request to merge the change back into the master branch. Click on **Create a pull request**
 
     ![](images/71.png)
 
     ![](images/72.png)
 
-1. Review the pull request and click Complete
+1. Review the pull request and click **Complete**
 
     ![](images/73.png)
 
@@ -628,13 +641,13 @@ git pull
 
 ## [App Service Deployment Slots](app-service-deployment-slots)
 
-Before we queue a new release, we will create a new deployment slot in the App Service and stage our build before releasing to production. This way we can validate our changes in a production environment before we do the final release.
+Before we queue a new release, we will create a new deployment slot in the App Service and stage our build before releasing to production. This way, we can validate our changes in a production environment before we do the final release. This is known as a Blue/Green deployment strategy.
 
 1. In Azure App Portal navigate to the App Service, click on the Deployment slots blade and create a new deployment slot
 
     ![](images/75.png)
 
-1. Name the deployment slot "staging" and select to clone from your production app service
+1. Name the deployment slot "staging" and select to clone from your production app service, then click on the new staging slot.
 
     ![](images/76.png)
 
@@ -644,7 +657,7 @@ Before we queue a new release, we will create a new deployment slot in the App S
 
         ![](images/77.png)
 
-    1. Create a new Access Policy in Azure Key Vault and allow Get and List permission on the new staging slot identity
+    1. Create a new Access Policy in Azure Key Vault and allow **Get** and **List** permission on the new staging slot identity
 
         ![](images/78.png)
 
@@ -667,8 +680,10 @@ Before we queue a new release, we will create a new deployment slot in the App S
 1. Click on the Deploy Azure App Service task, and check the Deploy to Slot or App Service Environment checkbox. From there, select the resource group and slot and click save then create a new release to deploy.
 
     ![](images/80.png)
+    
+1. In the Releases pane, you can delete the original release configuration (Release-1).
 
-1. Navigate to the stinging site URL to verify the changes
+1. Navigate to the stanging site URL to verify the changes
 
 1. When ready you can swap the slots in Azure App Service to enable the changes on Staging as production
 
