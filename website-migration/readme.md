@@ -81,7 +81,7 @@ The solution consists of a ASP.NET WebForms website and SQL Server database. We'
 
 ### Download sample files
 
-1. Download [https://pauyusa.blob.core.windows.net/workshop/TailwindTraders.zip?sp=r&st=2019-07-05T16:46:41Z&se=2019-08-01T00:46:41Z&spr=https&sv=2018-03-28&sig=ad3jfZP2LDPAGJ9fNy3%2Bryti9FJaYwL7Hqt%2F4P%2BlrMQ%3D&sr=b](sample/TailwindTraders.zip)
+1. Download [TailwindTraders.zip](https://pauyusa.blob.core.windows.net/workshop/TailwindTraders.zip?sp=r&st=2019-07-05T16:46:41Z&se=2019-08-01T00:46:41Z&spr=https&sv=2018-03-28&sig=ad3jfZP2LDPAGJ9fNy3%2Bryti9FJaYwL7Hqt%2F4P%2BlrMQ%3D&sr=b)
 
 1. If you have a source code repository path on your machine that you normally use, you can skip this step; otherwise, create a new directory on your machine using Command Prompt
 
