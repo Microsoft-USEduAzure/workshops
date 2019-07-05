@@ -689,23 +689,31 @@ Before we queue a new release, we will create a new deployment slot in the App S
 
     ![](images/81.png)
 
-### Now let's add a pipeline task to send an email requesting approval and auto-swap on approval
+### Now let's modify our release pipeline to add a new production stage and approval gate
 
-REFERENCE: https://blogs.msdn.microsoft.com/ukhybridcloud/2018/03/19/azure-devops-automate-app-service-slot-swaps-in-your-vsts-release-pipeline/
+1. In the release pipeline editor, hover your mouse over **Stage 1** and click **+Add** to add a new stage
 
-1. Add a new Agentless job to the pipeline tasks. Within the agentless job, add a new Manual intervention task and name it "Approve staging build". Enter a user to notify (yourself) and click Save
+    ![](images/84.png)
 
-    ![](images/82.png)
+1. We'll use an Empty job template to configure our slot swap
 
-1. Add a new Agent job and a Azure App Service Manage task. Select your subscription, set the action to Swap Slots and select staging as the source slot to be swapped with production. Click save and create a new release.
+    ![](images/85.png)
 
-    ![](images/83.png)
+1. In the job/task configuration, click the **+** button, and search for "app service", and select **Azure App Service manage**
 
-1. Create a new build and confirm that the build is halted while it awaits an approval. Once the approval is submitted, verify that the produciton slot swap occurs.
+    ![](images/88.png)
 
-## Performance testing and autoscaling
+1. Configure your app service and source slot
 
-## Authentication using Azure AD
+    ![](images/89.png)
+
+1. After configuring the job/task, click on the **Pipeline** tab, then click on the **Pre-deployment conditions** button to the left of your last stage in the pipeline. Here, we will configure the release to halt after the first stage and wait for approval to proceed. Be sure the trigger is set and you've set yourself as the pre-deployment approver.
+
+    ![](images/86.png)
+
+    ![](images/87.png)
+
+1. Click **Save** and create a new release. The release is now configured to deploy to your staging slot, wait for approval, then proceed to swap with the production slot.
 
 ## [Clean up](clean-up)
 Once you've completed exploring the resources we created in this workshop, do not forget to delete your Azure Resource Group to ensure you do not incur any uncessary charges
