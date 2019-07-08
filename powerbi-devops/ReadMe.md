@@ -56,4 +56,4 @@ Azure DevOps [30 day trial].
   [30 day trial]:https://azure.microsoft.com/en-us/services/devops/
   [download visual studio]:https://visualstudio.microsoft.com/vs/whatsnew/
   [download Power BI Desktop]:https://www.microsoft.com/en-us/download/details.aspx?id=45331
-  [Download sample report]:<https://github.com/MarchingBug/powerbi-devops/blob/master/sourcefiles/dev_IPEDSEnrollmentTrends.zip> 
+  [Download sample report]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/sourcefiles/dev_IPEDSEnrollmentTrends.zip> 
