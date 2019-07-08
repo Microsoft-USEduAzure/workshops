@@ -51,4 +51,4 @@ Enter a name and *copy the secret value to a text file - we will need it later*
 Next: [Link App to Power BI]
 
 [Login]:https://portal.azure.com
-[Link App to Power BI]:<https://github.com/MarchingBug/powerbi-devops/blob/master/6-LinkAppToPowerBi/ReadMe.md>
+[Link App to Power BI]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/6-LinkAppToPowerBi/ReadMe.md>
