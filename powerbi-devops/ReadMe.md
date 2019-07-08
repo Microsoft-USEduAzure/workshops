@@ -42,13 +42,13 @@ Azure DevOps [30 day trial].
 - [Link Azure App to Power Bi]
 - [Create DevOps Pipeline]
   
-  [Create Azure DevOps Project]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/1-CreateAzureDevOpsProject/ReadMe.md>
-  [Loading your Power BI Report to a Repository]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/2-CreateVisualStudioProject/ReadMe.md>
-  [Link VS Project to Azure DevOps]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/3-LinkVStoDevOps/ReadMe.md>
-  [Configure Power Bi]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/4-ConfigurePowerBi/ReadMe.md>
-  [Configure Azure App]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/5-ConfigureAppOnAzure/ReadMe.md>
-  [Link Azure App to Power Bi]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/6-LinkAppToPowerBi/ReadMe.md>
-  [Create DevOps Pipeline]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/7-CreateDevOpsPipeline/ReadMe.md>
+  [Create Azure DevOps Project]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/1-CreateAzureDevOpsProject/>
+  [Loading your Power BI Report to a Repository]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/2-CreateVisualStudioProject/>
+  [Link VS Project to Azure DevOps]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/3-LinkVStoDevOps/>
+  [Configure Power Bi]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/4-ConfigurePowerBi/>
+  [Configure Azure App]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/5-ConfigureAppOnAzure/>
+  [Link Azure App to Power Bi]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/6-LinkAppToPowerBi/>
+  [Create DevOps Pipeline]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/7-CreateDevOpsPipeline/>
   
   [free account]:<https://azure.microsoft.com/en-us/free/?WT.mc_id=A261C142F>
   [Sign in]:<https://portal.azure.com/>
@@ -56,4 +56,4 @@ Azure DevOps [30 day trial].
   [30 day trial]:https://azure.microsoft.com/en-us/services/devops/
   [download visual studio]:https://visualstudio.microsoft.com/vs/whatsnew/
   [download Power BI Desktop]:https://www.microsoft.com/en-us/download/details.aspx?id=45331
-  [Download sample report]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/sourcefiles/dev_IPEDSEnrollmentTrends.zip> 
+  [Download sample report]:https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/sourcefiles/dev_IPEDSEnrollmentTrends.zip
