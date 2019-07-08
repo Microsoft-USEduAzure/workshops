@@ -15,7 +15,7 @@ Service principal can replace master user and help customers build a more robust
 
 [Login] into your Power BI Account, once logged in, on the top menu, click on the settings icon then select Admin Portal
 
-![admin portal](adminportal.png)
+![admin portal](Adminportal.png)
 
 Select tenant settings, scroll down to the option *Allow Service Principals to User Power BI*, enable the option.
 
