@@ -11,4 +11,4 @@
   Next: [Loading your Power BI Report to a Repository]
   
    [login]:https://azure.microsoft.com/en-us/services/devops/
-   [Loading your Power BI Report to a Repository]:<https://github.com/MarchingBug/powerbi-devops/blob/master/2-CreateVisualStudioProject/ReadMe.md>
+   [Loading your Power BI Report to a Repository]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/2-CreateVisualStudioProject/ReadMe.md>
