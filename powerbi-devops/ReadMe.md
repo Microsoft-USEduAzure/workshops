@@ -42,7 +42,7 @@ Azure DevOps [30 day trial].
 - [Link Azure App to Power Bi]
 - [Create DevOps Pipeline]
   
-  [Create Azure DevOps Project]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops//1-CreateAzureDevOpsProject/ReadMe.md>
+  [Create Azure DevOps Project]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/1-CreateAzureDevOpsProject/ReadMe.md>
   [Loading your Power BI Report to a Repository]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/2-CreateVisualStudioProject/ReadMe.md>
   [Link VS Project to Azure DevOps]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/3-LinkVStoDevOps/ReadMe.md>
   [Configure Power Bi]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/4-ConfigurePowerBi/ReadMe.md>
