@@ -1,15 +1,11 @@
 # Loading your Power BI report to a repository
 
-There a the maximum total file size allowed to be manually uploaded of (20 MB) on Git repositories. There are 2 ways or circumvent this:
+You can simply go to your Azure DevOps repository and upload the file .pbix file. But there a maximum total file size allowed to be manually uploaded of 20 MB on Git repositories. There are 2 ways to circumvent this:
 
 - Save your report as a Power BI Template - .pbit extension and manually load it to your repository. Using this method you need to add a refresh dataset to the release pipeline
-- Load using Visual Studio or Visual Code
-
+- Load using Visual Studio or Visual Studio Code
 
 ## Create a Visual Studio Project
-
-You can simply go to your Azure DevOps repository and upload the file .pbix file. 
-
 
 Open Visual Studio and create a new project
 
