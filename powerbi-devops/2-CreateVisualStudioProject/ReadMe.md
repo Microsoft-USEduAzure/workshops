@@ -22,4 +22,4 @@ Open Visual Studio and create a new project
   Next: [Link VS Project to Azure DevOps]
   
 [here to download it]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/sourcefiles/_dev_IPEDSEnrollmentTrends.zip>
-[Link VS Project to Azure DevOps]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/3-LinkVStoDevOps/>
+[Link VS Project to Azure DevOps]:<https://github.com/Microsoft-USEduAzure/workshops/tree/master/powerbi-devops/3-LinkVSToDevOps>
