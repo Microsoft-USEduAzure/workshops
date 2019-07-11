@@ -1,6 +1,6 @@
 # Higher Education Modern Data Warehouse in Azure
 
-Register for this workshop to learn how to leverage Microsoft Azure tools and services to build a modern data warehouse. During this session, we'll cover the steps involved in ingestion, validation, processing, serving, visualization, and analytics. 
+Register for this workshop to learn how to leverage Microsoft Azure tools and services to build a modern data warehouse. During this workshop, we'll cover Azure Data Platform Services used for ingesting, preparing, enriching, presenting and consuming data.
 
 **You'll learn about:**
  
