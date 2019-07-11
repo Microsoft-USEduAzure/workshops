@@ -2,8 +2,19 @@
 
 Register for this workshop to learn how to leverage Microsoft Azure tools and services to build a modern data warehouse. During this session, we'll cover the steps involved in ingestion, validation, processing, serving, visualization, and analytics. 
 
-![](media/modern-data-warehouse.png)
+**You'll learn about:**
+ 
+*	Creating and managing resources in Azure
+* Azure Data Warehouse and Azure SQL Database
+* Azure Data Factory and Mapping Data Flows
+* Azure Databricks
+* Azure Data Lake Storage Gen2
+* Azure Machine Learning Service
+* Power BI
 
+![](media/00-Data-Stages.png)
+
+<!--
 ### Pre-requisites:
   - Ensure users are able to create App Registrations within Azure Active AD tenant
   
@@ -42,3 +53,5 @@ Register for this workshop to learn how to leverage Microsoft Azure tools and se
 ### [Task 13: Verify data](azure-sql-datawarehouse/verify-data.md)
 
 ### [Task 14: Visualize data](power-bi/visualize-data.md)
+
+-->
