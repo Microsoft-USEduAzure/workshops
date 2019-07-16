@@ -33,4 +33,4 @@ az network vnet create --name myVirtualNetwork --resource-group AzureLab --subne
 ```
 Further documentation:  [Create Virtual Network Documentation](https://docs.microsoft.com/en-us/azure/virtual-network/quick-create-portal)
 
-### Next: [Create Virtual Machines](../VirtualNetwork/VirtualNetwork.md) ###
+### Next: [Create Virtual Machines](../CreateVirtualMachine/CreateVirtualMachine.md) ###
