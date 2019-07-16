@@ -1,7 +1,3 @@
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 # Hands on Azure Fundamentals Lab
 
 ## Introduction
@@ -17,7 +13,7 @@ If you don't have an Azure subscription, create a [free account] now.
 [Sign in] to the Azure portal.
 
 ## Syllabus
-- [Core Concepts]
+- [Core Concepts](/CoreConcepts/core-concepts.md)
 - [Open Azure CLI]
 - [Create a Resource Group]
 - [Create a Virtual Network]
