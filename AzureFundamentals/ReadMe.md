@@ -13,7 +13,7 @@ If you don't have an Azure subscription, create a [free account] now.
 [Sign in] to the Azure portal.
 
 ## Syllabus
-- [Core Concepts](/CoreConcepts/core-concepts.md)
+- [Core Concepts](./CoreConcepts/core-concepts.md)
 - [Open Azure CLI]
 - [Create a Resource Group]
 - [Create a Virtual Network]
