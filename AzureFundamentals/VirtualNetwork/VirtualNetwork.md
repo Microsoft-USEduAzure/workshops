@@ -12,12 +12,12 @@
 1. Click the **Create** button.
 1. In **Create virtual network**, enter or select this information:
     - `Name`	Enter myVirtualNetwork.
-    - `Address space`	Enter 10.1.0.0/16.
+    - `Address space`	Enter 10.0.0.0/16.
     - `Subscription`	Select your subscription.
     - `Resource group`	Select AzureLab.
     - `Location`	Select South Central US.
-    - `Subnet - Name`	Enter myVirtualSubnet.
-    - `Subnet - Address` range	Enter 10.1.0.0/24.
+    - `Subnet - Name`	Enter default.
+    - `Subnet - Address` range	Enter 10.0.0.0/24.
 
     ![Select Azure Resource Group](media/2.png)
 1. Leave the rest of the defaults and select Create.

@@ -1,11 +1,12 @@
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 # Create a File Share and Mount to VM
 
-In this document you will learn how to:
+## Tasks 
+- Create a File Share
+    - [Create a File Share and Mount to VM via the Azure Portal](#azure-portal)
+    - [Create a File Share and Mount to VM via Azure CLI](#azure-cli)  
+- [Mount Files Share to VM](#Mount-Files-Share)
 
+In this document you will learn how to:
 - Create a Storage Account
   - Create a FileShare
   - Upload a file
@@ -14,8 +15,43 @@ In this document you will learn how to:
 - List files on VM
 
 ----
+## Azure Portal
+### Task 1: Create a Storage Account
+Before you can work with an Azure file share, you have to create an Azure storage account. A general-purpose v2 storage account provides access to all of the Azure Storage services: blobs, files, queues, and tables. The quickstart creates a general-purpose v2 storage account but, the steps to create any type of storage account are similar. A storage account can contain an unlimited number of shares. A share can store an unlimited number of files, up to the capacity limits of the storage account.
 
-## Create a Storage Account
+Storage account names must be unique, so make sure to replace "USEDUAzureLabstorage" with a unique name.
+
+1. In the [Azure Portal](https://portal.azure.com), click the **+Create a resource** link at the top left of the page.
+1. In the Search field, type *Storage* and click on **Storage Account** that appears in the drop down list and click **Create.**
+![Select Azure Resource Group](media/1.png)
+1. In **Create storage account**, enter or select this information:
+    - `Project details - Subscription`	Select your subscription.
+    - `Project details - Resource Group`	Select *AzureLab*.
+    
+    - `Instance details - Storage account name`	Enter a *globally unique* name.
+    - `Instance details - Location`	Select *South Central US*.
+    - `Instance details - Replication`	Select *Locally-redundant Storage (LRS)*  
+![Select Azure Resource Group](media/2.png)
+1. Click **Review + Create** and once validation has passed, click **Create**
+1. Check the **Notifications** icon in the upper right and wait unitl you see **Resource group created**, then click the **Go to resource** button.
+1. From the Storage Account menu, click on **Access Keys** and copy the value of **key2's Key**  
+![Select Azure Resource Group](media/3.png)
+
+
+### Task 2: Create an Azure Files File Share
+1. From the Storage Account menu, click on **Files** and then **+File share**
+![Select Azure Resource Group](media/4.png)
+1. Set the **Name** to *myshare* and the **Quota** to *100 GiB* and press **Create**  
+![Select Azure Resource Group](media/5.png)
+1. From the the Files screen, select the **myshare** share we have just created and then click on **+Add Directory**
+1. Enter *myDirectory* as the directory **Name** and click **OK**
+![Select Azure Resource Group](media/6.png)
+1. Upload a local text file to the directory by clicking the **Upload** button, followed by the **Folder** icon, selecting the local file, and finally clicking the second **Upload** button on the Upload Files blade.  
+![Select Azure Resource Group](media/7.png)
+
+
+## Azure CLI
+### Create a Storage Account
 
 Before you can work with an Azure file share, you have to create an Azure storage account. A general-purpose v2 storage account provides access to all of the Azure Storage services: blobs, files, queues, and tables. The quickstart creates a general-purpose v2 storage account but, the steps to create any type of storage account are similar. A storage account can contain an unlimited number of shares. A share can store an unlimited number of files, up to the capacity limits of the storage account.
 
@@ -25,7 +61,7 @@ The following example creates a storage account named mystorageaccount  by using
 
 az storage account create  --resource-group "AzureLab"   --name "useduazurelabstorage"  --location eastus2 --sku Standard_LRS --query "name" | tr -d '"'
 ```
-Further documentation:  [Create a File Share Documentation]
+Further documentation:  [Create a File Share Documentation](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-cl)
 
 ### Get the Storage Account Key
 
@@ -74,7 +110,8 @@ az storage file list --account-name useduazurelabstorage --account-key WZIIDm1Df
 ```  
 ----
 
-## Attached File Share to Linux VM
+## Mount Files Share
+### Mount to Linux VM
 
 We will attach the File Share to one of the VM created on our previous Lab
 
@@ -136,10 +173,22 @@ drwxrwxrwx 2 root root    0 May 24 15:30 myDirectory
 usr@myVm2:/mnt/MyAzureFileShare$
 ```
 
-Further documentation: [Mount Files Share to Linux VM]
+Further documentation: [Mount Files Share to Linux VM](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-linux)
 
-[Next -> Backup a Virtual Machine]
+### Mount to Windows VM
+1. Use the RDP client to remotely connect to your Windows virtual machine.  
+1. Open **File Explorer.** This can be done by opening from the Start Menu, or by pressing Win+E shortcut.  
+1. Navigate to the **This PC** item on the left-hand side of the window. This will change the menus available in the ribbon. Under the Computer menu, select **Map network drive.**   
+![Select Azure Resource Group](media/8.png)
+1. Copy the UNC path from the Connect pane in the Azure portal.  
+![Select Azure Resource Group](media/9.png)
+1. Select the drive letter and enter the UNC path and check **Connect using different credentials**  
+![Select Azure Resource Group](media/10.png)
+1. Use the storage account name prepended with AZURE\ as the username and a storage account key as the password.    
+![Select Azure Resource Group](media/11.png)
+1. Use Azure file share as desired.   
+![Select Azure Resource Group](media/12.png)
 
-[Create a File Share Documentation]: <https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-cli>
-[Mount Files Share to Linux VM]: <https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-linux>
-[Next -> Backup a Virtual Machine]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/Backup/BackupVM.md>
+Further documentation: [Mount Files Share on Windows VM](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)
+
+### Next: [Backup a Virtual Machine](../Backup/BackupVM.md) ###
