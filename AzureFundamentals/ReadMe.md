@@ -17,6 +17,7 @@ If you don't have an Azure subscription, create a [free account] now.
 - [Open Azure CLI]
 - [Create a Resource Group]
 - [Create a Virtual Network]
+- [Create Virtual Machines](./CreateVirtualMachine/CreateVirtualMachine.md)
 - [Create a File Share & Mount to VM]
 - [Backup a Virtual Machine]
 - [Clean Up]
