@@ -1,5 +1,6 @@
 
-# Create a function that integrates with Azure Logic Apps
+# Azure Serverless Workshop
+## Function Apps, Logic Apps, and Cognitive Services
 
 Azure Functions integrates with Azure Logic Apps in the Logic Apps Designer. This integration lets you use the computing power of Functions in orchestrations with other Azure and third-party services. 
 
