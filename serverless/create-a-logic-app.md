@@ -1,4 +1,6 @@
-# Create a logic app   
+# Create a logic app
+Azure Logic Apps simplifies how you build automated scalable workflows that integrate apps and data across cloud services and on-premises systems. Learn how to create, design, and deploy logic apps that automate business processes with our quickstarts, tutorials, templates, and APIs.  
+**Documentation: https://docs.microsoft.com/en-us/azure/logic-apps/**
 ### Prerequisite: [Create a Function App](./create-a-function-app.md) ###
 
 ## Tasks
