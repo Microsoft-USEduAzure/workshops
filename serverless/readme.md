@@ -8,6 +8,8 @@ This tutorial shows you how to use Functions with Logic Apps and Cognitive Servi
 
 An HTTP triggered function categorizes tweets as green, yellow, or red based on the sentiment score. An email is sent that includes the original tweet and a translation if applicable when poor sentiment is detected. The tweet is retweeted if it has positive sentiment and profanity is not detected. 
 
+![Search for Text Translator](media/serverless-diagram.png)
+
 In this tutorial, you learn how to:
 
 > * Create a Cognitive Services API Resource.

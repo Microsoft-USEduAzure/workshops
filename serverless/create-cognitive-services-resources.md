@@ -1,6 +1,8 @@
 # Create Cognitive Services resources
 
-The Cognitive Services APIs are available in Azure as individual resources. Use the Text Analytics API to detect the sentiment, Microsoft Translator to translate, and Content Modreator to detect profanity of the tweets being monitored.  
+The Cognitive Services APIs are available in Azure as individual resources. Use the Text Analytics API to detect the sentiment, Microsoft Translator to translate, and Content Modreator to detect profanity of the tweets being monitored. 
+
+![Search for Text Analytics](media/cognitive-services-banner.png)
 **Documentation: https://docs.microsoft.com/en-us/azure/cognitive-services/**
 ### Prerequisite: [Syllabus](./readme.md)
 

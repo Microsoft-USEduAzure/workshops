@@ -1,5 +1,8 @@
 # Create a Function App
-Functions provides a great way to offload processing tasks in a logic apps workflow. This tutorial uses an HTTP triggered function to process tweet sentiment scores from Cognitive Services and return a category value.   
+Functions provides a great way to offload processing tasks in a logic apps workflow. This tutorial uses an HTTP triggered function to process tweet sentiment scores from Cognitive Services and return a category value.
+
+![Search for Text Translator](media/azure-functions-banner.png)
+
 **Documentation: https://docs.microsoft.com/en-us/azure/azure-functions/**
 ### Prerequisite: [Create Cognitive Services Resources](./create-cognitive-services-resources.md)
 
