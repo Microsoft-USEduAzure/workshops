@@ -16,6 +16,7 @@ Functions provides a great way to offload processing tasks in a logic apps workf
 1. In the Search field, type in "Function" and choose "Function App"  
 ![Search for Text Translator](media/function-app-1.png)
 1. Click the **Create** button and fill out the resource creation form
+
     | Setting      |  Suggested value   | Description                                        |
     | --- | --- | --- |
     | **Name** | Your function name | Choose a globally unique name. |
