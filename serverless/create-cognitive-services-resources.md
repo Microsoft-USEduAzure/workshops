@@ -20,12 +20,14 @@ The Cognitive Services APIs are available in Azure as individual resources. Use 
 1. In the Search field, type in "Text Analytics" and choose "Text Analytics"  
 ![Search for Text Analytics](media/sentiment-1.png)
 1. Click the **Create** button and fill out the resource creation form
+
     | Setting      |  Suggested value   | Description                                        |
     | --- | --- | --- |
     | **Name** | TwtrSentiment | Choose a unique account name. |
     | **Location** | South Central US | Use the location nearest you. |
     | **Pricing tier** | F0 | Start with the lowest tier. If you run out of calls, scale to a higher tier.|
     | **Resource group** | ServerlessWkrshp | Use the same resource group for all services in this tutorial.|
+    
 1. Click **Create** to create your resource.  
 ![Fill out Text Analytics resource form](media/sentiment-2.png)
 1. From your Resource Group, go to your Sentiment Analysis resource and make note of the **Key1** and **Endpoint** value.
@@ -36,12 +38,14 @@ The Cognitive Services APIs are available in Azure as individual resources. Use 
 1. In the Search field, type in "Translator" and choose "Text Translator"  
 ![Search for Text Translator](media/text-translator-1.png)
 1. Click the **Create** button and fill out the resource creation form
+
     | Setting      |  Suggested value   | Description                                        |
     | --- | --- | --- |
     | **Name** | TwtrTranslator | Choose a unique account name. |
     | **Subscription** | Your Subscription | The subscription associated with your account |
     | **Pricing tier** | F0 | Start with the lowest tier. If you run out of calls, scale to a higher tier.|
     | **Resource group** | ServerlessWkrshp | Use the same resource group for all services in this tutorial.|
+    
 1. Click **Create** to create your resource.  
 ![Fill out Translator resource form](media/text-translator-2.png)
 1. From your Resource Group, go to your Translator resource and make note of the **Key1** value.
@@ -53,6 +57,7 @@ The Cognitive Services APIs are available in Azure as individual resources. Use 
 1. In the Search field, type in "Content" and choose "Content Moderator"  
 ![Search for Content Moderator](media/content-moderator-1.png)
 1. Click the **Create** button and fill out the resource creation form
+
     | Setting      |  Suggested value   | Description                                        |
     | --- | --- | --- |
     | **Name** | TwtrModerator | Choose a unique account name. |
@@ -60,6 +65,7 @@ The Cognitive Services APIs are available in Azure as individual resources. Use 
     | **Location** | South Central US | Use the location nearest you. |
     | **Pricing tier** | S0 | S0 allows for up to 10 calls per second|
     | **Resource group** | ServerlessWkrshp | Use the same resource group for all services in this tutorial.|
+    
 1. Click **Create** to create your resource.  
 ![Fill out Content Moderator resource form](media/content-moderator-2.png)
 1. From your Resource Group, go to your Content Moderator resource and make note of the **Key1** value.
