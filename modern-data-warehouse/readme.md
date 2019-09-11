@@ -4,16 +4,54 @@ This workshop will aim to get you more familiar with the tools used to build a m
 
 ![](media/modern-data-warehouse.png)
 
-### Pre-requisites:
-  - Ensure users are able to create App Registrations within Azure Active AD tenant
+We will follow up this Data Stages Pattern to consume data
+
+![](media/00-Data-Stages.png)
+
+## Lab Prerequisites and Deployment
+The following prerequisites must be completed before you start these labs:
+
+* You must be connected to the internet;
+
+* Use either Edge or Chrome when executing the labs. Internet Explorer may have issues when rendering the UI for specific Azure services.
+
+* You must have a Pay-As-You-Go Azure account with administrator- or contributor-level access to your subscription. If you don’t have an account, you can sign up for an account following the instructions <a href="https://azure.microsoft.com/en-au/pricing/purchase-options/pay-as-you-go/" target="_blank">here</a>
+
+    <br>**IMPORTANT**: Azure free subscriptions have quota restrictions that prevent the workshop resources from being deployed successfully. Please use a Pay-As-You-Go subscription instead.
+
+    <br>**IMPORTANT**: When you deploy the lab resources in your own subscription you are responsible for the charges related to the use of the services provisioned. 
+
+* Ensure users are able to create App Registrations within Azure Active AD tenant
   
-  - Ensure the following Resource providers are registered within subscription
+* Ensure the following Resource providers are registered within subscription
   
     - Microsoft.DataFactory
     
     - Microsoft.Databricks
     
     - Microsoft.Sql
+
+* [download Power BI Desktop]
+
+* [Sign in] to the Azure portal.
+
+## Workshop Definitions:
+
+Throughout the workshop we will be using the following pre-defined vairables:
+     
+<br> - **Resource Group**: EDUMDW-Lab
+<br> - **Blob Storage Account**: edumdwstorage+YourInititals
+<br> - **Azure Data Lake**: edumdwdatalake+YourInititals
+<br> - **Service App**: edumdwlab-databricks-app
+<br> - **SQL Server**:edumdwsqlserver+Your Initials
+<br> - **Server Admin User**: EduMdwAdmin
+<br> - **SQL Server User Password**: P@$$word123
+<br> - **Azure Data Factory**:edumdwDataFactory+YourInitials
+<br> - **Data Warehouse**:EDUMDWDataWarehouse
+<br> - **Logic App**:EduMdwLocicApp+YourInitials
+
+
+## Workshop Tasks
 
 ### [Task 1: Create Azure Resource Group](azure-resource-group/create-resource-group.md)
 
@@ -39,6 +77,12 @@ This workshop will aim to get you more familiar with the tools used to build a m
 
 ### [Task 12: Update Azure Data Factory pipeline to transform data using Databricks](azure-data-factory-v2/transform-data-using-databricks.md)
 
-### [Task 13: Verify data](azure-sql-datawarehouse/verify-data.md)
+### [Task 13: Use Logic Apps to Read Tweeter feeds with Cognitive Services](azure-logic-app/steam-ai-tweeter.md)
 
 ### [Task 14: Visualize data](power-bi/visualize-data.md)
+
+[Sign in]:<https://portal.azure.com/>
+[60 day trial]:https://signup.microsoft.com/signup?sku=a403ebcc-fae0-4ca2-8c8c-7a907fd6c235&email&ru=https%3A%2F%2Fapp.powerbi.com%3Fpbi_source%3Dweb%26redirectedFromSignup%3D1%26noSignUpCheck%3D1
+[download Power BI Desktop]:https://www.microsoft.com/en-us/download/details.aspx?id=45331
+
+

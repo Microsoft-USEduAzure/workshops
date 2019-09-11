@@ -13,12 +13,13 @@
 1. Click the **Create** button from the Azure Databricks page.
 
 1. Enter the following and click the **Create** button:
-    - Workspace name: *Enter your workspace name*
-    - Subscription: *Select your subscription*
-    - Resource Group: *Select your resource gorup*
-    - Location: *Select your location*
+    <br>- **Workspace name**: MDWDatabricksYourInitials
+    <br>- **Subscription**: *Select your subscription*
+    <br>- **Resource Group**: EDUMDW-Lab
+    <br>- **Location**: *Select your location*
 
-        ![New data factory](media/provision/2.png)
+ ![New](media/provision/2.png)
+        
 
 1. Check the **Notifications** icon in the upper right and wait until you see **Deployment succeeded** then click the **Go to resource** button.
 
