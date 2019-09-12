@@ -19,12 +19,7 @@
     # Install the Az Storage module
     Install-Module Az.Storage -Repository PSGallery -AllowPrerelease -AllowClobber -Force
 
-    New-AzStorageAccount -ResourceGroupName $resourceGroup 
-      --Name $name 
-      --Location $location 
-      --SkuName Standard_LRS 
-      --Kind StorageV2 
-      --EnableHierarchicalNamespace $True
+    New-AzStorageAccount -ResourceGroupName $resourceGroup -Name $name -Location $location -SkuName Standard_LRS -Kind StorageV2 -EnableHierarchicalNamespace $True
     ```
     
     ### Bash
