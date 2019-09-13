@@ -22,11 +22,11 @@ In this workshop we will use the [Azure Machine Learning SDK for Python](https:/
 
 ## Create an Azure Machine Learning Services Workspace
 [Link to Top](#Task-List)  
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-1. Click **Create a resource** in the upper left-hand corner of the Azure portal.
+1. Sign in to the [Azure portal](https://portal.azure.com/).  
+1. Click **Create a resource** in the upper left-hand corner of the Azure portal.  
 1. In the Search field, type in *Machine Learning* and choose **Machine Learning Service Workspace**
-![Create Machine Learning Workspace](media/1.png)
-1. Click on the **Create** button and fill out the Resource Creation form accordingly, then click **Review + Create**, followed by **Create**.
+![Create Machine Learning Workspace](media/1.png)  
+1. Click on the **Create** button and fill out the Resource Creation form accordingly, then click **Review + Create**, followed by **Create**.  
 ![Create Machine Learning Workspace](media/2.png)
 
 | Setting | Suggested value   |
@@ -36,21 +36,21 @@ In this workshop we will use the [Azure Machine Learning SDK for Python](https:/
 |**Resource group**  | Create a new resoruce group for this workshop.|
 |**Location**  | Use the location nearest you.|
 
-5. Go to the Workspace once it has been deployed and retrieve the:
+5. Go to the Workspace once it has been deployed and retrieve the:  
     - Subscription ID
     - Resource Group Name
     - Workspace Name
 ![Retrieve workspace settings](media/3.png)
-1. From the same page, click on the **Storage** hyperlink.
-1. From the Storage Account Overview, click on **Access Keys**, and retrieve **key2**
+1. From the same page, click on the **Storage** hyperlink.  
+1. From the Storage Account Overview, click on **Access Keys**, and retrieve **key2**  
 ![Retrieve workspace settings](media/4.png)
 
 ## Connect to the Azure Machine Learning Services Workspace
 [Link to Top](#Task-List)  
 
-For Azure AutoML, you will need to create an **Experiment**, which is a named object in your Machine Learning Workspace used to run experiments.
+For Azure AutoML, you will need to create an **Experiment**, which is a named object in your Machine Learning Workspace used to run experiments.  
 
-1. First, we will import the Azure Machine Learning Service and Logging libraries and validate SDK version.
+1. First, we will import the Azure Machine Learning Service and Logging libraries and validate SDK version.  
 
 
 ```python
