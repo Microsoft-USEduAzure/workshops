@@ -12,25 +12,20 @@
 
     ### Powershell
     ```
-    $resourceGroup = "<ENTER_YOUR _RESOURCE_GROUP_NAME>"
-    $name = "<ENTER_YOUR _STORAGE_ACCOUNT_NAME>"
+    $resourceGroup = "EDUMDW-Lab"
+    $name = "edumdwdatalake+YOURINITIALS"
     $location = "<ENTER_YOUR _PREFERRED_LOCATION>"
 
     # Install the Az Storage module
     Install-Module Az.Storage -Repository PSGallery -AllowPrerelease -AllowClobber -Force
 
-    New-AzStorageAccount -ResourceGroupName $resourceGroup `
-      -Name $name `
-      -Location $location `
-      -SkuName Standard_LRS `
-      -Kind StorageV2 `
-      -EnableHierarchicalNamespace $True
+    New-AzStorageAccount -ResourceGroupName $resourceGroup -Name $name -Location $location -SkuName Standard_LRS -Kind StorageV2 -EnableHierarchicalNamespace $True
     ```
-
+    
     ### Bash
     ```
-    resourceGroup=<ENTER_YOUR _RESOURCE_GROUP_NAME>
-    name=<ENTER_YOUR _STORAGE_ACCOUNT_NAME>
+    resourceGroup=EDUMDW-Lab
+    name=edumdwstorage+YOURINITIALS
     location=<ENTER_YOUR _PREFERRED_LOCATION>
 
     # Enable extension to interact with ADLS Gen2

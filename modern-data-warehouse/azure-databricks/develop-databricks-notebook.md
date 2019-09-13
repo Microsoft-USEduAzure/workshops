@@ -4,7 +4,7 @@
  
  - [Create SQL Data Warehouse](../azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
 
- - [Create workspace](provision-azure-sql-data-warehouse.md)
+ - [Create workspace](create-workspace.md)
 
 ## Task: Transform data using Azure Databricks notebook
 
@@ -49,7 +49,7 @@
         > File system is what you entered in the file path text box while configuring the sink in [Task 7: Build copy pipeline using Azure Data Factory](../azure-data-factory-v2/copy-file-into-adls-gen2.md)
 
         ```
-        val df = spark.read.json("abfss://<ENTER_YOUR_FILE_SYSTEM_NAME>@<ENTER_YOUR_ALDS_STORAGE_ACCOUNT_NAME>.dfs.core.windows.net/small_radio_json.json")
+        val df = spark.read.json("abfss://nyclocationlookup@<ENTER_YOUR_ALDS_STORAGE_ACCOUNT_NAME>.dfs.core.windows.net/small_radio_json.json")
         ```
 
     - ### Display the data.
@@ -59,17 +59,25 @@
         ```
 
     - ### Load only specific columns.
+      
+        For the next command, click on the command option show title
+
+        ![](media/notebook/show-title.png)
+
+		In the title window type: **Load only specific columns sample**
 
         ```
-        val specificColumnsDf = df.select("firstname", "lastname", "gender", "location", "level")
+        val specificColumnsDf = df.select("Borough", "Zone")
         
         specificColumnsDf.show()
         ```
 
-    - ### Rename a column.
+    - ### Rename a column.      
+
+		In the title window type: **Rename column example**
 
         ```
-        val renamedColumnsDF = specificColumnsDf.withColumnRenamed("level", "subscription_type")
+        val renamedColumnsDF = specificColumnsDf.withColumnRenamed("Borough", "Borough Name")
         
         renamedColumnsDF.show()
         ```
@@ -79,7 +87,7 @@
 
         ```
         val blobStorage = "<ENTER_YOUR_BLOB_STORAGE_ACCOUNT_NAME>.blob.core.windows.net"
-        val blobContainer = "<ENTER_YOUR_BLOB_CONTAINER_NAME>"
+        val blobContainer = "nyclocationlookup"
         val blobAccessKey =  "<ENTER_YOUR_BLOB_STORAGE_ACCOUNT_KEY>"
         ``` 
 
@@ -102,10 +110,10 @@
         > These are the values you documented in [Task 5: Create Azure SQL Data Warehouse](../azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
 
         ```
-        val dwDatabase = "<ENTER_YOUR_DW_DATABASE_NAME>"
+        val dwDatabase = "EDUMDWDataWarehouse"
         val dwServer = "<ENTER_YOUR_DW_SERVER_NAME>.database.windows.net"
-        val dwUser = "<ENTER_DB_USERNAME>"
-        val dwPass = "<ENTER_DB_PASSWORD>"
+        val dwUser = "EduMdwAdmin"
+        val dwPass = "P@$$word123"
         val dwJdbcPort =  "1433"
         val dwJdbcExtraOptions = "encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;"
         val sqlDwUrl = "jdbc:sqlserver://" + dwServer + ":" + dwJdbcPort + ";database=" + dwDatabase + ";user=" + dwUser+";password=" + dwPass + ";$dwJdbcExtraOptions"
@@ -121,10 +129,10 @@
             "spark.sql.parquet.writeLegacyFormat",
             "true")
 
-        renamedColumnsDF.write
+        df.write
             .format("com.databricks.spark.sqldw")
             .option("url", sqlDwUrlSmall) 
-            .option("dbtable", "SampleTable")
+            .option("dbtable", "Staging.NYCTaxiLocationLookup")
             .option( "forward_spark_azure_storage_credentials","True")
             .option("tempdir", tempDir)
             .mode("overwrite")

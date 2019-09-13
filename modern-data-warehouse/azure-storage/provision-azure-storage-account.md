@@ -15,13 +15,13 @@
 1. Click the **Create** button.
 
 1. Enter the following and click the **Review + create** button then click **Create** once validation has passed:
-    - Resource Group: *Select your resource group*
-    - Name: *Enter a storage account name **(NOTE: Must be globally unique, must be lowercase and alphanumeric only)***
-    - Location: *Select your location*
-    - Performance: *Standard*
-    - Account kind: *StorageV2 (general purpose v2)*
-    - Replication: *Locally-redundant storage (LRS)*
-    - Access tier (default): *Hot*
+    - **Resource Group**: EDUMDW-Lab
+    - **Name**: edumdwstorage+YOURINITIALS **(NOTE: Must be globally unique, must be lowercase and alphanumeric only)***
+    - **Location**: *Select your location*
+    - **Performance**: *Standard*
+    - **Account kind**: *StorageV2 (general purpose v2)*
+    - **Replication**: *Locally-redundant storage (LRS)*
+    - **Access tier (default)**: *Hot*
 
     ![New data factory](media/provision/2.png)
 
@@ -29,15 +29,50 @@
 
     ![Notifications](media/provision/3.png)
 
+## Task: Create Blob Containers
+
+### We'll be creating 5 blob containers to temporarily store our data prior to loading 
+
 1. In the Storage account blade, click on **Blobs**
 
     ![Notifications](media/provision/4.png)
 
-1. In the Blobs blade, click on the **+ Container** button, enter a name, then click the **OK** button. Copy the container name to notepad for later use.
+1.  We will create the following 5 containers:
+	  * nyctaxidata 
+      * nycimages
+      * polybase
+      * nyclocationlookup
+      * nycimagemetadata
+     
+In the Blobs blade, click on the **+ Container** button:    
+<br> - **container name**: nyctaxidata
+<br> - **public access data**: private
 
-    ![Notifications](media/provision/5.png)
+   ![Notifications](media/nyctaxidata.png)
 
+   Repeat the steps for the next containers:  
+   <br> - **container name**: nycimages
+   <br> - **public access data**: blob
 
+   ![Notifications](media/nycimages.png)
+      
+<br> - **container name**: polybase
+	  <br> - **public access data**: private
+
+   ![Notifications](media/polybase.png)
+
+   <br> - **container name**: nyclocationlookup
+   <br> - **public access data**: private
+
+   ![Notifications](media/nyclocationlookup.png)
+
+    
+<br> - **container name**: nycimagemetadata
+ <br> - **public access data**: private
+   
+   ![Notifications](media/nycimagemetadata.png)
+
+## Task: Copy Keys to Notepad
 1. Navigate to the **Access keys** blade and copy the following values to notepad for later use:
 
     - Storage URL: **<YOUR_STORAGE_ACCOUNT_NAME>**.blob.core.windows.net
