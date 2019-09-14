@@ -1,7 +1,7 @@
 # Introduction to Azure Machine Learning Workshop
 ## Visual ML Classification
 
-In this workshop we will use the [Azure Machine Learning Studio](https://studio.azureml.net/) to predict and flag students who are at risk of dropping a course. 
+In this workshop we will use [Azure Machine Learning Studio](https://studio.azureml.net/) to predict and flag students who are at risk of dropping a course. 
 
 DIFF
 a collaborative, drag-and-drop visual workspace where you can build, test, and deploy machine learning solutions without needing to write code.
