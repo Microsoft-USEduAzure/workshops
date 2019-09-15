@@ -15,7 +15,7 @@ A new [visual interface for Azure Machine Learning](https://docs.microsoft.com/e
 ### Syllabus
 - Review question to be answered, identify features and label.
 
-    |  |     |
+    []()  | |
     |------|------|
     |**Question**  | *Which students are at risk for dropping a course before completion?*|
     |**Data**  | Enrollment data by term by subject by class by section by student.  Historical data includes *Dropped* class indicator.|
