@@ -15,11 +15,13 @@ A new [visual interface for Azure Machine Learning](https://docs.microsoft.com/e
 ### Syllabus
 - Review question to be answered, identify features and label.
 
-|**Question**  | *Which students are at risk for dropping a course before completion?*|
-|**Data**  | Enrollment data by term by subject by class by section by student.  Historical data includes *Dropped* class indicator.|
-|**Features**  |  *Age, Class, Credit Hours, Gender, Mid Term Grade, Subject*|
-|**Label**  | *Dropped*|
-|**Confounding Variables**  | *Drop Date, End Semester Grade, Endrolled*|
+    |  |     |
+    |------|------|
+    |**Question**  | *Which students are at risk for dropping a course before completion?*|
+    |**Data**  | Enrollment data by term by subject by class by section by student.  Historical data includes *Dropped* class indicator.|
+    |**Features**  |  *Age, Class, Credit Hours, Gender, Mid Term Grade, Subject*|
+    |**Label**  | *Dropped*|
+    |**Confounding Variables**  | *Drop Date, End Semester Grade, Endrolled*|
 
 - [Create a Guest Workspace (8 hour trial)](create-a-guest-workspace.md)
 
