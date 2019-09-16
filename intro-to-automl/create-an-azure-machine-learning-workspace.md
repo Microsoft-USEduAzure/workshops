@@ -1,5 +1,5 @@
 
-## Create an Azure Machine Learning Services Workspace z
+## Create an Azure Machine Learning Services Workspace
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. Click **Create a resource** in the upper left-hand corner of the Azure portal.
 1. In the Search field, type in *Machine Learning* and choose **Machine Learning Service Workspace**
@@ -25,11 +25,4 @@
 
 ## [Back to Syllabus](readme.md)
 ## Next: 
-- [Use Jupyter Notebooks](./intro-automl.ipynb) to:
-    - Connect to the Azure Machine Learning Services Workspace
-    - Load data from Azure Blob Storage
-    - Transform and prepare data
-    - Configure AutoML Experiment
-    - Run AutoML Experiment & Explore Results
-    - Retreive and Test AutoML model
-    - Apply AutoML model to whole dataset
+- [Create a Notebook VM](create-a-notebook-vm.md)

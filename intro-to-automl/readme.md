@@ -11,7 +11,7 @@ In this workshop we will use the [Azure Machine Learning SDK for Python](https:/
  
 ### Syllabus
 - [Create an Azure Machine Learning Services Workspace](create-an-azure-machine-learning-workspace.md)
-
+- [Create a Notebook VM](create-a-notebook-vm.md)
 - [Use Jupyter Notebooks](./intro-automl.ipynb) to:
     - Connect to the Azure Machine Learning Services Workspace
     - Load data from Azure Blob Storage
