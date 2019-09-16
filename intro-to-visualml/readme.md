@@ -26,8 +26,6 @@ A new [visual interface for Azure Machine Learning](https://docs.microsoft.com/e
 - [Create a Guest Workspace (8 hour trial)](create-a-guest-workspace.md)
 
 - [Use Azure Machine Learning Studio](visual-ml-workshop.md) to:
-    - Review question to be answered
-    - Identify features and label
     - Load data from Azure SQL Server
     - Examine, transform and prepare data
     - Select classification algorithm
