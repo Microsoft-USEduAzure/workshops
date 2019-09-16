@@ -1,5 +1,5 @@
 
-## Create an Azure Machine Learning Services Workspace
+## Create an Azure Machine Learning Services Workspace z
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. Click **Create a resource** in the upper left-hand corner of the Azure portal.
 1. In the Search field, type in *Machine Learning* and choose **Machine Learning Service Workspace**
