@@ -15,8 +15,8 @@
 
 1. No experiments will exists when you first log into Azure Machine Learning Studio.  At the lower left hand corner click on the **+ NEW** icon:
 
-<p style="margin-left: 40px">
-  <img src="media/image004.png" height="400" title="Github Logo">
+<p style="margin-left: 3em">
+  <img src="media/image004.png" height="400" title="Create Blank Experiment">
 </p>
 
 2. When creating a new experiment you can choose templates from the [Azure AI Gallery](https://gallery.azure.ai/), run through a guided *Experiment Tutorial* or create a *Blank Experiment*.  Click on **Blank Experiment**:
