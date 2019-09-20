@@ -5,7 +5,7 @@
 
 - [Create a Blank Experiment](#Create-a-Blank-Experiment)
 - [Load Data from Azure SQL Server](#Load-Data-from-Azure-SQL-Server)
-- [Examine, transform and prepare data](#Examine,-transform-and-prepare-data)
+- [Transform and prepare data](#Transform-and-prepare-data)
 - [Select classification algorithm](#Select-classification-algorithm)
 - [Train model](#Train-model)
 - [Score model](#Score-model)
@@ -48,29 +48,55 @@ A *green checkmark* will be displayed on the right-hand side of the *Import Data
 ![Load Data from Azure SQL Server](media/image012.png)
 1. When building experiments modules can be connected to create a serialized execution pipeline.  Modules with **inputs** will have one or more *small circles* at the top of the module.  Modules with **outputs** will have one or more *small circles* at the bottom of the module.  Right-click on the *small circle* at the bottom of the *Import Data* module and select **Visualize**:
 ![Load Data from Azure SQL Server](media/image013.png)
-The *Results dataset* for the *Import Data* module should be displayed.  The visualizations displays the number of rows and columns, sample data rows, descriptive statistics and attribute level distribution information:
+The *Results dataset* for the *Import Data* module should be displayed.  The visualization displays the number of rows and columns, sample data rows, descriptive statistics and attribute level distribution information:
 ![Load Data from Azure SQL Server](media/image014.png)
 
-### Examine, transform and prepare data
+### Transform and prepare data
 
-1. Click on the **Save** icon at the bottom of the canvas to save the experiment.  Next, click on the **Run** icon at the bottom of the canvas and select **Run** to execute the modules included in the experiment.  
+1. Type *select* in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
 ![Load Data from Azure SQL Server](media/image015.png)
+![Load Data from Azure SQL Server](media/image016.png)
+![Load Data from Azure SQL Server](media/image017.png)
+![Load Data from Azure SQL Server](media/image018.png)
+![Load Data from Azure SQL Server](media/image019.png)
+![Load Data from Azure SQL Server](media/image020.png)
+![Load Data from Azure SQL Server](media/image021.png)
+![Load Data from Azure SQL Server](media/image022.png)
+![Load Data from Azure SQL Server](media/image023.png)
+![Load Data from Azure SQL Server](media/image024.png)
+![Load Data from Azure SQL Server](media/image025.png)
+![Load Data from Azure SQL Server](media/image026.png)
+![Load Data from Azure SQL Server](media/image027.png)
+![Load Data from Azure SQL Server](media/image028.png)
+![Load Data from Azure SQL Server](media/image029.png)
 
 ### Select classification algorithm
 
+1. Type *select* in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
+![Load Data from Azure SQL Server](media/image030.png)
+
 ### Train model
+
+1. Type *select* in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
+![Load Data from Azure SQL Server](media/image031.png)
+![Load Data from Azure SQL Server](media/image032.png)
+![Load Data from Azure SQL Server](media/image033.png)
 
 ### Score model
 
+1. Type *select* in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
+![Load Data from Azure SQL Server](media/image034.png)
+![Load Data from Azure SQL Server](media/image035.png)
+
 ### Evaluate model
 
-1. Open a InPrivate or Incognito browser window and navigate to [studio.azureml.net](https://studio.azureml.net/).
-1. Click **Sign up here** just underneath the blue *Sign In* button:
-![Create Machine Learning Workspace](media/image001.png)
-1. Click **Enter** on the *Guest Workspace* option:
-![Create Machine Learning Workspace](media/image002.png)
-1. You should now have access to a guest Azure Machine Learning Studio workspace.  Notice in the upper left the *time remaining* and *Guest* user access:
-![Create Machine Learning Workspace](media/image003.png)
+1. Type *select* in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
+![Load Data from Azure SQL Server](media/image036.png)
+![Load Data from Azure SQL Server](media/image037.png)
+![Load Data from Azure SQL Server](media/image038.png)
+![Load Data from Azure SQL Server](media/image039.png)
+![Load Data from Azure SQL Server](media/image040.png)
+![Load Data from Azure SQL Server](media/image041.png)
 
 ## *You have completed the Visual ML Classification workshop*
 

@@ -15,7 +15,7 @@
 - [Use Azure Machine Learning Studio](visual-ml-workshop.md) to:
   - Create a Blank Experiment
   - Load data from Azure SQL Server
-  - Examine, transform and prepare data
+  - Transform and prepare data
   - Select classification algorithm
   - Train model
   - Score model
