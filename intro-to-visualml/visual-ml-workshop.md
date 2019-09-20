@@ -15,7 +15,7 @@
 
 1. No experiments will exists when you first log into Azure Machine Learning Studio.  At the lower left hand corner click on the **+ NEW** icon:
 
-<p style="margin-left: 3em">
+<p style="margin-left: 8%">
   <img src="media/image004.png" height="400" title="Create Blank Experiment">
 </p>
 
