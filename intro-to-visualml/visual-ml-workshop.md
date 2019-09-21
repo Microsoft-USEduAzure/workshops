@@ -22,7 +22,7 @@
 
 ### Load Data from Azure SQL Server
 
-1. Type *sql* in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
+1. Type **sql** in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
 ![Load Data from Azure SQL Server](media/image007.png)
 1. The properties panel for the *Import Data* module should now be displayed on the right-hand side of the canvas.  Set the *Data source* to: **Azure SQL Database**
 ![Load Data from Azure SQL Server](media/image008.png)
@@ -53,38 +53,52 @@ The *Results dataset* for the *Import Data* module should be displayed.  The vis
 
 ### Transform and prepare data
 
-1. Type *select* in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
+1. Type **select** in the module search window and hit enter.  Drag and drop the **Select Columns in Dataset** module onto the experiment canvas:
 ![Load Data from Azure SQL Server](media/image015.png)
+1. To create a machine learning pipeline, modules need to be connected.  To connect the output of the *Import Data* module to the input of the *Select Columns in Dataset* module, click and hold on the circle at the bottom of the *Import Data* module then drag the mouse currsor over the circle at the top of the *Select Columns in Dataset* module.  Release the mouse buttom to complete the connection:
 ![Load Data from Azure SQL Server](media/image016.png)
+1. The properties panel for the *Select Columns in Dataset* module should now be displayed on the right-hand side of the canvas.  Click on **Launch column selector**:
 ![Load Data from Azure SQL Server](media/image017.png)
+1. The *column selector* can be used to select specific columns from a data set *by name* or *by rules*.  Select **WITH RULES**, *Begin With* **NO COLUMNS** and create a rule to include the following columns: **Age, Class, CreditHours, Gender, MidTermGrade, Subject** and **Dropped**.  Click on the **checkmark** on the bottom right-hand side of the *column selector* to continue:
 ![Load Data from Azure SQL Server](media/image018.png)
+1. Click on the **Save** icon at the bottom of the canvas to save the experiment. Next, click on the **Run** icon at the bottom of the canvas and select **Run** to execute the modules included in the experiment.  Right-click on the **output** of the *Select Columns in Dataset* and select **Visualize** to review the dataset:
 ![Load Data from Azure SQL Server](media/image019.png)
+1. Type **meta** in the module search window and hit enter.  Drag and drop the **Edit Metadata** module onto the experiment canvas:
 ![Load Data from Azure SQL Server](media/image020.png)
+1. Connect the output from the *Select Columns in Dataset* module to the input for the *Edit Metadata* module.  The properties panel for the *Edit Metadata* module should now be displayed on the right-hand side of the canvas.  Click on **Launch column selector**:
 ![Load Data from Azure SQL Server](media/image021.png)
+1. Select **WITH RULES**, *Begin With* **NO COLUMNS** and create a rule to include *column type* **String**.  Create a rule to include the column **Dropped**.  Click on the **checkmark** on the bottom right-hand side of the *column selector* to continue:
 ![Load Data from Azure SQL Server](media/image022.png)
+1. Continue to update the properties for th *Edit Metadata* module by setting *Catigorical* to **Make categorical**:
 ![Load Data from Azure SQL Server](media/image023.png)
+1. Type **normalize** in the module search window and hit enter.  Drag and drop the **Mormalize Data** module onto the experiment canvas:
 ![Load Data from Azure SQL Server](media/image024.png)
+1. Connect the output from the *Edit Metadata* module to the input for the *Normalize Data* module.  The properties panel for the *Normalize Data* module should now be displayed on the right-hand side of the canvas.  Leave the *Transformation method* set to the default of **ZScore**.  Click on **Launch column selector**:
 ![Load Data from Azure SQL Server](media/image025.png)
+1. Select **WITH RULES**, *Begin With* **NO COLUMNS** and create a rule to include the column **Age**.  Click on the **checkmark** on the bottom right-hand side of the *column selector* to continue:
 ![Load Data from Azure SQL Server](media/image026.png)
+1. Type **split** in the module search window and hit enter.  Drag and drop the **Split Data** module onto the experiment canvas:
 ![Load Data from Azure SQL Server](media/image027.png)
+1. Connect the output from the *Normalize Data* module to the input for the *Split Data* module.  The properties panel for the *Split Data* module should now be displayed on the right-hand side of the canvas.  Set the *Fraction of rows in the first output dataset* property to **0.7** (70%).  Set the *Random seed* property to some random number, like **1234**:
 ![Load Data from Azure SQL Server](media/image028.png)
+1. Click on the **Save** icon at the bottom of the canvas to save the experiment.  Next, click on the **Run** icon at the bottom of the canvas and select **Run** to execute the modules included in the experiment.  A *green checkmark* will be displayed on the right-hand side of each module if successfully run:
 ![Load Data from Azure SQL Server](media/image029.png)
 
 ### Select classification algorithm
 
-1. Type *select* in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
+1. Type **select** in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
 ![Load Data from Azure SQL Server](media/image030.png)
 
 ### Train model
 
-1. Type *select* in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
+1. Type **select** in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
 ![Load Data from Azure SQL Server](media/image031.png)
 ![Load Data from Azure SQL Server](media/image032.png)
 ![Load Data from Azure SQL Server](media/image033.png)
 
 ### Score model
 
-1. Type *select* in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
+1. Type **select** in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
 ![Load Data from Azure SQL Server](media/image034.png)
 ![Load Data from Azure SQL Server](media/image035.png)
 
