@@ -2,7 +2,7 @@
 ## Create a Notebook VM
 1. From your Azure Machine Learning Service Workspace, click on **Notebook VMs** in the resource blade, then click **+New**.
 ![Create a Notebook VM](media/notebook-vm-1.png)
-1. Enter a **Globally Unique Value** for the **Name** field and leave **Virutal machine size** as *STANDARD_D3_V2*, next click **Create**.
+1. Enter a **Globally Unique Value** for the **Name** field. Then, click on *Choose Virtual Machine Size* and select *STANDARD_DS4*, next click **Create**.
 ![Create a Notebook VM](media/notebook-vm-2.png)
 1. Your VM will take a few minutes to deploy. Once deployed, click on the **Jupyter** hyperlink to launch Jupyter Notebooks.
 ![Create a Notebook VM](media/notebook-vm-3.png)
