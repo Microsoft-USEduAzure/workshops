@@ -20,7 +20,7 @@
     - Workspace Name  
 ![Retrieve workspace settings](media/3.png)
 1. From the same page, click on the **Storage** hyperlink.  
-1. From the Storage Account Overview, click on **Access Keys**, and retrieve **key2**  
+1. From the Storage Account Overview, click on **Access Keys**, and retrieve the **Storage Account Name** and **key2**  
 ![Retrieve workspace settings](media/4.png)
 
 ## [Back to Syllabus](readme.md)
