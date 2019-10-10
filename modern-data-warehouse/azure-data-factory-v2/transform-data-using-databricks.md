@@ -83,7 +83,7 @@
 
 ## Task: Visualize Data Using Power BI    
  1.  If you have not done so, [download Power BI Desktop]
-   <br> [Download sample report](media/powerbi/MDWDataVisualization.pbit)
+   <br> [Download sample report](media/PowerBi/MDWDataVisualization.pbit)
    <br> Open the downloaded report
 
 	 ![](media/powerbi/open-report.png)
