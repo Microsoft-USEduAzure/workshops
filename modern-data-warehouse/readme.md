@@ -23,15 +23,19 @@ The following prerequisites must be completed before you start these labs:
 
 * Ensure users are able to create App Registrations within Azure Active AD tenant, more information <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-how-applications-are-added" target="_blank">here</a>
   
-* Ensure the following Resource providers are registered within subscription
-  
-    - Microsoft.DataFactory
-    
-    - Microsoft.Databricks
-    
-    - Microsoft.Sql
+* Ensure the following Resource providers are registered within subscription  
+    <br> • Microsoft.DataFactory
+    <br> • Microsoft.Databricks
+    <br> • Microsoft.Sql
 
-* [download Power BI Desktop]
+* Power BI Desktop App 
+    <br> • Best option for Windows 10 desktops 
+	<br> • Does not require Administrative rights to install 
+    <br> • Automatically updates when monthly Power BI Desktop updates are released
+https://www.microsoft.com/en-us/p/power-bi-desktop/9ntxr16hnw1t?activetab=pivot:overviewtab
+ 
+Power BI Desktop Installer 
+https://aka.ms/pbiSingleInstaller
 
 * [Sign in] to the Azure portal.
 
