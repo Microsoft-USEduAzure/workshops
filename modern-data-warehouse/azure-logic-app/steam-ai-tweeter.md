@@ -151,4 +151,4 @@ GO
 
 ![New](media/run-logic-app.png)
 
-## Next task: [View Data](../Power-bi/visualize-data.md)
+## Next task: [View Data](../power-bi/visualize-data.md)
