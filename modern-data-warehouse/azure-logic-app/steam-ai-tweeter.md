@@ -72,61 +72,61 @@ GO
 
  ![New](media/save-configuration.png)
 
- 1. Once the resource is ready, click on go to resource
+1. Once the resource is ready, click on go to resource
   
   ![New](media/notification.png)
 
- 1. Edit the app
+1. Edit the app
 
  ![New](media/select-edit.png)
 
- 1. Select the trigger **When a new tweet is posted**
+1. Select the trigger **When a new tweet is posted**
 
  ![New](media/select-trigger.png)
 
- 1. Click on connect and follow the instructions to link your tweeter account
+1. Click on connect and follow the instructions to link your tweeter account
 
   ![New](media/sign-in-tweeter.png)
   ![New](media/authorize-tweeter.png)
 
-  1. Select filter to #NYC every 10 minutes
+ 1. Select filter to #NYC every 10 minutes
 
   <br> - **Search text**: #NYC
   <br> - **Interval**: 10
 
   ![New](media/select-filter.png)
 
-  1. Click in New Step, and search for detect sentiment
+ 1. Click in New Step, and search for detect sentiment
 
   ![New](media/select-sentiment.png)
 
-  1. Configure cognitive services account
+ 1. Configure cognitive services account
 
   <br> -**Connection name**: Cognitive Services
   <br> -**Account Key**: *Cognitive Services Key**
   <br> - **Site URL**: *your coginitive services end point**
 
-  1. Once configured, select the parameters you want to use
+ 1. Once configured, select the parameters you want to use
 
   ![New](media/detect-sentiment-select-parameter.png)
 
   
-  1. Click on Add Action and select **SQL**
+ 1. Click on Add Action and select **SQL**
    
    ![New](media/action-select-sql.png)
 
-  1. Select Insert Row (v2)
+ 1. Select Insert Row (v2)
 
    ![New](media/action-select-sql-insert-row.png)
 
-  1. Configure your sql db connection
+ 1. Configure your sql db connection
 
   <br> - **Connection name**: edumdwsqlserver
   <br> -  Select your sql server
   
 ![New](media/action-select-sql-server.png)
 
-  1. A list of available databases on the server will be displayed, select TwitterDatabase
+ 1. A list of available databases on the server will be displayed, select TwitterDatabase
   
   <br> - **User Name**:EduMdwAdmin
   <br> - **Password**:P@$$word123
@@ -135,12 +135,11 @@ GO
 
   ![New](media/action-select-database.png)
 
- 1. Fill the data from the dropdown boxes
+1. Fill the data from the dropdown boxes
  
  ![New](media/action-final-configuration.png)
 
 1. Select parameters from the drop down box:
-
 
  ![New](media/action-insert-row-parameters.png)
 
@@ -151,7 +150,6 @@ GO
 1. Run the logic app
 
 ![New](media/run-logic-app.png)
-
 
 ## Next task: [View Data](../Power-bi/visualize-data.md)
 
