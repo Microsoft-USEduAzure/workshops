@@ -83,8 +83,7 @@
 
 ## Task: Visualize Data Using Power BI    
  1.  If you have not done so, [download Power BI Desktop]
-   <br> [Download sample report]
-   <a href="https://github.com/Microsoft-USEduAzure/workshops/blob/master/modern-data-warehouse/azure-data-factory-v2/media/PowerBi/MDWDataVisualization.pbit" download> here </a>
+   <br> <a href="https://github.com/Microsoft-USEduAzure/workshops/blob/master/modern-data-warehouse/azure-data-factory-v2/media/PowerBi/MDWDataVisualization.pbit/raw" download> Download sample report </a>
    <br> Open the downloaded report
 
 	 ![](media/powerbi/open-report.png)
