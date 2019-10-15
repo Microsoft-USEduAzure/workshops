@@ -15,23 +15,27 @@ The following prerequisites must be completed before you start these labs:
 
 * Use either Edge or Chrome when executing the labs. Internet Explorer may have issues when rendering the UI for specific Azure services.
 
-* You must have a Pay-As-You-Go Azure account with administrator- or contributor-level access to your subscription. If you don�t have an account, you can sign up for an account following the instructions <a href="https://azure.microsoft.com/en-au/pricing/purchase-options/pay-as-you-go/" target="_blank">here</a>
+* You must have a Pay-As-You-Go Azure account with administrator- or contributor-level access to your subscription. If you don’t have an account, you can sign up for an account following the instructions <a href="https://azure.microsoft.com/en-au/pricing/purchase-options/pay-as-you-go/" target="_blank">here</a>
 
     <br>**IMPORTANT**: Azure free subscriptions have quota restrictions that prevent the workshop resources from being deployed successfully. Please use a Pay-As-You-Go subscription instead.
 
     <br>**IMPORTANT**: When you deploy the lab resources in your own subscription you are responsible for the charges related to the use of the services provisioned. 
 
-* Ensure users are able to create App Registrations within Azure Active AD tenant
+* Ensure users are able to create App Registrations within Azure Active AD tenant, more information <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-how-applications-are-added" target="_blank">here</a>
   
-* Ensure the following Resource providers are registered within subscription
-  
-    - Microsoft.DataFactory
-    
-    - Microsoft.Databricks
-    
-    - Microsoft.Sql
+* Ensure the following Resource providers are registered within subscription  
+    <br> • Microsoft.DataFactory
+    <br> • Microsoft.Databricks
+    <br> • Microsoft.Sql
 
-* [download Power BI Desktop]
+* Power BI Desktop App 
+    <br> • Best option for Windows 10 desktops 
+	<br> • Does not require Administrative rights to install 
+    <br> • Automatically updates when monthly Power BI Desktop updates are released
+https://www.microsoft.com/en-us/p/power-bi-desktop/9ntxr16hnw1t?activetab=pivot:overviewtab
+ 
+Power BI Desktop Installer 
+https://aka.ms/pbiSingleInstaller
 
 * [Sign in] to the Azure portal.
 

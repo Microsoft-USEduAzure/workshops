@@ -83,7 +83,7 @@
 
 ## Task: Visualize Data Using Power BI    
  1.  If you have not done so, [download Power BI Desktop]
-   <br> [Download sample report](media/powerbi/MDWDataVisualization.pbit)
+   <br> <a href="https://github.com/Microsoft-USEduAzure/workshops/blob/master/modern-data-warehouse/azure-data-factory-v2/media/PowerBi/MDWDataVisualization.pbit/" download> Download sample report </a>
    <br> Open the downloaded report
 
 	 ![](media/powerbi/open-report.png)
@@ -100,9 +100,7 @@
 
     This the report view
 
-   ![](media/powerbi/report-view.png)
-       
-    
+   ![](media/powerbi/report-view.png)  
 
 ## Next task: [Stream Cognitive Services Real Time](../azure-logic-app/steam-ai-tweeter.md)
 

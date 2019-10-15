@@ -10,7 +10,7 @@ In this section you will create a linked service connection to a shared storage 
 
     ![Create new pipeline](media/provision/author.png)    
 
-2.	On the **New Linked Service** blade, type ìAzure Blob Storageî in the search box to find the **Azure Blob Storage** linked service. Click **Continue**.
+2.	On the **New Linked Service** blade, type ‚ÄúAzure Blob Storage‚Äù in the search box to find the **Azure Blob Storage** linked service. Click **Continue**.
     
     ![Create new pipeline](media/Lab2-Image10.png) 
 
@@ -80,11 +80,11 @@ Dataset | Description
 **MDWDataLake_NYCTaxiData_CSV**| References your edumdwstorage+*YourInitials* storage account. It functions as a data source when copying data to EDUMDWDataWarehouse_StagingNYCTaxiData.
 
 
-1.	Open the **Azure Data Factory** portal and click the **Author *(pencil icon)*** option on the left-hand side panel. Under **Factory Resources** tab, click the ellipsis **(Ö)** next to **Datasets** and then click **Add Dataset** to create a new dataset.
+1.	Open the **Azure Data Factory** portal and click the **Author *(pencil icon)*** option on the left-hand side panel. Under **Factory Resources** tab, click the ellipsis **(‚Ä¶)** next to **Datasets** and then click **Add Dataset** to create a new dataset.
 
     ![Create new pipeline](media/Lab2-Image12.png)
 
-2.	Type ìAzure Blob Storageî in the search box and select **Azure Blob Storage**. Click **Continue**.
+2.	Type ‚ÄúAzure Blob Storage‚Äù in the search box and select **Azure Blob Storage**. Click **Continue**.
 
     ![Create new pipeline](media/Lab2-Image13.png)
 
@@ -118,8 +118,7 @@ Dataset | Description
             }
         }
     },
-    "type": "Microsoft.DataFactory/factories/datasets"
-}
+    "type": "Microsoft.DataFactory/factories/datasets"}
     ```
 5.	Leave remaining fields with default values.
 
@@ -127,7 +126,7 @@ Dataset | Description
 
 6.	Repeat the process to create another Azure Storage Binary dataset, this time referencing the NYCTaxiData container in your MDWDataLake storage account. This dataset acts as the destination for the NYC taxi data files you will copy from the previous dataset.
 
-7.	Type ìAzure Blob Storageî in the search box and select **Azure Blob Storage**. Click **Continue**.
+7.	Type ‚ÄúAzure Blob Storage‚Äù in the search box and select **Azure Blob Storage**. Click **Continue**.
 
     ![Create new pipeline](media/Lab2-Image13.png)
 
@@ -171,7 +170,7 @@ Dataset | Description
 
 11.	Repeat the process to create a new Azure Storage CSV dataset referencing the NYCTaxiData container in your MDWDataLake storage account. This dataset acts as the data source of NYC taxi records (CSV) you will copy to your Azure SQL Data Warehouse.
 
-12.	Type ìAzure Blob Storageî in the search box and select **Azure Blob Storage**. Click **Continue**.
+12.	Type ‚ÄúAzure Blob Storage‚Äù in the search box and select **Azure Blob Storage**. Click **Continue**.
 
     ![Create new pipeline](media/Lab2-Image13.png)
 
@@ -224,10 +223,9 @@ Dataset | Description
         "type": "Microsoft.DataFactory/factories/datasets"
     }
     ```
-
 16.	Repeat the process to create a new Azure Blob json dataset, this time referencing the NYCTaxiLookup container in your MDWResources storage account. 
 
-17.	Type ìAzure Blob Storageî in the search box and select **Azure Blob Storage**. Click **Continue**.
+17.	Type ‚ÄúAzure Blob Storage‚Äù in the search box and select **Azure Blob Storage**. Click **Continue**.
 
     ![Create new pipeline](media/Lab2-Image13.png)
 
@@ -283,13 +281,12 @@ Dataset | Description
             }
         }
     },
-    "type": "Microsoft.DataFactory/factories/datasets"
-}
+    "type": "Microsoft.DataFactory/factories/datasets"}
     ```
 
 21.	Repeat the process to create a new Azure Blob json dataset, this time referencing the NYCTaxiLookup container in your MDWResources storage account. 
 
-22.	Type ìAzure Blob Storageî in the search box and select **Azure Blob Storage**. Click **Continue**.
+22.	Type ‚ÄúAzure Blob Storage‚Äù in the search box and select **Azure Blob Storage**. Click **Continue**.
 
     ![Create new pipeline](media/Lab2-Image13.png)
 
@@ -327,12 +324,11 @@ Dataset | Description
             }
         }
     },
-    "type": "Microsoft.DataFactory/factories/datasets"
-}
+    "type": "Microsoft.DataFactory/factories/datasets"}
     ```
 
 26.	Repeat the process to create another dataset, this time referencing the Staging.NYCTaxiData in your Azure SQL Data Warehouse database. 
-27.	Type ìAzure SQL Data Warehouseî in the search box and select **Azure SQL Data Warehouse**. Click **Continue**.
+27.	Type ‚ÄúAzure SQL Data Warehouse‚Äù in the search box and select **Azure SQL Data Warehouse**. Click **Continue**.
 
     ![Create new pipeline](media/Lab2-Image17.png)
 
@@ -356,8 +352,7 @@ Dataset | Description
             "tableName": "[Staging].[NYCTaxiData]"
         }
     },
-    "type": "Microsoft.DataFactory/factories/datasets"
-    }
+    "type": "Microsoft.DataFactory/factories/datasets"    }
     ```
 
 29.	Leave remaining fields with default values.
@@ -751,14 +746,14 @@ ___
 
 ___
 
-1.	Open the **Azure Data Factory** portal and click the **Author *(pencil icon)*** option on the left-hand side panel. Under the **Factory Resources** tab, click the ellipsis **(Ö)** next to Pipelines and then click **Add Pipeline** to create a new dataset.
+1.	Open the **Azure Data Factory** portal and click the **Author *(pencil icon)*** option on the left-hand side panel. Under the **Factory Resources** tab, click the ellipsis **(‚Ä¶)** next to Pipelines and then click **Add Pipeline** to create a new dataset.
 1.	On the New Pipeline tab, enter the following details:
     <br>- **General > Name**: Copy NYC Taxi Data
 1.	Leave remaining fields with default values.
 
     ![Create new pipeline](media/Lab2-Image21.png)
 
-1.	From the Activities panel, type ìCopy Dataî in the search box. Drag the Copy Data activity on to the design surface. This copy activity will copy data files from MDWResources to MDWDatalake.
+1.	From the Activities panel, type ‚ÄúCopy Data‚Äù in the search box. Drag the Copy Data activity on to the design surface. This copy activity will copy data files from MDWResources to MDWDatalake.
 1.	Select the Copy Data activity and enter the following details:
     <br>- **General > Name**: CopyTaxiDataFiles
     <br>- **Source > Source dataset**: EDUMDWResources_NYCTaxiData
@@ -770,7 +765,7 @@ ___
     ![Create new pipeline](media/Lab2-Image23.png)
 
 1.	Repeat the process to create another Copy Data Activity, this time to copy data from the files in your data lake to your SQL Data Warehouse.
-1.	From the Activities panel, type ìCopy Dataî in the search box. Drag the Copy Data activity on to the design surface.
+1.	From the Activities panel, type ‚ÄúCopy Data‚Äù in the search box. Drag the Copy Data activity on to the design surface.
 1.	Select the Copy Data activity and enter the following details:
     <br>- **General > Name**: CopyTaxiDataToDW
     <br>- **Source > Source dataset**: MDWDataLake_NYCTaxiData_CSV
@@ -789,7 +784,7 @@ ___
     ![Create new pipeline](media/Lab2-Image26.png)
 
 1.	Repeat the process to create another Copy Data Activity, this time to copy taxi location lookup data from MDWResources to your storage account.
-1.	From the Activities panel, type ìCopy Dataî in the search box. Drag the Copy Data activity on to the design surface.
+1.	From the Activities panel, type ‚ÄúCopy Data‚Äù in the search box. Drag the Copy Data activity on to the design surface.
 1.	Select the Copy Data activity and enter the following details:
     <br>- **General > Name**: CopyTaxiLookupToStorage
     <br>- **Source > Source dataset**: EDUMDMResources_NYCTaxiLookup
@@ -807,7 +802,7 @@ ___
 
  ![Create new pipeline](media/Lab2-Image28a.png)
 
-1.	From the Activities panel, type ìStored Procedureî in the search box. Drag the Stored Procedure activity onto the design surface. This activity will execute the Staging.spNYCLoadTaxiDataSummary to generate aggregated taxi ride information.
+1.	From the Activities panel, type ‚ÄúStored Procedure‚Äù in the search box. Drag the Stored Procedure activity onto the design surface. This activity will execute the Staging.spNYCLoadTaxiDataSummary to generate aggregated taxi ride information.
 1.	Select the Stored Procedure activity and enter the following details:
     <br>- **General > Name**: LoadTaxiDataSummary
     <br>- **SQL account > Linked service**: MDWSQLVirtualServer_MDWDataWarehouse
