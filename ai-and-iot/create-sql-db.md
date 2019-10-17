@@ -91,4 +91,4 @@ We need a table to hold our polar bear sightings. Let's create it with the Azure
 
 The main column we need is named ```IsPolarBear``` which will be set to 1 or 0 to indicate that the corresponding images contain a polar bear.
 
-### Next unit: [Write results to the Azure SQL DB with the Azure Function](create-logic-app.md)
+### Next unit: [Create a Logic App to run prediction model and write to SQL](create-logic-app.md)

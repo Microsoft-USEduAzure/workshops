@@ -201,3 +201,6 @@ We'll use a Logic App to receive IoT data from the Service Bus Queue, analyize i
     ![Create Logic App](media/loigc-app-30.png)
 
 1. Add the corresponding value from the *Parse JSON* dynamic content into their respective fields and click **Save.**
+
+
+### Next unit: [Visualize the camera activity with Power BI](visualize-with-power-bi.md)
