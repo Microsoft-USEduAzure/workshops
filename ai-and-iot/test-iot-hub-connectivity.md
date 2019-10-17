@@ -61,7 +61,4 @@ We'll use a sample image for this test. The images that the simulated cameras wi
 
 1. Click photos to open the "**photos**" container, then verify that **image_19.jpg** exists in the container. 
 
-    ![Verify uploads](media/verify-upload-3.png)
-
-
 ### Next unit: [Connect a Stream Analytics job to IoT hub](connect-stream-analytics.md)

@@ -27,7 +27,7 @@ Azure Resources Groups are logical collections of Azure resources (e.g virtual m
 
 A general-purpose v2 storage account provides access to all of the Azure Storage services: blobs, files, queues, and tables. The quickstart creates a general-purpose v2 storage account but, the steps to create any type of storage account are similar.
 
-Storage account names must be unique, so make sure to replace "*useduazurelabstorage*" with a unique name.
+Storage account names must be unique, so make sure to replace "*arcticlabstore*" with a unique name.
 
 1. In the [Azure Portal](https://portal.azure.com), click the **+Create a resource** link at the top left of the page.
 1. In the Search field, type *Storage* and click on **Storage Account** that appears in the drop down list and click **Create.**
@@ -46,14 +46,12 @@ Storage account names must be unique, so make sure to replace "*useduazurelabsto
 
     ![Select Azure Resource Group](media/storage-3.png)
 
-1. Finally, also copy and paste the name of your storage account (e.g. *useduazurelabstorage*) into your text editor.
+1. Also copy and paste the name of your storage account (e.g. *arcticlabstore*) into your text editor.
 
 
 
 ## 3. Create a Blob container
 Before you can upload images to a storage account, you must create a blob container to store them in.
-1. Once the deployment of your storage account is complete, click the **Go to resource** button.
-![Go to your storage account](media/storage-4.png)
 1. From Storage Account overview, click on **Containers** in the left-hand blade, then click on the **+ Container** link. 
 ![Add a new container](media/storage-5.png)
 1. Enter in **photos** for the container name and set *Public access level* to **Blob (anonymous read access for blobs only)**. Then, click **OK**

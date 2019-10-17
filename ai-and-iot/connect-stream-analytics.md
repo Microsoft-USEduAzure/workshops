@@ -6,9 +6,10 @@ Now that we have our IoT hub connected to the blob container, let's connect a St
     ![Select Stream Analytics](media/connect-stream-analytics-1.png)
 
 1. Fill out the Stream Analytics Job deployment screen appropriately and click on **Create**
+
     | Field | Suggested Value  |
     |------|------|
-    |Job name |```polar-bear-analytics```|
+    |Job name |```arctic-analytics```|
     |Subscription |Your Azure Subscrription|
     |Resource Group |The resource group you're using for this lab.|
     |Location |Use the location nearest you.|
@@ -17,7 +18,7 @@ Now that we have our IoT hub connected to the blob container, let's connect a St
 
     ![Deploy Stream Analytics](media/connect-stream-analytics-2.png)
 
-1. Open the **polar-bear-analytics** Stream Analytics job in the portal. If the Stream Analytics job doesn't appear in the resource group, click the **Refresh** button at the top of the view until it does.
+1. Open the **arctic-analytics** Stream Analytics job in the portal. If the Stream Analytics job doesn't appear in the resource group, click the **Refresh** button at the top of the view until it does.
 1. Click **Inputs** in the left-side menu.
 1. Select **Add stream input > IoT Hub** to add an input to the Stream Analytics job.
 

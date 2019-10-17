@@ -28,7 +28,7 @@ We will use an Azure Service Bus Queue as an Output for our Stream Analytics IoT
 
     ![Service Bus Form](media/service-bus-4.png)
 
-1. Set the Name to ```polar-bear-queue``` and leave all other fields as their default values. Then, click the **Create** button.
+1. Set the Name to ```arctic-queue``` and leave all other fields as their default values. Then, click the **Create** button.
     
     ![Service Bus Form](media/service-bus-5.png)
 
