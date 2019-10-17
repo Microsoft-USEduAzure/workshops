@@ -33,3 +33,4 @@ Azure provides all the services and features you need to build a solution for th
 - [Train and Test the Image Classifier](train-and-test-image-classifier.md)
 - [Create an Azure SQL DB to hold results](create-sql-db.md)
 - [Create a Logic App to run prediction model and write to SQL](create-logic-app.md)
+- [Visualize the camera activity with Power BI](visualize-with-power-bi.md)
