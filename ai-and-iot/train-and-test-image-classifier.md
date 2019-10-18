@@ -60,6 +60,16 @@ We'll use a set of training images that show three arctic animals we expect to s
 
 1. Upload all of the images in the **training-walrus** folder to the Custom Vision Service and tag them with the term "*Walrus*." Wait for the upload to complete, and then click **Done**.
 
+## Negative training
+
+Not only should you train the model of what is a polar bear, arctic fox, or walrus, but you should also train the model for what in the photos is *not* one of these animals. Since all of our images are against a snowy backdrop, the model may learn to associate snow with each of the animals. This may result in false negatives for a polar bear walking on tundra in the summer months or a false positive for another type of bear walking against a snowy landscape. 
+
+To teach the Custom Vision model that the snow in the images is not the animal, we will now upload images of snow as *Negatives*. 
+
+1. Upload all of the images in the **training-snow** folder to the Custom Vision Service. This time, instead of a custom tag, select the **- Negative** value. Then, click **Upload**.
+
+    ![Negative snow images](media/train-images-1.png)
+
 ## Train the vision model
 With the images tagged and uploaded, the next step is to train the model so it can distinguish between arctic foxes, polar bears, and walruses, and determine whether an image contains one of these animals.
 

@@ -38,7 +38,7 @@ We'll use a Logic App to receive IoT data from the Service Bus Queue, analyize i
 
     ![Create Logic App](media/loigc-app-4.png)
 
-1. Select your queue name from the drop down and change the *Interval* to 20 and the *Frequency* to Second. Then, click **+ New Step**.
+1. Select your queue name from the drop down and change the *Interval* to 30 and the *Frequency* to Second. Then, click **+ New Step**.
 
     ![Create Logic App](media/loigc-app-5.png)
 
@@ -123,14 +123,6 @@ We'll use a Logic App to receive IoT data from the Service Bus Queue, analyize i
 
     | Setting      |  Suggested value   | Description                                        |
     | ----------------- | ------------ | ------------- |
-    | **Name** | Prediction | The variable name to reference later. |
-    | **Type** | String | The variable type. |
-
-
-1. Repeat the last two steps to create another variable with the following suggested values, then click **+ New step**
-
-    | Setting      |  Suggested value   | Description                                        |
-    | ----------------- | ------------ | ------------- |
     | **Name** | isPolarBear | The variable name to reference later. |
     | **Type** | Boolean | The variable type. |
     | **Value** | false | Default to not a polar bear. |
@@ -174,15 +166,27 @@ We'll use a Logic App to receive IoT data from the Service Bus Queue, analyize i
 
     ![Create Logic App](media/loigc-app-22.png)
 
-1. Under *Condition* click on *Choose a value*, select **tagName** from the Dynamic Content menu. Set the condition to **is equal to** and the condition value to *Polar bear*. Next, click **+ Add** and **Add Row** to add another condition. 
+1. Under *Condition* click on *Choose a value*, click on **Expression** from the Dynamic Content menu and type *toLower()*.
+
+    ![Logic App Expression](media/loigc-app-31.png)
+
+1. Click on **Dynamic Content**, then click within the parenthesis of the toLower() expression and select **tagName**. Next, click **OK**.
+
+    ![Logic App Expression](media/loigc-app-32.png)
+
+1. Set the condition to **is equal to** and the condition value to *polar bear*. Next, click **+ Add** and **Add Row** to add another condition. 
 
     ![Create Logic App](media/loigc-app-23.png)
 
-1. Under *Condition* click on *Choose a value*, select **probability** from the Dynamic Content menu. Set the condition to **is greater than or equal to** and the condition value to *0.8*.
+1. Under *Condition* click on *Choose a value*, click on **Expression** and type in ```float()``. Then click within the parenthesis of the float() expression and select **probability**. Next, click **OK**.
+
+    ![Create Logic App](media/loigc-app-34.png)
+
+1. Set the condition to **is greater than or equal to** and the condition value to ```0.8```.
 
     ![Create Logic App](media/loigc-app-24.png)
 
-1. Under *If True*, click **Add an action** and select *Set Variable*. Under *Name*, choose **isPolarBear** and set the *Value* to **1**. Then, click **+ New Step** *outside of the condition and for each loop.*
+1. Under *If True*, click **Add an action** and select *Set Variable*. Under *Name*, choose **isPolarBear** and set the *Value* to **true**. Then, click **+ New Step** *outside of the condition and for each loop.*
 
     ![Create Logic App](media/loigc-app-27.png)
 
@@ -196,11 +200,91 @@ We'll use a Logic App to receive IoT data from the Service Bus Queue, analyize i
 
 1. Select the **Use Connectiong String** option for both *Server Name* and *Database Name*, and set the *Table* value to equal **PolarBears.**. 
 
-1. Click **Add new parameter** to add the ```ID```, ```CameraId```, ```Latitude```, ```Longitude```, ```Url```, ```Timestamp```, and ```IsPolarBear``` fields.
+1. Click **Add new parameter** to add the ```ID```, ```CameraId```, ```Latitude```, ```Longitude```, ```Url```, ```Timestamp```, and ```IsPolarBear``` fields. Add the corresponding value from the *Parse JSON* dynamic content into their respective fields and click the **\*Id** field.
 
     ![Create Logic App](media/loigc-app-30.png)
 
-1. Add the corresponding value from the *Parse JSON* dynamic content into their respective fields and click **Save.**
+1. From the Dynamic Content menu, click on **Expression** and then type in ```guid()```, next click **OK** followed by **Save**.
+
+    ![Create Logic App](media/loigc-app-33.png)
+
+## Start Stream Analytics Job
+
+1. Return to your Stream Analytics job and click **Start** to start the Stream Analytics job running.
+
+    ![Link Queue](media/service-bus-10.png)
+
+1. Make sure **Job output start time** is set to **Now**, and then click **Start** to start the run.
+
+The job will take a couple of minutes to start.
 
 
+## Simulate IoT device activity
+If the Azure Cloud Shell timed out while you were working in the portal, go ahead and reconnect it. 
+
+1. In the Cloud Shell on the right, make sure you are in the project folder photoproc. Recall you can use the cd command in the shell to switch to the proper folder.
+    ```bash
+    cd photoproc/
+    ```
+
+1. Run the simulation/
+
+    ```bash
+    node run.js
+    ```
+1. Confirm that you see output similar to the following, indicating that all 10 "cameras" are connected to the IoT hub:
+
+    ```output
+    polar_cam_0003 connected
+    polar_cam_0005 connected
+    polar_cam_0001 connected
+    polar_cam_0009 connected
+    polar_cam_0004 connected
+    polar_cam_0006 connected
+    polar_cam_0008 connected
+    polar_cam_0007 connected
+    polar_cam_0002 connected
+    polar_cam_0010 connected
+    ```
+
+    The order in which the cameras connect to the IoT hub will probably differ from what's shown here, and will also vary from one run to the next.
+
+1. After a few seconds, additional output should appear. Each line corresponds to an event transmitted from a camera to the IoT hub. The output will look something like:
+
+    ```output
+    polar_cam_0008: https://streaminglabstorage.blob.core.windows.net/photos/image_24.jpg
+    polar_cam_0004: https://streaminglabstorage.blob.core.windows.net/photos/image_10.jpg
+    polar_cam_0005: https://streaminglabstorage.blob.core.windows.net/photos/image_26.jpg
+    polar_cam_0007: https://streaminglabstorage.blob.core.windows.net/photos/image_27.jpg
+    polar_cam_0001: https://streaminglabstorage.blob.core.windows.net/photos/image_15.jpg
+    polar_cam_0007: https://streaminglabstorage.blob.core.windows.net/photos/image_20.jpg
+    polar_cam_0003: https://streaminglabstorage.blob.core.windows.net/photos/image_18.jpg
+    polar_cam_0005: https://streaminglabstorage.blob.core.windows.net/photos/image_21.jpg
+    polar_cam_0001: https://streaminglabstorage.blob.core.windows.net/photos/image_20.jpg
+    polar_cam_0009: https://streaminglabstorage.blob.core.windows.net/photos/image_26.jpg
+    ```
+1. Confirm that the cameras are running and generating events as shown above.
+
+## Validate successful Logic App runs
+
+After a few minutes, go back to the Logic App that was created and validate successful run history
+
+1. From the Logic App *Overview* page, you can see the history of all runs. They should be 
+
+    ![Link Queue](media/loigc-app-35.png)
+    
+## Validate successful SQL inserts
+
+1. Go to the Query Editor of your SQL database and log in with the credentials you set. Then, click OK.
+
+    ![Link Queue](media/loigc-app-36.png)
+
+1. Copy the following query into the Query Editor pane and click **Run**. You should now see data in your database. 
+
+    ```sql
+        Select * from [dbo].[PolarBears]
+    ```
+
+    ![Link Queue](media/loigc-app-37.png)
+    
 ### Next unit: [Visualize the camera activity with Power BI](visualize-with-power-bi.md)
