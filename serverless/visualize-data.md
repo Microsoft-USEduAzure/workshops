@@ -29,4 +29,6 @@
 
 ## Congratulations, you have completed this Hands-On-Lab! 
 
-Next: [Clean up](./clean-up.md)
+### Next: [Clean Up](./clean-up.md) ###
+#### Previous: [Syllabus](./readme.md) ####
+
