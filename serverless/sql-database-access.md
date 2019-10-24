@@ -41,3 +41,7 @@ GO
 1. You should see the created table 
 ![Tables](media/37-sql-table-created.png)
 
+<br>
+
+### Next: [Save Twitter Sentiment to SQL](./sql-save-twitter-to-sql.md) ###
+#### Previous: [Syllabus](./readme.md) ####
