@@ -13,7 +13,7 @@ Azure SQL Database serverless (preview) is a compute tier for single databases t
 1. In the Search field, type in "Azure SQL" and choose "Azure SQL"  
 ![Search for Azure SQL](media/24-search-azure-sql.png)
 1. The following options will be presented, select **Single Database**
-![Single Database](media/25-sql-server-options.png)  
+![Single Database](media/25-sql-server-options.png) 
 1. Click the **Create** button and fill out the resource creation form
 
     | Setting      |  Suggested value   | Description                                        |
@@ -25,9 +25,9 @@ Azure SQL Database serverless (preview) is a compute tier for single databases t
     | **Location** | South Central US | Use the location nearest you. |
     | **Pricing tier** | F0 | Start with the lowest tier. If you run out of calls, scale to a higher tier.|
     | **Resource group** | ServerlessWkrshp | Use the same resource group for all services in this tutorial.|
-
-1. Configure database
+    
 ![Configure Database Server](media/27-configure-database-server.png)
+1. Configure database
 ![Configure Database](media/28-configure-database.png)
 1. Select serverless and click apply
 ![Select Serverless Computing](media/29-select-serverless.png)
