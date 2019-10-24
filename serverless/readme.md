@@ -35,4 +35,5 @@ In this tutorial, you learn how to:
 - [Test the Workflow](./test-the-workflow.md)
 - [Create Serverless SQL Database](./sql-database-access.md)
 - [Access your SQL Database](./sql-database-access.md)
+- [Save Twitter Sentiment to SQL](./sql-save-twitter-to-sql.md)
 - [Clean up](./clean-up.md)
