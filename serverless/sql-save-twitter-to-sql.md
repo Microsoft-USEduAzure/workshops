@@ -18,3 +18,6 @@ We will edit the previously created Logic App to save results to SQL
 ![Configure connection](media/40-configure-sql-connection.png)
 1. Click on parameters and select all the fields on the table
 ![Final configuration](media/41-final-sql-configuration.png)
+1. Match database fields to parameters
+![Match Fields](media/42-match-fields-to-parameters.png)
+1. Click Save
