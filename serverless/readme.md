@@ -36,4 +36,5 @@ In this tutorial, you learn how to:
 - [Create Serverless SQL Database](./sql-database-access.md)
 - [Access your SQL Database](./sql-database-access.md)
 - [Save Twitter Sentiment to SQL](./sql-save-twitter-to-sql.md)
+- [Visualize Data](./visualize-data.md)
 - [Clean up](./clean-up.md)
