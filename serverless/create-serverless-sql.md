@@ -34,3 +34,9 @@ Azure SQL Database serverless (preview) is a compute tier for single databases t
 ![Select Serverless Computing](media/29-select-serverless.png)
 1. Select Review and Create
 ![Select Review and Create](media/30-sql-review-create.png)
+
+<br>
+
+### Next: [Configure Access & Database](./sql-database-access.md) ###
+#### Previous: [Syllabus](./readme.md) ####
+
