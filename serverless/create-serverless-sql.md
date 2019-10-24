@@ -26,5 +26,7 @@ Azure SQL Database serverless (preview) is a compute tier for single databases t
 ![Configure Database Server](media/27-configure-database-server.png)
 1. Configure database
 ![Configure Database](media/28-configure-database.png)
-1. Select serverless and click create
+1. Select serverless and click apply
 ![Select Serverless Computing](media/29-select-serverless.png)
+1. Select Review and Create
+![Select Review and Create](media/30-sql-review-create.png)
