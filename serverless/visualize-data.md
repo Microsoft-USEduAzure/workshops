@@ -22,7 +22,7 @@
  <br> - **User Name**: mainuser
  <br> - **Password**: #Welcome1023#
 ![](media/enter-server-name.png) 
-![](media/enter-credentials.png)
+![](media/45-enter-credentials.png.png)
 1. This is the report view
    ![](media/43-report-view.png)
    ![](media/44-report-view1.png)
