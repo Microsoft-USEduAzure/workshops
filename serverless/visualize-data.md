@@ -29,4 +29,4 @@
 
 ## Congratulations, you have completed this Hands-On-Lab! 
 
-> **NOTE:** Don't forget to delete your resource group.
+Next: [Clean up](./clean-up.md)
