@@ -15,7 +15,7 @@
 
 ## Download Power BI Sample Report
 1. Download template report
-![Download sample report](TwitterSentiment.pbit)
+![Download sample report](media/Twittersentiment.pbit)
 1. Open downloaded report   
 ![](media/open-report.png)
 1. Enter following parameters
