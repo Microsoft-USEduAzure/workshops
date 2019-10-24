@@ -21,3 +21,8 @@ We will edit the previously created Logic App to save results to SQL
 1. Match database fields to parameters
 ![Match Fields](media/42-match-fields-to-parameters.png)
 1. Click Save
+
+<br>
+
+### Next: [Visualize Data](./visualize-data.md) ###
+#### Previous: [Syllabus](./readme.md) ####
