@@ -6,7 +6,7 @@ We will edit the previously created Logic App to save results to SQL
 
 ## Edit Logic App
 1. Edit Existing logic app
-![Edit Logic App](media/38-edit-logic-app.pmg)
+![Edit Logic App](media/38-edit-logic-app.png)
 1. Scroll to the bottom of the flow and click plus sign
 1. Search for SQL
 1. Select SQL option
@@ -14,7 +14,7 @@ We will edit the previously created Logic App to save results to SQL
 ![Select Insert Row](media/39-select-insert-row.png)
 1. Database options will show up, please select **svrlessdemo**
 1. Enter user name: **mainuser**
-1. Password: #Welcome1023#
+1. Password: **#Welcome1023#**
 ![Configure connection](media/40-configure-sql-connection.png)
 1. Click on parameters and select all the fields on the table
 ![Final configuration](media/41-final-sql-configuration.png)
