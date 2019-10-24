@@ -18,11 +18,11 @@
 ![](media/open-report.png)
 1. User the following parameters
  <br> - **Server name**: svrlessdemo.database.windows.net
+ ![](media/enter-server-name.png)
  <br> - **Authentication**: Database
  <br> - **User Name**: mainuser
- <br> - **Password**: #Welcome1023#
-![](media/enter-server-name.png) 
-![](media/45-enter-credentials.png.png)
+ <br> - **Password**: #Welcome1023# 
+![](media/45-enter-credentials.png)
 1. This is the report view
    ![](media/43-report-view.png)
    ![](media/44-report-view1.png)
