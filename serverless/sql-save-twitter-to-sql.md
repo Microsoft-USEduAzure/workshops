@@ -12,4 +12,9 @@ We will edit the previously created Logic App to save results to SQL
 1. Select SQL option
 1. Select Insert Row
 ![Select Insert Row](media/39-select-insert-row.png)
-
+1. Database options will show up, please select **svrlessdemo**
+1. Enter user name: **mainuser**
+1. Password: #Welcome1023#
+![Configure connection](media/40-configure-sql-connection.png)
+1. Click on parameters and select all the fields on the table
+![Final configuration](media/41-final-sql-configuration.png)
