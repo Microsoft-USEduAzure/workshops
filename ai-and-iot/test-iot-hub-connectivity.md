@@ -32,8 +32,9 @@ We'll use a sample image for this test. The images that the simulated cameras wi
     ```
 1. Replace the following values, then save and close the editor.
 
+
     | Line | Value  | Replacement Value   |
-    |------|------|------|------|
+    |------|------|------|
     |3 |```jprocess.env.HUB_NAME```|Your IoT Hub Name (with single quotes)|
     |4 |```process.env.ACCOUNT_NAME```|Your Storage Account Name (with single quotes)| 
     |7 |```'ACCOUNT_KEY'```|Your Storage Account Key (with single quotes)|
