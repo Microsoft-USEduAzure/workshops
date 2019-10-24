@@ -25,7 +25,7 @@ If the Azure Cloud Shell timed out while you were working in the portal, go ahea
 1. Replace the following values, then save and close the editor.
 
    | Line | Value  | Replacement Value   |
-    |------|------|------|------|
+    |------|------|------|
     |5 |```jprocess.env.HUB_NAME```|Your IoT Hub Name (with single quotes)|
     |6 |```process.env.ACCOUNT_NAME```|Your Storage Account Name (with single quotes)| 
     |9 |```'ACCOUNT_KEY'```|Your Storage Account Key (with single quotes)|
