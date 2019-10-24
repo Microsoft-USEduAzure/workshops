@@ -24,3 +24,20 @@ We will need to configure firewall for access & add a database to collect the da
     ![Go Back to Query Editor](media/34-firewall-settings-goback.png)
     1. Click on OK    
     ![Try Again](media/35-query-editor-tryagain.png)
+1. You should see the query editor
+![Query Editor](media/36-sql-sucessful-login.png)
+1. In the query window copy the following SQL statment and click Run
+
+```sql
+ CREATE TABLE [dbo].[TweeterDetails](
+	[CreatedAt] [datetime] NULL,
+	[SentimentScore] [float] NULL,
+	[TweetText] [varchar](300) NULL,
+	[TweetId] [varchar](300) NULL,
+	[Location] [varchar](300) NULL
+) ON [PRIMARY]
+GO
+```
+1. You should see the created table 
+![Tables](media/37-sql-table-created.png)
+
