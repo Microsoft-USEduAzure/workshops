@@ -33,4 +33,6 @@ In this tutorial, you learn how to:
 - [Create a Function App](./create-a-function-app.md)
 - [Create a Logic App](./create-a-logic-app.md)
 - [Test the Workflow](./test-the-workflow.md)
+- [Create Serverless SQL Database](./sql-database-access.md)
+- [Access your SQL Database](./sql-database-access.md)
 - [Clean up](./clean-up.md)
