@@ -1,6 +1,6 @@
 # Build copy pipeline using Azure Data Factory for Cognitive Services
 
-## Pre-requisite task: [Create Azure Data Factory V2](./azure-data-factory-v2/provision-azure-data-factory-v2.md)
+## Pre-requisite task: [Create Azure Data Factory V2](../azure-data-factory-v2/provision-azure-data-factory-v2.md)
 
 ## Task: Create Linked Services Connections
 In this section you will create a linked service connection to a shared storage accounnt called EDUMDWResources hosted in an external Azure subscription. This storage account hosts the NYC Taxi data files you will copy to your data lake. As this storage account sits in an external subscription you will connect to it using a SAS URL token.
