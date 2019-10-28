@@ -10,9 +10,14 @@
 
 > **NOTE:** See reference links below for notebook and markdown syntax guidance.
 
-1. Click on the **Workspace** button in the navigation page and click on your notebook.
 
-    ![](media/notebook/1.png)
+1.On the Azure Databricks portal, click the **Home** button on the left-hand side menu. 
+2.On the **Workspace** blade, click the down arrow next to your user name and then click **Create > Notebook**.
+3.On the **Create Notebook** pop-up window type “NYCTaxiData” in the Name field.
+4.Ensure you have the **Language** field set to **Python** and the **Cluster** field is set to **NYCTAxiLookup**.
+5.Click **Create**.
+
+    ![](media/notebook/NYCTaxiData-notebook.png)
 
 1. In the notebook, enter the following bits of code into new cells and click the play button and **Run Cell** to execute the command against your Spark cluster.
 
