@@ -55,7 +55,7 @@ Throughout the workshop we will be using the following pre-defined vairables:
 <br> - **Logic App**:EduMdwLocicApp+YourInitials
 
 
-## Workshop Tasks
+## Provision Resources
 
 ### [Task 1: Create Azure Resource Group](azure-resource-group/create-resource-group.md)
 
@@ -69,21 +69,27 @@ Throughout the workshop we will be using the following pre-defined vairables:
 
 ### [Task 6: Create Azure Data Factory V2](azure-data-factory-v2/provision-azure-data-factory-v2.md)
 
-### [Task 7: Build copy pipeline using Azure Data Factory](azure-data-factory-v2/copy-file-into-adls-gen2.md)
+## Lab 1: Logic Apps & Cognitive Services 
 
-### [Task 8: Create Azure Databricks](azure-databricks/provision-azure-databricks.md)
+### [Task 1: Use Logic Apps to Read Tweeter feeds with Cognitive Services](azure-logic-app/steam-ai-tweeter.md)
 
-### [Task 9: Create Azure Databricks Cluster](azure-databricks/create-spark-cluster.md)
+## Lab 2: Azure Data Factory & Databricks
 
-### [Task 10: Create Azure Databricks Workspace](azure-databricks/create-workspace.md)
+### [Task 1: Build copy pipeline using Azure Data Factory](azure-data-factory-v2/copy-file-into-adls-gen2.md)
 
-### [Task 11: Develop Azure Databricks notebook](azure-databricks/develop-databricks-notebook.md)
+### [Task 2: Create Azure Databricks](azure-databricks/provision-azure-databricks.md)
 
-### [Task 12: Update Azure Data Factory pipeline to transform data using Databricks](azure-data-factory-v2/transform-data-using-databricks.md)
+### [Task 3: Create Azure Databricks Cluster](azure-databricks/create-spark-cluster.md)
 
-### [Task 13: Use Logic Apps to Read Tweeter feeds with Cognitive Services](azure-logic-app/steam-ai-tweeter.md)
+### [Task 4: Create Azure Databricks Workspace](azure-databricks/create-workspace.md)
 
-### [Task 14: Visualize data](power-bi/visualize-data.md)
+### [Task 5: Develop Azure Databricks notebook](azure-databricks/develop-databricks-notebook.md)
+
+### [Task 6: Update Azure Data Factory pipeline to transform data using Databricks](azure-data-factory-v2/transform-data-using-databricks.md)
+
+### [Task 7: Use Logic Apps to Read Tweeter feeds with Cognitive Services](azure-logic-app/steam-ai-tweeter.md)
+
+### [Task 8: Visualize data](power-bi/visualize-data.md)
 
 [Sign in]:<https://portal.azure.com/>
 [60 day trial]:https://signup.microsoft.com/signup?sku=a403ebcc-fae0-4ca2-8c8c-7a907fd6c235&email&ru=https%3A%2F%2Fapp.powerbi.com%3Fpbi_source%3Dweb%26redirectedFromSignup%3D1%26noSignUpCheck%3D1
