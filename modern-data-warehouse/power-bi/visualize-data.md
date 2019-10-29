@@ -27,4 +27,4 @@
 
 ## Congratulations, you have completed this Hands-On-Lab! 
 
-## [Main Page](../../readme.md)
+## [Main Page](../readme.md)
