@@ -87,9 +87,7 @@ Throughout the workshop we will be using the following pre-defined vairables:
 
 ### [Task 6: Update Azure Data Factory pipeline to transform data using Databricks](azure-data-factory-v2/transform-data-using-databricks.md)
 
-### [Task 7: Use Logic Apps to Read Tweeter feeds with Cognitive Services](azure-logic-app/steam-ai-tweeter.md)
-
-### [Task 8: Visualize data](power-bi/visualize-data.md)
+### [Task 7: Visualize data](power-bi/visualize-data.md)
 
 [Sign in]:<https://portal.azure.com/>
 [60 day trial]:https://signup.microsoft.com/signup?sku=a403ebcc-fae0-4ca2-8c8c-7a907fd6c235&email&ru=https%3A%2F%2Fapp.powerbi.com%3Fpbi_source%3Dweb%26redirectedFromSignup%3D1%26noSignUpCheck%3D1
