@@ -754,7 +754,7 @@ ___
 
 1.	From the Activities panel, type “Copy Data” in the search box. Drag the Copy Data activity on to the design surface. This copy activity will copy data files from MDWResources to MDWDatalake.
 1.	Select the Copy Data activity and enter the following details:
-    <br>- **General > Name**: CopyTaxiDataFiles
+    <br>- **General > Name**: Copy NYC Taxi Data
     <br>- **Source > Source dataset**: EDUMDWResources_NYCTaxiData
     <br>- **Sink > Sink dataset**: MDWDataLake_NYCTaxiData_Binary
     <br>- **Sink > Copy Behavior**: Preserve Hierarchy
