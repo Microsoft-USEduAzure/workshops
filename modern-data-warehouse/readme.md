@@ -88,6 +88,8 @@ Throughout the workshop we will be using the following pre-defined vairables:
 
 ### [Task 6: Update Azure Data Factory pipeline to transform data using Databricks](azure-data-factory-v2/transform-data-using-databricks.md)
 
+## Clean Up Resources
+### [Task 1: Delete Resource Group](cleanup/readme.md)
 
 
 [Sign in]:<https://portal.azure.com/>
