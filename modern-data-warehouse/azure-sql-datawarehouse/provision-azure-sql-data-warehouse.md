@@ -11,7 +11,7 @@
 
 1. In the Azure Marketplace search bar, type **azure synap** and click on **Azure Synapse Analytics (formerly SQL DW)** that appears in the drop down list
 
-    ![New](media/provision/1.png)
+    ![New](media/provision/1a.png)
 
 1. Click the **Create** button.
 
