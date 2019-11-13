@@ -65,7 +65,7 @@ Throughout the workshop we will be using the following pre-defined vairables:
 
 ### [Task 4: Create Azure Service Principal](azure-ad-service-principal/create-service-principal.md)
 
-### [Task 5: Create Azure SQL Data Warehouse](azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
+### [Task 5: Create Azure Synapse Analytics (Formerly SQL DW)](azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
 
 ### [Task 6: Create Azure Data Factory V2](azure-data-factory-v2/provision-azure-data-factory-v2.md)
 
