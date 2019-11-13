@@ -1,15 +1,15 @@
-# Provision Azure SQL Data Warehouse
+# Provision Azure Synapse Analytics (formerly SQL DW)
 
 ## Pre-requisite task: [Create Azure Resource Group](../azure-resource-group/create-resource-group.md)
 
-## Task: Create Azure SQL Data Warehouse
+## Task: Azure Synapse Analytics (formerly SQL DW)
 
 ### We'll be creating this resource to store our cleaned data which will be loaded from our Azure Databricks notebook.
 
-## Task: Provision Data Warehouse & SQL Server
+## Task: Provision Azure Synapse Analytics (formerly SQL DW) & SQL Server
 1. In the [Azure Portal](https://portal.azure.com), click **+Create a resource** link at top left of the page.
 
-1. In the Azure Marketplace search bar, type **data warehouse** and click on **SQL Data Warehouse** that appears in the drop down list
+1. In the Azure Marketplace search bar, type **azure synap** and click on **Azure Synapse Analytics (formerly SQL DW)** that appears in the drop down list
 
     ![New](media/provision/1.png)
 
