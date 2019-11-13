@@ -2,7 +2,7 @@
 
 This workshop will aim to get you more familiar with the tools used to build a modern data warehouse. We will use Azure Data Factory to load a file into Azure Data Lake Gen 2. From there we will transform the data inside of Azure Databricks and load into an Azure SQL Data Warehouse. Lastly, we'll use various reporting tools to connect to our data warehouse.
 
-![](media/modern-data-warehouse.png)
+![](media/modern-data-warehouse1.png)
 
 We will follow up this Data Stages Pattern to consume data
 
