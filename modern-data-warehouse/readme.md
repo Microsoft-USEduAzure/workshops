@@ -92,8 +92,12 @@ Throughout the workshop we will be using the following pre-defined vairables:
 ### [Task 1: Delete Resource Group](cleanup/readme.md)
 
 
+#### Credits:
+This workshop would not have been possible without the work of Microsoft's CSA [Fabio Braga] who published a very complete End 2 End workshop, please check it out.
+
 [Sign in]:<https://portal.azure.com/>
 [60 day trial]:https://signup.microsoft.com/signup?sku=a403ebcc-fae0-4ca2-8c8c-7a907fd6c235&email&ru=https%3A%2F%2Fapp.powerbi.com%3Fpbi_source%3Dweb%26redirectedFromSignup%3D1%26noSignUpCheck%3D1
 [download Power BI Desktop]:https://www.microsoft.com/en-us/download/details.aspx?id=45331
+[Fabio Braga]:https://github.com/fabragaMS
 
 
