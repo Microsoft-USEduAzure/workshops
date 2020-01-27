@@ -36,4 +36,4 @@
     ![Notifications](media/provision/author.png)        
 
 
-## Next task: [Build copy pipeline using Azure Data Factory](copy-file-into-adls-gen2.md)
+## Next task: [Use Logic Apps to Read Tweeter feeds with Cognitive Services](../azure-logic-app/steam-ai-tweeter.md)

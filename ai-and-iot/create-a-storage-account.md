@@ -6,6 +6,8 @@ We're going to be using several Azure services together to create our Polar Bear
 - A general-purpose Azure Storage account.
 - A blob container to hold the photographs taken by the remote cameras.
 
+**Before you begin, please open your favorite text editor.**   
+A few pieces of this lab will require you to copy and paste tokens and URLs into a text editor for future use. 
 
 ## 1. Create a Resource Group
 

@@ -2,7 +2,7 @@
 
 This workshop will aim to get you more familiar with the tools used to build a modern data warehouse. We will use Azure Data Factory to load a file into Azure Data Lake Gen 2. From there we will transform the data inside of Azure Databricks and load into an Azure SQL Data Warehouse. Lastly, we'll use various reporting tools to connect to our data warehouse.
 
-![](media/modern-data-warehouse.png)
+![](media/modern-data-warehouse1.png)
 
 We will follow up this Data Stages Pattern to consume data
 
@@ -55,7 +55,7 @@ Throughout the workshop we will be using the following pre-defined vairables:
 <br> - **Logic App**:EduMdwLocicApp+YourInitials
 
 
-## Workshop Tasks
+## Provision Resources
 
 ### [Task 1: Create Azure Resource Group](azure-resource-group/create-resource-group.md)
 
@@ -65,28 +65,39 @@ Throughout the workshop we will be using the following pre-defined vairables:
 
 ### [Task 4: Create Azure Service Principal](azure-ad-service-principal/create-service-principal.md)
 
-### [Task 5: Create Azure SQL Data Warehouse](azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
+### [Task 5: Create Azure Synapse Analytics (Formerly SQL DW)](azure-sql-datawarehouse/provision-azure-sql-data-warehouse.md)
 
 ### [Task 6: Create Azure Data Factory V2](azure-data-factory-v2/provision-azure-data-factory-v2.md)
 
-### [Task 7: Build copy pipeline using Azure Data Factory](azure-data-factory-v2/copy-file-into-adls-gen2.md)
+## Lab 1: Logic Apps & Cognitive Services 
 
-### [Task 8: Create Azure Databricks](azure-databricks/provision-azure-databricks.md)
+### [Task 1: Use Logic Apps to Read Tweeter feeds with Cognitive Services](azure-logic-app/steam-ai-tweeter.md)
+### [Task 2: Visualize Tweeter data](power-bi/visualize-data.md)
 
-### [Task 9: Create Azure Databricks Cluster](azure-databricks/create-spark-cluster.md)
+## Lab 2: Azure Data Factory & Databricks
 
-### [Task 10: Create Azure Databricks Workspace](azure-databricks/create-workspace.md)
+### [Task 1: Build copy pipeline using Azure Data Factory](azure-data-factory-v2/copy-file-into-adls-gen2.md)
 
-### [Task 11: Develop Azure Databricks notebook](azure-databricks/develop-databricks-notebook.md)
+### [Task 2: Create Azure Databricks](azure-databricks/provision-azure-databricks.md)
 
-### [Task 12: Update Azure Data Factory pipeline to transform data using Databricks](azure-data-factory-v2/transform-data-using-databricks.md)
+### [Task 3: Create Azure Databricks Cluster](azure-databricks/create-spark-cluster.md)
 
-### [Task 13: Use Logic Apps to Read Tweeter feeds with Cognitive Services](azure-logic-app/steam-ai-tweeter.md)
+### [Task 4: Create Azure Databricks Workspace](azure-databricks/create-workspace.md)
 
-### [Task 14: Visualize data](power-bi/visualize-data.md)
+### [Task 5: Develop Azure Databricks notebook](azure-databricks/develop-databricks-notebook.md)
+
+### [Task 6: Update Azure Data Factory pipeline to transform data using Databricks](azure-data-factory-v2/transform-data-using-databricks.md)
+
+## Clean Up Resources
+### [Task 1: Delete Resource Group](cleanup/readme.md)
+
+
+#### Credits:
+This workshop would not have been possible without the work of Microsoft's CSA [Fabio Braga] who published a very complete End 2 End workshop, please check it out.
 
 [Sign in]:<https://portal.azure.com/>
 [60 day trial]:https://signup.microsoft.com/signup?sku=a403ebcc-fae0-4ca2-8c8c-7a907fd6c235&email&ru=https%3A%2F%2Fapp.powerbi.com%3Fpbi_source%3Dweb%26redirectedFromSignup%3D1%26noSignUpCheck%3D1
 [download Power BI Desktop]:https://www.microsoft.com/en-us/download/details.aspx?id=45331
+[Fabio Braga]:https://github.com/fabragaMS
 
 

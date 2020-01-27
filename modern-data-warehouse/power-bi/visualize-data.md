@@ -27,4 +27,4 @@
 
 ## Congratulations, you have completed this Hands-On-Lab! 
 
-> **NOTE:** Don't forget to delete your resource group.
+## [Main Page](../readme.md)
