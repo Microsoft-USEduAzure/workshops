@@ -15,10 +15,9 @@ We will need to configure firewall for access & add a database to collect the da
     1. Click on the **Set server firewall link**
 ![Query Error](media/32-query-error.png)
 1. At the firewall settings:
-    1. Click on the **On Button for Allow Azure services** and resources to access this server
+    1. Click on the On Button for Allow Azure services and resources to access this server
     1. Enter a name for the IP rule name: **Query editor**
     1. Paste your IP Address to the Start Id and End IP
-    1. Click on **Add IP Client** this option will allow you to view data on Power BI Desktop
     1. Click Save    
     ![Firewall settings](media/33-firewall-settings.png)
     1. Go back to query editor
@@ -42,7 +41,7 @@ GO
 1. You should see the created table 
 ![Tables](media/37-sql-table-created.png)
 
-<br>
-
 ### Next: [Save Twitter Sentiment to SQL](./sql-save-twitter-to-sql.md) ###
+
 #### Previous: [Syllabus](./readme.md) ####
+
