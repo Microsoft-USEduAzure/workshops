@@ -31,12 +31,12 @@
     # Enable extension to interact with ADLS Gen2
     az extension add --name storage-preview
 
-    az storage account create 
-        --name $name 
-        --resource-group $resourceGroup 
-        --location $location 
-        --sku Standard_LRS 
-        --kind StorageV2 
+    az storage account create               \
+        --name $name                        \
+        --resource-group $resourceGroup     \
+        --location $location                \
+        --sku Standard_LRS                  \
+        --kind StorageV2                    \
         --hierarchical-namespace true
     ```
 
