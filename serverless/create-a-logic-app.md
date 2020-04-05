@@ -195,8 +195,8 @@ The last part of the workflow is to trigger an email when the sentiment is score
 
     ![Set language](media/translate-1.png)
 
-Add the following conditional check. 
-    ![Check language](media/Condition_Lang_NotEnglish.png)
+Add the following conditional check:
+    ![Check language](media/ConditionCheck_Lang_NotEnglish.png)
 
 Explanation: If the language is not English, in the next step, you want to translate it to English before sending email.
 
