@@ -191,9 +191,14 @@ The last part of the workflow is to trigger an email when the sentiment is score
 
     ![Add Condition action](media/condition-1.png)    
 
-1. In the **Choose a value** field, select **Language Code** from the **Dynamic Content** pop-up. 
+1. In the **Choose a value** field, select **Language Code** from the **Dynamic Content** pop-up.
 
     ![Set language](media/translate-1.png)
+
+Add the following conditional check. 
+    ![Check language](/media/Condition_Lang_NotEnglish.png)
+
+Explanation: If the language is not English, in the next step, you want to translate it to English before sending email.
 
 1. In nested **IF TRUE**, click **Add an action**, search for `Translate` and click on the **Translate text (preview)** action. 
 
