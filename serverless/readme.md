@@ -28,7 +28,7 @@ In this tutorial, you learn how to:
 + An [Outlook.com](https://outlook.com/) or [Office 365 Outlook](https://outlook.office.com) for account (for sending notifications).
 
 
-## Syllabus
+## Steps
 - [Create Cognitive Services Resources](./create-cognitive-services-resources.md)
 - [Create a Function App](./create-a-function-app.md)
 - [Create a Logic App](./create-a-logic-app.md)
