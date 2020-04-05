@@ -2,8 +2,6 @@
 # Azure Serverless Workshop
 **Function Apps, Logic Apps, and Cognitive Services**
 
-Azure Functions integrates with Azure Logic Apps in the Logic Apps Designer. This integration lets you use the computing power of Functions in orchestrations with other Azure and third-party services. 
-
 This tutorial shows you how to use Functions with Logic Apps and Cognitive Services on Azure to run language detection, sentiment analysis, language translation, and a profanity filter on Twitter tweets.   
 
 An HTTP triggered function categorizes tweets as green, yellow, or red based on the sentiment score. An email is sent that includes the original tweet and a translation if applicable when poor sentiment is detected. The tweet is retweeted if it has positive sentiment and profanity is not detected. 
