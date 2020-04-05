@@ -2,7 +2,9 @@
 # Azure Serverless Workshop
 **Function Apps, Logic Apps, and Cognitive Services**
 
-This tutorial shows you how to use Functions with Logic Apps and Cognitive Services on Azure to run language detection, sentiment analysis, language translation, and a profanity filter on Twitter tweets.   
+Are you ready for a taste of serverless?
+
+This tutorial shows you how to use Azure Functions with Logic Apps and Cognitive Services to run language detection, sentiment analysis, language translation, and a profanity filter on Twitter tweets.  
 
 An HTTP triggered function categorizes tweets as green, yellow, or red based on the sentiment score. An email is sent that includes the original tweet and a translation if applicable when poor sentiment is detected. The tweet is retweeted if it has positive sentiment and profanity is not detected. 
 
