@@ -28,8 +28,11 @@ Functions provides a great way to offload processing tasks in a logic apps workf
     | **Runtime Stack** | .Net Core | Choose .Net Core for this tutorial.|
     | **Storage Account** | Create New | Create a new storage account for this function|
 
-1. Click **Create** to create your resource.  
-![Search for Text Translator](media/function-app-2.png)
+1. Click **Create** to create your resource. 
+
+![Create function app](media/function-app-create-1.png)
+
+![Create function app](media/function-app-create-2.png)
 
 ## Create an HTTP triggered function  
 
