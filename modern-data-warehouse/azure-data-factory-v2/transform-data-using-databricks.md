@@ -102,7 +102,7 @@
 
    ![](media/powerbi/report-view.png)  
 
-## Next task: [Stream Cognitive Services Real Time](../azure-logic-app/steam-ai-tweeter.md)
+## Next task: [Clean up your resources](../cleanup/readme.md)
 
 [download Power BI Desktop]:https://www.microsoft.com/en-us/download/details.aspx?id=45331
 

@@ -13,6 +13,29 @@
 ### Prerequisite: [Syllabus](./readme.md)
 
 ## Download Power BI Sample Report
+1. Download template report
+![Download sample report](TwitterSentiment.pbit)
+1. Open downloaded report   
+![](media/open-report.png)
+1. Enter following parameters
+<br> - **Server name**: svrlessdemo.database.windows.net
+![](media/enter-server-name.png)
+ <br> - **Authentication**: Database
+ <br> - **User Name**: mainuser
+ <br> - **Password**: #Welcome1023#
+
+![](media/enter-credentials.png)
+
+   This is the report view
+
+   ![](media/report-view.png)
+   ![](media/report-view1.png)
+
+
+## Congratulations, you have completed this Hands-On-Lab! 
+
+> **NOTE:** Don't forget to delete your resource group.
+=======
 1. [Download template report](media/Twittersentiment.pbit)
 1. Open downloaded report   
 ![](media/open-report.png)
@@ -31,3 +54,4 @@
 
 ### Next: [Clean Up](./clean-up.md) ###
 #### Previous: [Syllabus](./readme.md) ####
+

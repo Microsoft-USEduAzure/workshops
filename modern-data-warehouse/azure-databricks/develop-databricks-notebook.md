@@ -49,7 +49,7 @@
         > File system is what you entered in the file path text box while configuring the sink in [Task 7: Build copy pipeline using Azure Data Factory](../azure-data-factory-v2/copy-file-into-adls-gen2.md)
 
         ```
-        val df = spark.read.json("abfss://nyclocationlookup@<ENTER_YOUR_ALDS_STORAGE_ACCOUNT_NAME>.dfs.core.windows.net/small_radio_json.json")
+        val df = spark.read.json("abfss://nyclocationlookup@<ENTER_YOUR_ALDS_STORAGE_ACCOUNT_NAME>.dfs.core.windows.net/taxi_zone_lookup.json")
         ```
 
     - ### Display the data.

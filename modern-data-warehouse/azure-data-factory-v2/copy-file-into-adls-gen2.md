@@ -20,8 +20,7 @@ In this section you will create a linked service connection to a shared storage 
     <br>- **Authentication method**: SAS URI
     <br>- **SAS URL**: 
     ```
-
-       https://mdwresourcefiles.blob.core.windows.net/?sv=2018-03-28&ss=bfqt&srt=sco&sp=rl&st=2019-09-06T15%3A17%3A12Z&se=2024-01-31T15%3A17%3A00Z&sig=Zl8mWOqjLVCYIiBtulk36hImVAfIvHD9W%2BwWY6JAcUY%3D
+https://eduusdevpoc.blob.core.windows.net/?sv=2019-02-02&ss=b&srt=sco&sp=rwdlac&se=2021-02-06T06:04:32Z&st=2019-10-29T21:04:32Z&spr=https,http&sig=hoZxLAtr%2BywRm4PYdnpFLATeFxrTmmXrmJ%2FUHGdhI%2BI%3D
 
     ```
 4.	Click **Test connection** to make sure you entered the correct connection details and then click **Finish**.
