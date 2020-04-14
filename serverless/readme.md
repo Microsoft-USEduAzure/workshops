@@ -27,7 +27,7 @@ In this tutorial, you learn how to:
 
 
 ## Prerequisites
-
++ An Azure subscription
 + An active [Twitter](https://twitter.com/) account. 
 + An [Outlook.com](https://outlook.com/) or [Office 365 Outlook](https://outlook.office.com) for account (for sending notifications).
 
