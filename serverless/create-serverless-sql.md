@@ -19,7 +19,7 @@ Azure SQL Database serverless (preview) is a compute tier for single databases t
     | Setting      |  Suggested value   | Description                                        |
     | --- | --- | --- |
     | **Resource group** | ServerlessWkrshp | Use the same resource group for all services in this tutorial.|
-    | **Name** | TwitterDetails | Enter the name of the database. |
+    | **Name** | twitterdatabase | Enter the name of the database. |
     | **Server** | svrlessdemo | Enter a unique name for the server. |
     | **Server Admin Login** | mainuser | This is the main user name.|
     | **Password** | #Welcome1023# | Write this down you will not be able to recover it.|
