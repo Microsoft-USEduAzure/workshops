@@ -29,7 +29,7 @@ We will need to configure firewall for access & add a database to collect the da
 1. In the query window copy the following SQL statment and click Run
 
 ```sql
- CREATE TABLE [dbo].[TweeterDetails](
+ CREATE TABLE [dbo].[TwitterDetails](
 	[CreatedAt] [datetime] NULL,
 	[SentimentScore] [float] NULL,
 	[TweetText] [varchar](300) NULL,
