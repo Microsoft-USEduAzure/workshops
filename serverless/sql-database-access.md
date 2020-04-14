@@ -43,5 +43,5 @@ GO
 
 ### Next: [Save Twitter Sentiment to SQL](./sql-save-twitter-to-sql.md) ###
 
-#### Previous: [Syllabus](./readme.md) ####
+#### Previous: [Create Serverless SQL Database](./create-serverless-sql.md) ####
 
