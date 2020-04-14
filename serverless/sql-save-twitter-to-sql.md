@@ -1,4 +1,4 @@
-# Insert record into SQL Database
+# Insert Records into Database
 
 We will edit the previously created Logic App to save results to SQL
 
