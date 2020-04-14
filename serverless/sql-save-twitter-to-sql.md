@@ -25,4 +25,4 @@ We will edit the previously created Logic App to save results to SQL
 <br>
 
 ### Next: [Visualize Data](./visualize-data.md) ###
-#### Previous: [Syllabus](./readme.md) ####
+#### Previous: [Configure Database Access & Table](./sql-database-access.md) ####
