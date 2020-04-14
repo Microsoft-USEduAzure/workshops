@@ -1,4 +1,4 @@
-# Configure Database Access & Add Tables
+# Configure Database Access & Table
 
 We will need to configure firewall for access & add a database to collect the data
 
