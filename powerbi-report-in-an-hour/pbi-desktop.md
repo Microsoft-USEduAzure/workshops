@@ -14,7 +14,7 @@
 ### Get data from web data source
 
 1. Open Power BI Desktop.  Click on the **Get Data** icon to create a new data set:
-![Get data](media/image001.png)
+![Get data](media/image001.png?raw=true)
 
 ### Transform and prepare data
 
