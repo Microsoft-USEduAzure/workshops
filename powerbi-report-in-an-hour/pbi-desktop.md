@@ -15,31 +15,21 @@
 
 1. Open Power BI Desktop.  Click on the **Get Data** icon to create a new data set:
 ![Get data](media/image001.png?raw=true)
+1. Type **web** to filter the data source types.  Click on **Web**, then click **Connect**:
+![Get data](media/image002.png?raw=true)
+1. Copy and paste the URL for the **USAFacts - Confirmed Cases** data set, click **OK**
+![Get data](media/image003.png?raw=true)
+    | Data Set Description | URL  |
+    |----------------------|------|
+    |*USAFacts - Confirmed Cases*  | <https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv> |
+    |*USAFacts - Deaths* | <https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv>|
+1. A preview of the **USAFacts - Confirmed Cases** data set should appear, click **Transform Data**:
+![Get data](media/image004.png?raw=true)
 
 ### Transform and prepare data
 
-1. Open Power BI Desktop.
-1. Type **sql** in the module search window and hit enter.  Drag and drop the **Import Data** module onto the experiment canvas:
-![Load Data from Azure SQL Server](media/image002.png)
-1. The properties panel for the *Import Data* module should now be displayed on the right-hand side of the canvas.  Set the *Data source* to: **Azure SQL Database**
-![Load Data from Azure SQL Server](media/image008.png)
-1. Continue to fill out the Azure SQL Database Properties using the values listed in the table:
-
-    | Property | Value  |
-    |------|------|
-    |**Database server name**  | higheredu.database.windows.net|
-    |**Database name**  | HigherED_DW|
-    |**User name**  | utreader|
-    |**Password**  | h00k'3mhornz|
-    |**Accept any server certificate (insecure)**  | leave the box unchecked|
-    |**Database query**  | SELECT * FROM MLInput.DropClass;|
-    |**Use cached results**  | check the box|
-
-    ![Load Data from Azure SQL Server](media/image009.png)
-
-1. Click on the **Save** icon at the bottom of the canvas to save the experiment.  Next, click on the **Run** icon at the bottom of the canvas and select **Run** to execute the modules included in the experiment.  
-![Load Data from Azure SQL Server](media/image010.png)
-The *Experiment Properties* pane on the right-hand of the canvas should now show a *STATUS CODE* of **Running**:
+1. The **Power Query Editor** will appear and can be used to transform the raw data imported from the USAFacts web site.  Notice that the first row of the data set contains the column hearders.  Click **Use First Row as Headers**:
+![Get data](media/image005.png?raw=true)
 
 ### Modify data formats and default aggregate functions
 
