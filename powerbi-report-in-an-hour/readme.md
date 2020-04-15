@@ -26,7 +26,7 @@ In this workshop we will use [Power BI Desktop](https://powerbi.microsoft.com/en
   - Get data from web data source
   - Transform and prepare data
   - Modify data formats and default aggregate functions
-  - Create quick measure
+  - Create quick measures
   - Design main report page
   - Design drill through report page
   - Review completed report
