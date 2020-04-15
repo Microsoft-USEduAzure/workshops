@@ -8,7 +8,7 @@
 - [Modify data formats and default aggregate functions](Modify-data-formats-and-default-aggregate-functions)
 - [Create quick measures](Create-quick-measures)
 - [Design main report page](Design-main-report-page)
-- [Design drill through report page](Design-drill-through-report page)
+- [Design drill through report page](Design-drill-through-report-page)
 - [Review completed report](Review-completed-report)
 
 ### Get data from web data source
