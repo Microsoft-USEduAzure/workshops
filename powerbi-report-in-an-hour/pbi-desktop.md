@@ -3,13 +3,10 @@
 
 ## Task List
 
-- [image from web data source](#Get-data-from-web-data-source)
+- [Get data from web data source](#Get-data-from-web-data-source)
 - [Transform and prepare data](#Transform-and-prepare-data)
-- [Prepare tables](#Prepare-tables)
-- [Create quick measures](#Create-quick-measures)
-- [Design main report page](#Design-main-report-page)
-- [Design drill through report page](#Design-drill-through-report-page)
-- [Review completed report](#Review-completed-report)
+- [Prepare tabular model](#Prepare-tabular-model)
+- [Design report](#Design-report)
 
 ### image from web data source
 
@@ -71,7 +68,7 @@ Click on the **Transform** page, then click on the **Unpivot Columns icon** and 
 1. The **Power Query Editor** will close and the queries will be executed to import data into the internal tabular model:
 ![image](media/image024.png?raw=true)
 
-### Prepare tables
+### Prepare tabular model
 
 1. Save the Power BI report before doing anymore work.  Click **File** in the upper lefthand corner:
 ![image](media/image025.png?raw=true)
@@ -79,23 +76,44 @@ Click **Save as**:
 ![image](media/image026.png?raw=true)
 Navigate to a folder where you want to save the file and name the file **US Covid-19**:
 ![image](media/image027.png?raw=true)
-1. The first step in preparing tables will be to hide the two tables that we merged.
+1. The first step in preparing tables will be to hide the two tables that we merged.  Click on the **... elipse icon** or right click on the table **covid_confirmed_usafacts** to display the table options menu:
+![image](media/image028.png?raw=true)
+Select **Hide**, to hide the table:
+![image](media/image029.png?raw=true)
+Repeat the process to hide the **covid_deaths_usafacts** table:
+![image](media/image030.png?raw=true)
+1. Some of the identifiers included in the imported data are not needed to perform analysis and can be hidden.  Right click on the **countyFIPS** column and select **Hide**:
+![image](media/image031.png?raw=true)
+Right click on the **stateFIPS** column and select **Hide**:
+![image](media/image032.png?raw=true)
+1. Notice that some of the columns have an icon to the left of the column name.  The icons can indicate that the column is aggregated using a **Summarization** method or that they belong to a predefined **Data category**. Click on **Confirmed Cases** and review the **Summarization** and **Data category** located on the **Column tools** ribbon:
+![image](media/image033.png?raw=true)
+1. Set the **Data catogory** for both the **County Name** and **State** columns by selecting the column and setting the **Data category** using the drop down selector:
+![image](media/image034.png?raw=true)
+![image](media/image035.png?raw=true)
+1. The **US Covid** table is now ready for report design:
+![image](media/image036.png?raw=true)
 
-### Create quick measures
+### Design report
 
-1. adfa
+Power BI has incorporated many design features common to other office products, such as PowerPoint.  Using the USAFacts National COVID-19 Report as an example, we will design a similar report using basic design features:
+![image](media/image037.png?raw=true)
 
-### Design main report page
-
-1. adfasdf 
-
-### Design drill through report page
-
-1. asdfasdfasdf
-
-### Review completed report
-
-1. adfasdfadf
+1. The confirmed cases listing by state matrix will be the first visual added to the report.  Click on **Confirmed Cases**, drag and drop it onto the report canvas:
+![image](media/image038.png?raw=true)
+1. **Confirmed Cases** is now highlighted in the **Fields** list and place in the **Value** landing zone for the visualization.  A column chart (see icon highlighted in the **Visualizations** panel) was automatically selected as the default visualization for **Confirmed Cases** based on its properties:
+![image](media/image039.png?raw=true)
+1. Change the visualization to a **Matrix** by selecting the **Matrix icon** in the **Visualizations** panel:
+![image](media/image040.png?raw=true)
+![image](media/image041.png?raw=true)
+![image](media/image042.png?raw=true)
+![image](media/image043.png?raw=true)
+![image](media/image044.png?raw=true)
+![image](media/image045.png?raw=true)
+![image](media/image046.png?raw=true)
+![image](media/image047.png?raw=true)
+![image](media/image048.png?raw=true)
+![image](media/image049.png?raw=true)
 
 ## *You have completed the Use Power BI Desktop workshop*
 

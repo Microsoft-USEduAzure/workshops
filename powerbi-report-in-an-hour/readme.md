@@ -25,11 +25,8 @@ In this workshop we will use [Power BI Desktop](https://powerbi.microsoft.com/en
 - [Use Power BI Desktop](pbi-desktop.md) to:
   - Get data from web data source
   - Transform and prepare data
-  - Prepare tables
-  - Create quick measures
-  - Design main report page
-  - Design drill through report page
-  - Review completed report
+  - Prepare tabular model
+  - Design report
 
 - [Publish your Power BI report to the Power BI Service](pbi-service.md): (**Optional** - according to time available and access to Power BI Service):
   - Publish your Power BI report to the Power BI Service
