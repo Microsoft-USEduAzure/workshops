@@ -25,7 +25,7 @@ In this workshop we will use [Power BI Desktop](https://powerbi.microsoft.com/en
 - [Use Power BI Desktop](pbi-desktop.md) to:
   - Get data from web data source
   - Transform and prepare data
-  - Modify data formats and default aggregate functions
+  - Prepare tables
   - Create quick measures
   - Design main report page
   - Design drill through report page
