@@ -22,9 +22,11 @@ In this workshop we will use [Power BI Desktop](https://powerbi.microsoft.com/en
     |**Filter**  |  *Use the date slider in the upper righthand corner of the report to modify the date range.  What date is used to filter the confirmed cases and deaths displayed in the table on the lefthand side of the report?*|
     |**Drill through**  | *Right-click on Texas and select* **Drill through->County View** |
 
-- [Use Power BI Desktop](pbi-desktop.md) to:
+- [Part 1 - Use Power BI Desktop](pbi-desktop-1.md) to:
   - Get data from web data source
   - Transform and prepare data
+
+- [Part 2 - Use Power BI Desktop](pbi-desktop-2.md) to:
   - Prepare tabular model
   - Design report
 
@@ -41,6 +43,8 @@ In this workshop we will use [Power BI Desktop](https://powerbi.microsoft.com/en
 - [Guy in a Cube](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 - [Power BI guidance documentation](https://docs.microsoft.com/en-us/power-bi/guidance/)
 - [Power BI publish to web](https://powerbi.microsoft.com/en-us/publishtoweb/)
+- [Introduction to DAX](https://docs.microsoft.com/en-us/power-bi/guided-learning/introductiontodax)
+- [The DAX Guide](https://dax.guide/)
 
 ### Power BI COVID-19 Resources
 
