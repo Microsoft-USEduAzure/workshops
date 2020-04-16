@@ -64,6 +64,8 @@ Click on the **Transform** page, then click on the **Unpivot Columns icon** and 
 ![image](media/image021.png?raw=true)
 1. The **Merge** dialog will appear.  Use the drop downs to set the tables to **covid_confirmed_usafacts** and **covid_deaths_usafacts**.  Holding the **CTRL** key select **countyFIPS**, **State** and **Date** in that order for each of the tables to be merged.  Click **OK**:
 ![image](media/image022.png?raw=true)
+1. Once the tables are merged, scroll all the way to the last column on the right.  The column name will be **covid_deaths_usafacts** and the data in the column will be labled **Table**.  Click on the **Expand icon** to the right of the column name.  Unselect all columns, except **Deaths**.  Make sure the **Use original column name as prefix** checkbox is unchecked and click **OK**
+![image](media/image022a.png?raw=true)
 1. Rename the new merged query table **US Covid** and click on **Close & Apply**:
 ![image](media/image023.png?raw=true)
 1. The **Power Query Editor** will close and the queries will be executed to import data into the internal tabular model:
@@ -71,7 +73,13 @@ Click on the **Transform** page, then click on the **Unpivot Columns icon** and 
 
 ### Prepare tables
 
-1. adfasdfasdf
+1. Save the Power BI report before doing anymore work.  Click **File** in the upper lefthand corner:
+![image](media/image025.png?raw=true)
+Click **Save as**:
+![image](media/image026.png?raw=true)
+Navigate to a folder where you want to save the file and name the file **US Covid-19**:
+![image](media/image027.png?raw=true)
+1. The first step in preparing tables will be to hide the two tables that we merged.
 
 ### Create quick measures
 
