@@ -5,11 +5,11 @@
 
 - [image from web data source](#Get-data-from-web-data-source)
 - [Transform and prepare data](#Transform-and-prepare-data)
-- [Prepare tables](Prepare-tables)
-- [Create quick measures](Create-quick-measures)
-- [Design main report page](Design-main-report-page)
-- [Design drill through report page](Design-drill-through-report-page)
-- [Review completed report](Review-completed-report)
+- [Prepare tables](#Prepare-tables)
+- [Create quick measures](#Create-quick-measures)
+- [Design main report page](#Design-main-report-page)
+- [Design drill through report page](#Design-drill-through-report-page)
+- [Review completed report](#Review-completed-report)
 
 ### image from web data source
 
@@ -71,13 +71,23 @@ Click on the **Transform** page, then click on the **Unpivot Columns icon** and 
 
 ### Prepare tables
 
+1. adfasdfasdf
+
 ### Create quick measures
+
+1. adfa
 
 ### Design main report page
 
+1. adfasdf 
+
 ### Design drill through report page
 
+1. asdfasdfasdf
+
 ### Review completed report
+
+1. adfasdfadf
 
 ## *You have completed the Use Power BI Desktop workshop*
 
