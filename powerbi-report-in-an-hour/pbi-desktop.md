@@ -54,13 +54,19 @@ Click on the **Transform** page, then click on the **Unpivot Columns icon** and 
 ![image](media/image016.png?raw=true)
 1. Right click on the **covid_confimed_usafacts (2)** query and select **Rename**.  Rename the query **covid_deaths_usafacts**:
 ![image](media/image017.png?raw=true)
-adsfadsf
+1. Use the **APPLIED STEPS** list to modify the data source to import the file containing data on deaths.  Click on the **Cog icon** to the right of the **Source** step.  Change the URL to <https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv> and click **OK**:
 ![image](media/image018.png?raw=true)
+1. Delete the last step, which renamed the **Value** column to **Confirmed Cases**:
 ![image](media/image019.png?raw=true)
+1. Rename the **Value** column to **Deaths**:
 ![image](media/image020.png?raw=true)
+1. Merge the **Confirmed Cases** and **Deaths** queries into a single table.  Select **Combine**, then **Merge Queries** and click on **Merge Queries as New**:
 ![image](media/image021.png?raw=true)
+1. The **Merge** dialog will appear.  Use the drop downs to set the tables to **covid_confirmed_usafacts** and **covid_deaths_usafacts**.  Holding the **CTRL** key select **countyFIPS**, **State** and **Date** in that order for each of the tables to be merged.  Click **OK**:
 ![image](media/image022.png?raw=true)
+1. Rename the new merged query table **US Covid** and click on **Close & Apply**:
 ![image](media/image023.png?raw=true)
+1. The **Power Query Editor** will close and the queries will be executed to import data into the internal tabular model:
 ![image](media/image024.png?raw=true)
 
 ### Prepare tables
