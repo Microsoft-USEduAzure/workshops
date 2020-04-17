@@ -54,9 +54,8 @@ Power BI has incorporated many design features common to other office products, 
 1. Click on the **Data icon** to the left of the report canvas to view the rows of the **US Covid** table.  Notice how each row contains a running total of **Confirmed Cases** and **Deaths** by State by County by Date:
 ![image](media/image045.png?raw=true)
 1. We need to add two new columns to the table for the **Confirmed Cases** and **Deaths** added each day.  This will enable us to trend the measures over time.  We will use [**Data Analysis Expressions** or **DAX**](https://docs.microsoft.com/en-us/power-bi/guided-learning/introductiontodax) to create the new columns.  DAX is a rich expression language that can be used to create complex calculations within tabular models.  Here is the DAX needed for the new columns:
-    | Daily Confirmed Cases |
-    |----------------------|
-    Daily Confirmed Cases =
+
+    **Daily Confirmed Cases** =
     VAR __CountyName = 'US Covid'[countyFIPS]
     VAR __stateFIPS = 'US Covid'[stateFIPS]
     VAR __Yesterday =
@@ -74,9 +73,7 @@ Power BI has incorporated many design features common to other office products, 
                 )
             ) + 0
 
-    | Daily Deaths |
-    |----------------------|
-    Daily Deaths =
+    **Daily Deaths** =
     VAR __CountyName = 'US Covid'[countyFIPS]
     VAR __stateFIPS = 'US Covid'[stateFIPS]
     VAR __Yesterday =
@@ -122,6 +119,38 @@ Power BI has incorporated many design features common to other office products, 
 ![image](media/image058.png?raw=true)
 1. Rename the measure, **Fatality Rate**.  Use **Measure Tools** to format the **Fatality Rate** as a percentage with 1 decimal place:
 ![image](media/image059.png?raw=true)
+1. The state matrix is now complete with all metrics properly formated:
+![image](media/image060.png?raw=true)
+1. Drag and drop **State** onto a blank area of the report canvas to the right of the state matrix:
+![image](media/image061.png?raw=true)
+1. Since the **Data category** for **State** is set, the default visual is a map.  Resize the map to take the top half of the canvas to the right of the state matrix:
+![image](media/image062.png?raw=true)
+1. Change the map visual to a **Shape Map** by clicking on the **Shape Map icon** in the **Visulizations** pane:
+![image](media/image063.png?raw=true)
+1. Drag **Daily Confirmed Cases** to **Color saturation** and drag **Daily Deaths** and **Fatality Rate** to **Tooltips**.  Each state is now colored according to the number of **Daily Confirmed Cases** and hovering over a state will provide the additional information from **Tooltips**:
+![image](media/image064.png?raw=true)
+1. Drag **Daily Confirmed Cases** onto a blank area of the report canvas to the right of the state matrix and underneath the shape map:
+![image](media/image065.png?raw=true)
+1. Drag **Date** onto the **Axis** for the column chart and resize so the right edge aligns with the middle of the shape map:
+![image](media/image066.png?raw=true)
+1. Right click on the new column chart and select **Copy**, then **Copy visual**:
+![image](media/image067.png?raw=true)
+1. Click on the empty canvas to the right of the column chart and paste a new chart using **Ctrl-v**.  Change the **Value** of the new chart to use **Daily Deaths**:
+![image](media/image068.png?raw=true)
+1. Click on the **paint roller icon** to modify the properties of the daily deaths column chart.  Expand **Data colors** and change the **Default color** to red:
+![image](media/image069.png?raw=true)
+1. The charts include early dates where there is very little data. Resize the state matrix to create room for a new date filter. Drag and drop **Date** onto the canvas just above the state matrix. Click on the **Filter icon** in the **Visualizations** pane to create a date filter:
+![image](media/image070.png?raw=true)
+1. Click on the down arrow in the upper righthand corner of the date filter:
+![image](media/image071.png?raw=true)
+1. Select **Between** to create a date range filter:
+![image](media/image072.png?raw=true)
+1. Use the date filter to set the starting date to March 10th, 2020.
+![image](media/image073.png?raw=true)
+1. As a final step, modify the cross filtering behavior of the report.  The default cross filtering behavior is to highlight the contribution of a selected state instead of filtering the counts to only show data for a selected state.  Click on the shape map, then click on **Edit interactions** on the **Format** ribbon.  Click on the **Filter icons** above both of the column charts below the shape map:
+![image](media/image074.png?raw=true)
+1. Click on Michigan and the column charts are now filtered according the data for Michigan only:
+![image](media/image075.png?raw=true)
 
 ## *You have completed Part 2 - Use Power BI Desktop workshop*
 
