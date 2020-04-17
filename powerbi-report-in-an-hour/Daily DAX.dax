@@ -1,0 +1,36 @@
+﻿Daily Confirmed Cases = 
+VAR __CountyName = 'US Covid'[County Name]
+VAR __State = 'US Covid'[State]
+VAR __Yesterday =
+    DATEADD ( 'US Covid'[Date], -1, DAY )
+VAR __TodaysCases = 'US Covid'[Confirmed Cases]
+RETURN
+    __TodaysCases
+        - CALCULATE (
+            SUM ( 'US Covid'[Confirmed Cases] ),
+            FILTER (
+                'US Covid',
+                'US Covid'[Date] = __Yesterday
+                    && 'US Covid'[County Name] = __CountyName
+                    && 'US Covid'[State] = __State
+            )
+        ) + 0
+
+Daily Deaths =
+VAR __CountyName = 'US Covid'[County Name]
+VAR __State = 'US Covid'[State]
+VAR __Yesterday =
+    DATEADD ( 'US Covid'[Date], -1, DAY )
+VAR __TodaysCases = 'US Covid'[Deaths]
+RETURN
+    __TodaysCases
+        - CALCULATE (
+            SUM ( 'US Covid'[Deaths] ),
+            FILTER (
+                'US Covid',
+                'US Covid'[Date] = __Yesterday
+                    && 'US Covid'[County Name] = __CountyName
+                    && 'US Covid'[State] = __State
+            )
+        ) + 0
+        

@@ -18,6 +18,8 @@
     |----------------------|------|
     |**USAFacts - Confirmed Cases**  | <https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv> |
     |**USAFacts - Deaths** | <https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv>|
+1. When accessing data from the web, you may be prompted for authentication.  The USAFacts data set can be accessed using anonymous access.  Click on **Anonymous**, then **Connect** to complete the connection:
+![image](media/image003a.png?raw=true)
 1. A preview of the **USAFacts - Confirmed Cases** data set should appear, click **Transform Data**:
 ![image](media/image004.png?raw=true)
 
@@ -57,10 +59,14 @@ Click on the **Transform** page, then click on the **Unpivot Columns icon** and 
 ![image](media/image020.png?raw=true)
 1. Merge the **Confirmed Cases** and **Deaths** queries into a single table.  Select **Combine**, then **Merge Queries** and click on **Merge Queries as New**:
 ![image](media/image021.png?raw=true)
-1. The **Merge** dialog will appear.  Use the drop downs to set the tables to **covid_confirmed_usafacts** and **covid_deaths_usafacts**.  Holding the **CTRL** key select **countyFIPS**, **State** and **Date** in that order for each of the tables to be merged.  Click **OK**:
+1. The **Merge** dialog will appear.  Use the drop downs to set the tables to **covid_confirmed_usafacts** and **covid_deaths_usafacts**.  Holding the **CTRL** key select **countyFIPS**, **State** and **Date** in that order for each of the tables to be merged:
 ![image](media/image022.png?raw=true)
+1. When combining data from multiple tables, you may be prompted to set privacy levels for the combined data set.  Select **Public**, then click **Save**:
+![image](media/image022a.png)
+1. Once the privacy levels have been set, Click **OK**:
+![image](media/image022b.png?raw=true)
 1. Once the tables are merged, scroll all the way to the last column on the right.  The column name will be **covid_deaths_usafacts** and the data in the column will be labled **Table**.  Click on the **Expand icon** to the right of the column name.  Unselect all columns, except **Deaths**.  Make sure the **Use original column name as prefix** checkbox is unchecked and click **OK**
-![image](media/image022a.png?raw=true)
+![image](media/image022c.png?raw=true)
 1. Rename the new merged query table **US Covid** and click on **Close & Apply**:
 ![image](media/image023.png?raw=true)
 1. The **Power Query Editor** will close and the queries will be executed to import data into the internal tabular model:

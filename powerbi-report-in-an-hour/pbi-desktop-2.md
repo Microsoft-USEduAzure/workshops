@@ -131,21 +131,25 @@ Power BI has incorporated many design features common to other office products, 
 ![image](media/image064.png?raw=true)
 1. Drag **Daily Confirmed Cases** onto a blank area of the report canvas to the right of the state matrix and underneath the shape map:
 ![image](media/image065.png?raw=true)
-1. Drag **Date** onto the **Axis** for the column chart and resize so the right edge aligns with the middle of the shape map:
+1. Resize so the right edge aligns with the middle of the shape map:
 ![image](media/image066.png?raw=true)
+1. Drag and drop **Date** to the **Axis** for the new column chart.  By default, a date hierarchy will automatically be created allowing users to drill up/down the hierarchy when interatcting with the visualization.  Click on the down arrow to the right of **Date** and select **Date** to remove the hierarchy and just use the date value for the axis:
+![image](media/image066a.png?raw=true)
 1. Right click on the new column chart and select **Copy**, then **Copy visual**:
 ![image](media/image067.png?raw=true)
 1. Click on the empty canvas to the right of the column chart and paste a new chart using **Ctrl-v**.  Change the **Value** of the new chart to use **Daily Deaths**:
 ![image](media/image068.png?raw=true)
 1. Click on the **paint roller icon** to modify the properties of the daily deaths column chart.  Expand **Data colors** and change the **Default color** to red:
 ![image](media/image069.png?raw=true)
-1. The charts include early dates where there is very little data. Resize the state matrix to create room for a new date filter. Drag and drop **Date** onto the canvas just above the state matrix. Click on the **Filter icon** in the **Visualizations** pane to create a date filter:
-![image](media/image070.png?raw=true)
-1. Click on the down arrow in the upper righthand corner of the date filter:
+1. The charts include early dates where there is very little data. Resize the state matrix to create room for a new date slicer. Drag and drop **Date** onto the canvas just above the state matrix. Click on the **Slicer icon** in the **Visualizations** pane to create a date slicer: 
+![image](media/image070.png)
+1. By default, a date hierarchy will automatically be created allowing users to drill up/down the hierarchy when interatcting with the visualization.  Click on the down arrow to the right of **Date** and select **Date** to remove the hierarchy and just use the date value for the axis:
+![image](media/image070a.png)
+1. Click on the down arrow in the upper righthand corner of the date slicer:
 ![image](media/image071.png?raw=true)
-1. Select **Between** to create a date range filter:
+1. Select **Between** to create a date range slicer:
 ![image](media/image072.png?raw=true)
-1. Use the date filter to set the starting date to March 10th, 2020.
+1. Use the date slicer to set the starting date to March 10th, 2020.
 ![image](media/image073.png?raw=true)
 1. As a final step, modify the cross filtering behavior of the report.  The default cross filtering behavior is to highlight the contribution of a selected state instead of filtering the counts to only show data for a selected state.  Click on the shape map, then click on **Edit interactions** on the **Format** ribbon.  Click on the **Filter icons** above both of the column charts below the shape map:
 ![image](media/image074.png?raw=true)

@@ -9,6 +9,7 @@ In this workshop we will use [Power BI Desktop](https://powerbi.microsoft.com/en
 ### Prerequisites
 
 - Install [Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/)
+- Enable [Shape Map visual](pbi-shape-map.md)
 - **Optional**: Log into the [Power BI Service](https://app.powerbi.com) a Power BI account.  If you have been granted a Power BI Pro license you can publish and share content with others.
 
 ### Power BI reports
