@@ -11,6 +11,10 @@ In this workshop we will use [Power BI Desktop](https://powerbi.microsoft.com/en
 - Install [Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/)
 - **Optional**: Log into the [Power BI Service](https://app.powerbi.com) a Power BI account.  If you have been granted a Power BI Pro license you can publish and share content with others.
 
+### Power BI reports
+
+[Click to download a zip file containing Power BI reports for each stage of this workshop](PBI_reports.zip)
+
 ### Syllabus
 
 - Review [USAFacts National COVID-19 Report](https://app.powerbi.com/view?r=eyJrIjoiMmI2ZjExMzItZTcwNy00YmUwLWFlMTAtYTUxYzVjODZmYjA5IiwidCI6ImMxMzZlZWMwLWZlOTItNDVlMC1iZWFlLTQ2OTg0OTczZTIzMiIsImMiOjF9)
