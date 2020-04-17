@@ -32,7 +32,6 @@ In this workshop we will use [Power BI Desktop](https://powerbi.microsoft.com/en
 
 - [Publish your Power BI report to the Power BI Service](pbi-service.md): (**Optional** - according to time available and access to Power BI Service):
   - Publish your Power BI report to the Power BI Service
-  - Open a web browser and navigate to the Power BI Service
   - Use web browser to interact with published Power BI report
 
 ### Power BI References
