@@ -14,18 +14,10 @@ If you don't have an Azure subscription, create a [free account] now.
 
 ## Syllabus
 - [Core Concepts](./CoreConcepts/core-concepts.md)
-- [Open Azure CLI]
-- [Create a Resource Group]
+- [Open Azure CLI](./OpenAzureCLI/OpenAzureCLI.md)
+- [Create a Resource Group](./CreateResourceGroup/CreateResourceGroup.md)
 - [Create a Virtual Network](./VirtualNetwork/VirtualNetwork.md)
 - [Create Virtual Machines](./CreateVirtualMachine/CreateVirtualMachine.md)
-- [Create a File Share & Mount to VM]
-- [Backup a Virtual Machine]
-- [Clean Up]
-
-  [Open Azure CLI]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/OpenAzureCLI/OpemAzureCLI.md>
-  [Create a Resource Group]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/CreateResourceGroup/CreateResourceGroup.md>
-  [Create a File Share & Mount to VM]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/FileShare/CreateAFileShare.md>
-  [Backup a Virtual Machine]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/Backup/BackupVM.md>
-  [Clean Up]:<https://github.com/Microsoft-USEduAzure/workshops/blob/master/AzureFundamentals/Cleanup/Cleanup.md>
-  [free account]:<https://azure.microsoft.com/en-us/free/?WT.mc_id=A261C142F>
-  [Sign in]:<https://portal.azure.com/>
+- [Create a File Share & Mount to VM](./FileShare/CreateAFileShare.md)
+- [Backup a Virtual Machine](./Backup/BackupVM.md)
+- [Clean Up](./Cleanup/Cleanup.md)
