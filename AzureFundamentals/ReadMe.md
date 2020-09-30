@@ -19,5 +19,6 @@ If you don't have an Azure subscription, create a [free account] now.
 - [Create a Virtual Network](./VirtualNetwork/VirtualNetwork.md)
 - [Create Virtual Machines](./CreateVirtualMachine/CreateVirtualMachine.md)
 - [Create a File Share & Mount to VM](./FileShare/CreateAFileShare.md)
+- [Use Serverless Tools to Analyze Text](./Serverless/CreateCognitiveService.md)
 - [Backup a Virtual Machine](./Backup/BackupVM.md)
 - [Clean Up](./Cleanup/Cleanup.md)

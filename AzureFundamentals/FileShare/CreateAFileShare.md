@@ -191,4 +191,4 @@ Further documentation: [Mount Files Share to Linux VM](https://docs.microsoft.co
 
 Further documentation: [Mount Files Share on Windows VM](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)
 
-### Next: [Backup a Virtual Machine](../Backup/BackupVM.md) ###
+### Next: [Use Serverless Tools to Analyze Text](../Serverless/CreateCognitiveService.md) ###
