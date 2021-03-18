@@ -48,7 +48,8 @@ Click on the **Transform** page, then click on the **Unpivot Columns icon** and 
 1. Notice as the data has been transformed, each step is captured in the **APPLIED STEPS** listing.  You can select on any of the applied steps to view the state of the data set after all of the steps before and including the selected step have been applied:
 ![image](media/image015.png?raw=true)
 1. To add the second data set containing deaths by State by County by Date, duplicate the **covid_confirmed_usafacts** query.  Right click on the **covid_confirmed_usafacts** query and select **Duplicate**:
-![image](media/image016.png?raw=true)
+
+    ![image](media/image016.png?raw=true)
 1. Right click on the **covid_confimed_usafacts (2)** query and select **Rename**.  Rename the query **covid_deaths_usafacts**:
 
     ![image](media/image017.png?raw=true)
