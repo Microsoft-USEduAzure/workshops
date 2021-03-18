@@ -54,7 +54,8 @@ Click on the **Transform** page, then click on the **Unpivot Columns icon** and 
 
     ![image](media/image017.png?raw=true)
 1. Use the **APPLIED STEPS** list to modify the data source to import the file containing data on deaths.  Click on the **Cog icon** to the right of the **Source** step.  Change the URL to <https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv> and click **OK**:
-![image](media/image018.png?raw=true)
+
+    ![image](media/image018.png?raw=true)
 1. Delete the last step, which renamed the **Value** column to **Confirmed Cases**:
 ![image](media/image019.png?raw=true)
 1. Rename the **Value** column to **Deaths**:
@@ -65,13 +66,15 @@ Click on the **Transform** page, then click on the **Unpivot Columns icon** and 
 1. The **Merge** dialog will appear.  Use the drop downs to set the tables to **covid_confirmed_usafacts** and **covid_deaths_usafacts**.  Holding the **CTRL** key select **countyFIPS**, **State** and **Date** in that order for each of the tables to be merged:
 ![image](media/image022.png?raw=true)
 1. When combining data from multiple tables, you may be prompted to set privacy levels for the combined data set.  Select **Public**, then click **Save**:
-![image](media/image022a.png)
+
+    ![image](media/image022a.png)
 1. Once the privacy levels have been set, Click **OK**:
 ![image](media/image022b.png?raw=true)
 1. Once the tables are merged, scroll all the way to the last column on the right.  The column name will be **covid_deaths_usafacts** and the data in the column will be labled **Table**.  Click on the **Expand icon** to the right of the column name.  Unselect all columns, except **Deaths**.  Make sure the **Use original column name as prefix** checkbox is unchecked and click **OK**
 ![image](media/image022c.png?raw=true)
 1. Rename the new merged query table **US Covid** and click on **Close & Apply**:
-![image](media/image023.png?raw=true)
+
+    ![image](media/image023.png?raw=true)
 1. The **Power Query Editor** will close and the queries will be executed to import data into the internal tabular model:
 ![image](media/image024.png?raw=true)
 
