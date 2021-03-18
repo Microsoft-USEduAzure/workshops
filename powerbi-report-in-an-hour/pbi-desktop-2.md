@@ -11,18 +11,18 @@
 1. Save the Power BI report before doing anymore work.  Click **File** in the upper lefthand corner:
 ![image](media/image025.png?raw=true)
 Click **Save as**:
-![image](media/image026.png?raw=true)
+
+    ![image](media/image026.png?raw=true)
 Navigate to a folder where you want to save the file and name the file **US Covid-19**:
 ![image](media/image027.png?raw=true)
-1. The first step in preparing tables will be to hide the two tables that we merged.  Click on the **... elipse icon** or right click on the table **covid_confirmed_usafacts** to display the table options menu:
+1. The first step in preparing tables will be to hide the two tables that we merged.  Click on the **eyeball icon** to the right of the **covid_confirmed_usafacts** table to hide:
 ![image](media/image028.png?raw=true)
-Select **Hide**, to hide the table:
-![image](media/image029.png?raw=true)
-Repeat the process to hide the **covid_deaths_usafacts** table:
+
+    Repeat the process to hide the **covid_deaths_usafacts** table:
 ![image](media/image030.png?raw=true)
-1. Some of the identifiers included in the imported data are not needed to perform analysis and can be hidden.  Right click on the **countyFIPS** column and select **Hide**:
+1. Some of the identifiers included in the imported data are not needed to perform analysis and can be hidden.  Click on the eyeball icon to the right of the **countyFIPS** column to hide:
 ![image](media/image031.png?raw=true)
-Right click on the **stateFIPS** column and select **Hide**:
+Repeat the process to hide the **stateFIPS** column:
 ![image](media/image032.png?raw=true)
 1. Notice that some of the columns have an icon to the left of the column name.  The icons can indicate that the column is aggregated using a **Summarization** method or that they belong to a predefined **Data category**. Click on **Confirmed Cases** and review the **Summarization** and **Data category** located on the **Column tools** ribbon:
 ![image](media/image033.png?raw=true)

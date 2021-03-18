@@ -24,7 +24,7 @@ In this workshop we will use [Power BI Desktop](https://powerbi.microsoft.com/en
     |------|------|
     |**Question**  | *Which state has the 3rd most deaths?*|
     |**Navigation**  | *What happens when you move the mouse pointer over Michigan on the US map?*|
-    |**Filter**  |  *Use the date slider in the upper righthand corner of the report to modify the date range.  What date is used to filter the confirmed cases and deaths displayed in the table on the lefthand side of the report?*|
+    |**Filter**  |  *Use the date slider in the upper righthand corner of the report to modify the date range.  Does the date slider filter the data for all visuals displayed in the report?*|
     |**Drill through**  | *Right-click on Texas and select* **Drill through->County View** |
 
 - [Part 1 - Use Power BI Desktop](pbi-desktop-1.md) to:
