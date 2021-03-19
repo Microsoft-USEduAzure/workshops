@@ -121,7 +121,7 @@ Power BI has incorporated many design features common to other office products, 
 ![image](media/image058.png?raw=true)
 1. Rename the measure, **Fatality Rate**.  Use **Measure Tools** to format the **Fatality Rate** as a percentage with 1 decimal place:
 ![image](media/image059.png?raw=true)
-1. The state matrix is now complete with all metrics properly formated:
+1. Add **Fatality Rate** to the state matrix.  The state matrix is now complete with all metrics properly formatted:
 ![image](media/image060.png?raw=true)
 1. Drag and drop **State** onto a blank area of the report canvas to the right of the state matrix:
 ![image](media/image061.png?raw=true)
@@ -139,7 +139,7 @@ Power BI has incorporated many design features common to other office products, 
 ![image](media/image066a.png?raw=true)
 1. Right click on the new column chart and select **Copy**, then **Copy visual**:
 ![image](media/image067.png?raw=true)
-1. Click on the empty canvas to the right of the column chart and paste a new chart using **Ctrl-v**.  Change the **Value** of the new chart to use **Daily Deaths**:
+1. Click on the empty canvas to the right of the column chart and paste a new chart using **Ctrl-v**.  Change the **Values** of the new chart to use **Daily Deaths**:
 ![image](media/image068.png?raw=true)
 1. Click on the **paint roller icon** to modify the properties of the daily deaths column chart.  Expand **Data colors** and change the **Default color** to red:
 ![image](media/image069.png?raw=true)
@@ -151,7 +151,7 @@ Power BI has incorporated many design features common to other office products, 
 ![image](media/image071.png?raw=true)
 1. Select **Between** to create a date range slicer:
 ![image](media/image072.png?raw=true)
-1. Use the date slicer to set the starting date to March 10th, 2020.
+1. Use the date slicer to set the starting date to August 1st, 2020.
 ![image](media/image073.png?raw=true)
 1. As a final step, modify the cross filtering behavior of the report.  The default cross filtering behavior is to highlight the contribution of a selected state instead of filtering the counts to only show data for a selected state.  Click on the shape map, then click on **Edit interactions** on the **Format** ribbon.  Click on the **Filter icons** above both of the column charts below the shape map:
 ![image](media/image074.png?raw=true)
