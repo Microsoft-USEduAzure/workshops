@@ -19,7 +19,7 @@ Navigate to a folder where you want to save the file and name the file **US Covi
     
     ![image](media/image028.png?raw=true)
 
-Repeat the process to hide the **covid_deaths_usafacts** table:
+    Repeat the process to hide the **covid_deaths_usafacts** table:
     
     ![image](media/image030.png?raw=true)
 1. Some of the identifiers included in the imported data are not needed to perform analysis and can be hidden.  Click on the eyeball icon to the right of the **countyFIPS** column to hide:
