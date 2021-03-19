@@ -10,11 +10,14 @@
 
 1. Save the Power BI report before doing anymore work.  Click **File** in the upper lefthand corner:
 ![image](media/image025.png?raw=true)
-Click **Save as**:
+
+    Click **Save as**:
 
     ![image](media/image026.png?raw=true)
-Navigate to a folder where you want to save the file and name the file **US Covid-19**:
-![image](media/image027.png?raw=true)
+
+    Navigate to a folder where you want to save the file and name the file **US Covid-19**:
+
+    ![image](media/image027.png?raw=true)
 1. The first step in preparing tables will be to hide the two tables that we merged.  Click on the **eyeball icon** to the right of the **covid_confirmed_usafacts** table to hide:
     
     ![image](media/image028.png?raw=true)
