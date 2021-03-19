@@ -18,12 +18,14 @@ Navigate to a folder where you want to save the file and name the file **US Covi
 1. The first step in preparing tables will be to hide the two tables that we merged.  Click on the **eyeball icon** to the right of the **covid_confirmed_usafacts** table to hide:
     
     ![image](media/image028.png?raw=true)
+
 Repeat the process to hide the **covid_deaths_usafacts** table:
     
     ![image](media/image030.png?raw=true)
 1. Some of the identifiers included in the imported data are not needed to perform analysis and can be hidden.  Click on the eyeball icon to the right of the **countyFIPS** column to hide:
     
     ![image](media/image031.png?raw=true)
+
 Repeat the process to hide the **stateFIPS** column:
 
     ![image](media/image032.png?raw=true)
@@ -41,7 +43,8 @@ Power BI has incorporated many design features common to other office products, 
 ![image](media/image037.png?raw=true)
 
 1. The confirmed cases listing by state matrix will be the first visual added to the report.  Click on **Confirmed Cases**, drag and drop it onto the report canvas:
-![image](media/image038.png?raw=true)
+
+    ![image](media/image038.png?raw=true)
 1. **Confirmed Cases** is now highlighted in the **Fields** list and place in the **Value** landing zone for the visualization.  A column chart (see icon highlighted in the **Visualizations** panel) was automatically selected as the default visualization for **Confirmed Cases** based on its properties:
 ![image](media/image039.png?raw=true)
 1. Change the visualization to a **Matrix** by selecting the **Matrix icon** in the **Visualizations** panel:
@@ -103,7 +106,8 @@ Power BI has incorporated many design features common to other office products, 
 1. Click on **New column** and copy and past the DAX for **Daily Deaths** into the column editor.  Click on the checkmark symbol to validate the DAX for the new column.  If the DAX is valid, the new column should be displayed:
 ![image](media/image048.png?raw=true)
 1. Review the rows of the **US Covid** table to validate that the new calculated columns are correctly showing the changes from one date to the next:
-![image](media/image049.png?raw=true)
+
+    ![image](media/image049.png?raw=true)
 1. Hide the **Confirmed Cases** running total column by clicking on the eyeball icon to the right of the column:
 ![image](media/image050.png?raw=true)
 1. Hide the **Deaths** running total column by clicking on the eyeball icon to the right of the column:
@@ -115,13 +119,15 @@ Power BI has incorporated many design features common to other office products, 
 1. Even though the original columns are hidden, they are still visible in the matrix that was added earlier.  Delete the original columns from the **Value** landing zone of the matrix and drag and drop the new columns into the **Value** landing zone:
 ![image](media/image054.png?raw=true)
 1. Power BI has a feature called [**Quick Measures**](https://docs.microsoft.com/en-us/power-bi/desktop-quick-measures) that is a template driven feature for creating common time intelligence and other metrics.  Right click on the **US Covid** table and select **New quick measure**:
-![image](media/image055.png?raw=true)
+
+    ![image](media/image055.png?raw=true)
 1. Use the **Calculation** dropdown menu to select the template for **Divisioni**:
 ![image](media/image056.png?raw=true)
 1. Drag and drop **Daily Deaths** onto the **Numerator** and **Daily Confirmed Cases** onto the **Denominator**.  Click **OK**:
 ![image](media/image057.png?raw=true)
 1. By default the **Quick Measures** feature will create a verbose name describing the new measure.  Right click on the new measure and select **Rename**
-![image](media/image058.png?raw=true)
+
+    ![image](media/image058.png?raw=true)
 1. Rename the measure, **Fatality Rate**.  Use **Measure Tools** to format the **Fatality Rate** as a percentage with 1 decimal place:
 ![image](media/image059.png?raw=true)
 1. Add **Fatality Rate** to the state matrix.  The state matrix is now complete with all metrics properly formatted:
@@ -129,7 +135,8 @@ Power BI has incorporated many design features common to other office products, 
 1. Drag and drop **State** onto a blank area of the report canvas to the right of the state matrix:
 ![image](media/image061.png?raw=true)
 1. Since the **Data category** for **State** is set, the default visual is a map.  Resize the map to take the top half of the canvas to the right of the state matrix:
-![image](media/image062.png?raw=true)
+
+    ![image](media/image062.png?raw=true)
 1. Change the map visual to a **Shape Map** by clicking on the **Shape Map icon** in the **Visulizations** pane:
 ![image](media/image063.png?raw=true)
 1. Drag **Daily Confirmed Cases** to **Color saturation** and drag **Daily Deaths** and **Fatality Rate** to **Tooltips**.  Each state is now colored according to the number of **Daily Confirmed Cases** and hovering over a state will provide the additional information from **Tooltips**:
@@ -145,7 +152,8 @@ Power BI has incorporated many design features common to other office products, 
 1. Click on the empty canvas to the right of the column chart and paste a new chart using **Ctrl-v**.  Change the **Values** of the new chart to use **Daily Deaths**:
 ![image](media/image068.png?raw=true)
 1. Click on the **paint roller icon** to modify the properties of the daily deaths column chart.  Expand **Data colors** and change the **Default color** to red:
-![image](media/image069.png?raw=true)
+
+    ![image](media/image069.png?raw=true)
 1. The charts include early dates where there is very little data. Resize the state matrix to create room for a new date slicer. Drag and drop **Date** onto the canvas just above the state matrix. Click on the **Slicer icon** in the **Visualizations** pane to create a date slicer: 
 ![image](media/image070.png)
 1. By default, a date hierarchy will automatically be created allowing users to drill up/down the hierarchy when interatcting with the visualization.  Click on the down arrow to the right of **Date** and select **Date** to remove the hierarchy and just use the date value for the axis:
@@ -153,7 +161,8 @@ Power BI has incorporated many design features common to other office products, 
 1. Click on the down arrow in the upper righthand corner of the date slicer:
 ![image](media/image071.png?raw=true)
 1. Select **Between** to create a date range slicer:
-![image](media/image072.png?raw=true)
+
+    ![image](media/image072.png?raw=true)
 1. Use the date slicer to set the starting date to August 1st, 2020.
 ![image](media/image073.png?raw=true)
 1. As a final step, modify the cross filtering behavior of the report.  The default cross filtering behavior is to highlight the contribution of a selected state instead of filtering the counts to only show data for a selected state.  Click on the shape map, then click on **Edit interactions** on the **Format** ribbon.  Click on the **Filter icons** above both of the column charts below the shape map:
