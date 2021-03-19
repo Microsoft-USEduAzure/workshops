@@ -16,13 +16,17 @@ Click **Save as**:
 Navigate to a folder where you want to save the file and name the file **US Covid-19**:
 ![image](media/image027.png?raw=true)
 1. The first step in preparing tables will be to hide the two tables that we merged.  Click on the **eyeball icon** to the right of the **covid_confirmed_usafacts** table to hide:
-![image](media/image028.png?raw=true)
+    
+    ![image](media/image028.png?raw=true)
 Repeat the process to hide the **covid_deaths_usafacts** table:
-![image](media/image030.png?raw=true)
+    
+    ![image](media/image030.png?raw=true)
 1. Some of the identifiers included in the imported data are not needed to perform analysis and can be hidden.  Click on the eyeball icon to the right of the **countyFIPS** column to hide:
-![image](media/image031.png?raw=true)
+    
+    ![image](media/image031.png?raw=true)
 Repeat the process to hide the **stateFIPS** column:
-![image](media/image032.png?raw=true)
+
+    ![image](media/image032.png?raw=true)
 1. Notice that some of the columns have an icon to the left of the column name.  The icons can indicate that the column is aggregated using a **Summarization** method or that they belong to a predefined **Data category**. Click on **Confirmed Cases** and review the **Summarization** and **Data category** located on the **Column tools** ribbon:
 ![image](media/image033.png?raw=true)
 1. Set the **Data catogory** for both the **County Name** and **State** columns by selecting the column and setting the **Data category** using the drop down selector:
