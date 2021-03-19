@@ -153,7 +153,8 @@ Power BI has incorporated many design features common to other office products, 
 1. Right click on the new column chart and select **Copy**, then **Copy visual**:
 ![image](media/image067.png?raw=true)
 1. Click on the empty canvas to the right of the column chart and paste a new chart using **Ctrl-v**.  Change the **Values** of the new chart to use **Daily Deaths**:
-![image](media/image068.png?raw=true)
+
+    ![image](media/image068.png?raw=true)
 1. Click on the **paint roller icon** to modify the properties of the daily deaths column chart.  Expand **Data colors** and change the **Default color** to red:
 
     ![image](media/image069.png?raw=true)
