@@ -48,9 +48,11 @@ Power BI has incorporated many design features common to other office products, 
 1. Click on **State**, drag and drop it onto **Matrix** visual:
 ![image](media/image042.png?raw=true)
 1. Visuals can be moved and resized on the canvas using the same methods as with any other Office application.  Click and drag the lower righthand corner of the **Matrix** visual to resize it:
-![image](media/image043.png?raw=true)
+
+    ![image](media/image043.png?raw=true)
 1. The rows in a matrix visual can be sorted by clicking on the column headers.  Click on the **Confirmed Cases** column header to sort the rows:
-![image](media/image044.png?raw=true)
+
+    ![image](media/image044.png?raw=true)
 1. Click on the **Data icon** to the left of the report canvas to view the rows of the **US Covid** table.  Notice how each row contains a running total of **Confirmed Cases** and **Deaths** by State by County by Date:
 ![image](media/image045.png?raw=true)
 1. We need to add two new columns to the table for the **Confirmed Cases** and **Deaths** added each day.  This will enable us to trend the measures over time.  We will use [**Data Analysis Expressions** or **DAX**](https://docs.microsoft.com/en-us/power-bi/guided-learning/introductiontodax) to create the new columns.  DAX is a rich expression language that can be used to create complex calculations within tabular models.  Here is the DAX needed for the new columns:
@@ -93,15 +95,15 @@ Power BI has incorporated many design features common to other office products, 
 
     Here is how the DAX looks when correctly formatted:
     ![image](media/image046.png?raw=true)
-1. Click on **New column** and copy and past the DAX for **Daily Confirmed Cases** into the column editor:
+1. Click on **New column** and copy and past the DAX for **Daily Confirmed Cases** into the column editor.  Click on the checkmark symbol to validate the DAX for the new column.  If the DAX is valid, the new column should be displayed:
 ![image](media/image047.png?raw=true)
-1. Click on **New column** and copy and past the DAX for **Daily Deaths** into the column editor:
+1. Click on **New column** and copy and past the DAX for **Daily Deaths** into the column editor.  Click on the checkmark symbol to validate the DAX for the new column.  If the DAX is valid, the new column should be displayed:
 ![image](media/image048.png?raw=true)
 1. Review the rows of the **US Covid** table to validate that the new calculated columns are correctly showing the changes from one date to the next:
 ![image](media/image049.png?raw=true)
-1. Hide the **Confirmed Cases** running total column by right clicking on the column header and selecting **Hide in report view**:
+1. Hide the **Confirmed Cases** running total column by clicking on the eyeball icon to the right of the column:
 ![image](media/image050.png?raw=true)
-1. Hide the **Deaths** running total column by right clicking on the column header and selecting **Hide in report view**:
+1. Hide the **Deaths** running total column by clicking on the eyeball icon to the right of the column:
 ![image](media/image051.png?raw=true)
 1. The **Column tools** are also available in the **Data view**.  Use the **Format** options to format the two new columns:
 ![image](media/image052.png?raw=true)
