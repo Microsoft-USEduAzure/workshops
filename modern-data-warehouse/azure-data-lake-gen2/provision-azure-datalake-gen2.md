@@ -25,7 +25,7 @@
     ### Bash
     ```
     resourceGroup=EDUMDW-Lab
-    name=edumdwstorage+YOURINITIALS
+    name=edumdwdatalake+YOURINITIALS
     location=<ENTER_YOUR _PREFERRED_LOCATION>
 
     # Enable extension to interact with ADLS Gen2
