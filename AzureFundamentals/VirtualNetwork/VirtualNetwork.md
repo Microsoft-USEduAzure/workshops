@@ -32,7 +32,10 @@
 You first need to create a network on the same recource group you created on the previous excercise:
 
 ```sh
-az network vnet create --name myVirtualNetwork --resource-group AzureLab --subnet-name default
+az network vnet create --name myVirtualNetwork --resource-group AzureLab --subnet-name default  --location southcentralus
+az network vnet subnet create --resource-group AzureLab --vnet-name MyVirtualNetwork -n AzureBastionSubnet --address-prefixes 10.0.1.0/27
+az network public-ip create --resource-group AzureLab --name myPip --sku Standard --location southcentralus
+az network bastion create --name MyBastionHost --public-ip-address myPip --resource-group AzureLab --vnet-name myVirtualNetwork --location southcentralus
 ```
 Further documentation:  [Create Virtual Network Documentation](https://docs.microsoft.com/en-us/azure/virtual-network/quick-create-portal)
 
