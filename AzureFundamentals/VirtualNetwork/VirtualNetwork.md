@@ -10,17 +10,20 @@
 1. In the Search field, type *Virtual* and click on **Virtual Network** that appears in the drop down list.
 ![Select Azure Resource Group](media/1.png)
 1. Click the **Create** button.
-1. In **Create virtual network**, enter or select this information:
-    - `Name`	Enter myVirtualNetwork.
-    - `Address space`	Enter 10.0.0.0/16.
-    - `Subscription`	Select your subscription.
-    - `Resource group`	Select AzureLab.
+1. In **Create virtual network**, enter or select this information, then click the **Security** tab.
+    - `Subscription`	Select your Azure subscription.
+    - `Resource group`	Select this lab's resource group.
     - `Location`	Select South Central US.
-    - `Subnet - Name`	Enter default.
-    - `Subnet - Address` range	Enter 10.0.0.0/24.
 
     ![Select Azure Resource Group](media/2.png)
-1. Leave the rest of the defaults and select Create.
+
+1. From within the **Security** tab, enable **BastionHost**, and click **Create new** for Public IP address.
+
+    ![Select Azure Resource Group](media/3.png)
+    
+1. Finally, enter the following information and press **Review + Create**, followed by **Create.** 
+    - `Bastion name` myBastionHost
+    - `AzureBastionSubnet address space` 10.0.1.0/27
 
 ----
 
