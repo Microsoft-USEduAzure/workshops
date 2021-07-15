@@ -9,64 +9,29 @@
 ## Azure Portal
 ### Create a Windows Server Virtual Machine
 1. In the [Azure Portal](https://portal.azure.com), click the **+Create a resource** link at the top left of the page.
-1. In the Search field, type *Windows Server* and click on **Windows Server** that appears in the drop down list.
+1. Under *Categories* click on **Compute**, then click on **Create** under *Virtual Machines*.
 ![Select Azure Resource Group](media/1.png)
-1. From **Select a software plan** choose **Windows Server 2019 Datacenter** and click **Create**
+1. In **Create a virtual machine**, enter or select this information:
+    - `Instance details - Subscription`	Select your subscription.
+    - `Instance details - Resource group`	Select this lab's resource group.
+    - `Instance details - Virtual Machine name`	windowsVM
+    - `Instance details - Region`	Select South Central US.
+
+    - `Availability options` Select No infrastructure redundancy required
+    - `Image` Select Windows Server 2019 Datacenter - Gen1
+    
+    - `Administrator account - Username`	Enter your Local administrator account name.
+    - `Administrator account - Password` and `Confirm password` Enter your Local adminsitrator account's password
+
+    - `Inbound Port Rules - Public inbound ports` Choose **None**
+    
 ![Select Azure Resource Group](media/2.png)
-1. In **Create a virtual machine**, enter or select this information:
-    - `Instance details - Subscription`	Select your subscription.
-    - `Instance details - Resource group`	Select **AzureLab**.
-    - `Instance details - Virtual Machine name`	myVm1
-    - `Instance details - Region`	Select South Central US.
-    
-    - `Administrator account - Username`	Enter your Local administrator account name.
-    - `Administrator account - Password` and `Confirm password` Enter your Local adminsitrator account's password
 
-    - `Inbound Port Rules - Public inbound ports` Choose **Allow selected ports** and then select **RDP (3389)** and from the drop-down.
+1. Click on **Networking**
+1. Ensure **Virtual Network** is set to *myVirtualNetwork*, set **Public inbound ports** to *None* and leave all else as default. Next, click **Review + Create** followed by **Create** once validation has passed.
+![Select Azure Resource Group](media/3.png)
 
-   
-    ![Select Azure Resource Group](media/3.png)
-    ![Select Azure Resource Group](media/4.png)
-1. Click **Next: Disks>**, leave all as default and click on **Next: Networking>**
-1. Ensure **Virtual Network** is set to *myVirtualNetwork* and leave all else as default.
-
-1. Click **Review + Create**, and then **Create** once validation has passed.
-    ![Select Azure Resource Group](media/5.png)
-1. Check the **Notifications** icon in the upper right and wait unitl you see **Resource group created**, then click the **Go to resource** button.
-1. Make note of myVm1's Public IP Address
-    ![Select Azure Resource Group](media/9.png)
-
-
-
-
-
-
-
-### Create an Ubuntu Virtual Machine
-1. In the [Azure Portal](https://portal.azure.com), click the **+Create a resource** link at the top left of the page.
-1. In the Search field, type *Ubuntu* and click on **Ubuntu 18.04 lTS** that appears in the drop down list, then click the **Create** button.
-![Select Azure Resource Group](media/6.png)
-
-1. In **Create a virtual machine**, enter or select this information:
-    - `Instance details - Subscription`	Select your subscription.
-    - `Instance details - Resource group`	Select **AzureLab**.
-    - `Instance details - Virtual Machine name`	myVm2
-    - `Instance details - Region`	Select South Central US.
-    
-    - `Administrator account - Authentication type`	Select *Password*
-    - `Administrator account - Username`	Enter your Local administrator account name.
-    - `Administrator account - Password` and `Confirm password` Enter your Local adminsitrator account's password
-
-    - `Inbound Port Rules - Public inbound ports` Choose **Allow selected ports** and then select **SSH (22)** and from the drop-down.
-![Select Azure Resource Group](media/7.png)
-
-1. Click **Next: Disks>**, leave all as default and click on **Next: Networking>**
-1. Ensure **Virtual Network** is set to *myVirtualNetwork* and leave all else as default.
-1. Click **Review + Create**, and then **Create** once validation has passed.
-1. Check the **Notifications** icon in the upper right and wait unitl you see **Resource group created**, then click the **Go to resource** button.
-1. Make note of myVm2's Public IP address
-![Select Azure Resource Group](media/8.png)
-
+For a Linux VM, follow the same steps above but choose *Ubuntu Server 20.04 LTS - Gen1* for the **Image**. 
 
 ## Azure CLI
 
