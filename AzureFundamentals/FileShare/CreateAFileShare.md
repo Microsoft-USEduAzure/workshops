@@ -22,32 +22,33 @@ Before you can work with an Azure file share, you have to create an Azure storag
 Storage account names must be unique, so make sure to replace "USEDUAzureLabstorage" with a unique name.
 
 1. In the [Azure Portal](https://portal.azure.com), click the **+Create a resource** link at the top left of the page.
-1. In the Search field, type *Storage* and click on **Storage Account** that appears in the drop down list and click **Create.**
+1. In the Search field, type *Storage Account* and click on **Storage Account** that appears in the drop down list and click **Create.**
 ![Select Azure Resource Group](media/1.png)
 1. In **Create storage account**, enter or select this information:
     - `Project details - Subscription`	Select your subscription.
     - `Project details - Resource Group`	Select *AzureLab*.
     
     - `Instance details - Storage account name`	Enter a *globally unique* name.
-    - `Instance details - Location`	Select *South Central US*.
-    - `Instance details - Replication`	Select *Locally-redundant Storage (LRS)*  
+    - `Instance details - Region`	Select *South Central US*.
+    - `Instance details - Redundancy`	Select *Locally-redundant Storage (LRS)*  
 ![Select Azure Resource Group](media/2.png)
 1. Click **Review + Create** and once validation has passed, click **Create**
-1. Check the **Notifications** icon in the upper right and wait unitl you see **Resource group created**, then click the **Go to resource** button.
-1. From the Storage Account menu, click on **Access Keys** and copy the value of **key2's Key**  
+1. Once the resource is fully deployed, click the **Go to resource** button.
 ![Select Azure Resource Group](media/3.png)
+1. From the Storage Account menu, click on **Access Keys**, next copy the value of **key2's Key** into a text editor.
+![Select Azure Resource Group](media/4.png)
 
 
 ### Task 2: Create an Azure Files File Share
-1. From the Storage Account menu, click on **Files** and then **+File share**
-![Select Azure Resource Group](media/4.png)
-1. Set the **Name** to *myshare* and the **Quota** to *100 GiB* and press **Create**  
+1. From the Storage Account menu, click on **File sh** and then **+File share**
+![Select Azure Resource Group](media/5.png)
+1. Set the **Name** to *myshare*,  the **Quota** to *100 GiB*, Tier to **Transaction optimized**, and press **Create**  
 ![Select Azure Resource Group](media/5.png)
 1. From the the Files screen, select the **myshare** share we have just created and then click on **+Add Directory**
 1. Enter *myDirectory* as the directory **Name** and click **OK**
-![Select Azure Resource Group](media/6.png)
-1. Upload a local text file to the directory by clicking the **Upload** button, followed by the **Folder** icon, selecting the local file, and finally clicking the second **Upload** button on the Upload Files blade.  
 ![Select Azure Resource Group](media/7.png)
+1. Upload a local text file to the directory by clicking the **Upload** button, followed by the **Folder** icon, selecting the local file, and finally clicking the second **Upload** button on the Upload Files blade.  
+![Select Azure Resource Group](media/8.png)
 
 
 ## Azure CLI

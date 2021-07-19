@@ -24,7 +24,6 @@
     - `Administrator account - Password` and `Confirm password` Enter your Local adminsitrator account's password
 
     - `Inbound Port Rules - Public inbound ports` Choose **None**
-    
 ![Select Azure Resource Group](media/2.png)
 
 1. Click on **Networking**
@@ -65,26 +64,12 @@ The following output will be displayed for VM2 - Note the Public IP Address
 
 ## Connect to your Virtual Machines ##
 ----
-### Windows Virtual Machine
-1. Open the Remote Desktop Connection client on your workstation and click **More Options**
-1. Input myVm1's Public IP address in the **Computer** field and your Local Administrator username as the **User name**, then click **Connect** and input your Local Administrator Password in the **Password** field. 
-![Select Azure Resource Group](media/10.png)
-1. Once logged in, open the **Command Prompt** and type *ping myVm2* followed by **Enter**, you will now receive replies from the Ubuntu virtual machine.
-![Select Azure Resource Group](media/11.png)
-
-### Ubuntu Virtual Machine
-#### Connect to myVm2 using the public id using Bash
-*If created following CLI instructions*
-```sh
-ssh  13.66.35.3
-```
-
-*If created following Azure Portal instructions*
-```sh
-ssh  username@13.66.35.3
-```
-
-You'll receive four replies from myVm1
+1. From your Virtual Machine's Overview page, click on **Connect** and then select **Bastion**. 
+![Select Azure Bastion](media/4.png)
+1. From within the *Bastion* page, click on **Use Bastion**.
+![Select Azure Bastion](media/5.png)
+1. Enter the credentials for the Virtual Machine, and then click **Connect**.
+![Select Azure Bastion](media/6.png)
 
 
 [Next -> Create a File Share & Mount to VM]
