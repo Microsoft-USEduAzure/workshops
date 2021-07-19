@@ -6,7 +6,7 @@
 
 
 
-## Azure Portalz
+## Azure Portal
 ### Create a Windows Server Virtual Machine
 1. In the [Azure Portal](https://portal.azure.com), click the **+Create a resource** link at the top left of the page.
 1. Under *Categories* click on **Compute**, then click on **Create** under *Virtual Machines*.
