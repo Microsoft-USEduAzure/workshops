@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The US EDU Customer Sucess Unit has put together this hands on lab to guide you throught the basic principles of Power BI - DevOps process.
+The US EDU Customer Success Unit has put together this hands on lab to guide you throught the basic principles of Power BI - DevOps process.
 
 ## Pre-requisites
 
