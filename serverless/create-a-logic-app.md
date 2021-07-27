@@ -1,5 +1,6 @@
 # Create a Logic App
-Azure Logic Apps simplifies how you build automated scalable workflows that integrate apps and data across cloud services and on-premises systems. Learn how to create, design, and deploy logic apps that automate business processes with our quickstarts, tutorials, templates, and APIs.  
+Azure Logic Apps simplifies how you build automated scalable workflows that integrate apps and data across cloud services and on-premises systems. Learn how to create, design, and deploy logic apps that automate business processes with our quickstarts, tutorials, templates, and APIs.
+
 **Documentation: https://docs.microsoft.com/en-us/azure/logic-apps/**
 ### Prerequisite: [Create a Function App](./create-a-function-app.md) ###
 ![Logic App Flow](media/logic-app-flow.png)
@@ -18,9 +19,9 @@ Azure Logic Apps simplifies how you build automated scalable workflows that inte
 
 ## Create the Logic App
 
-1. In the Azure portal, click the **New** button found on the upper left-hand corner of the Azure portal.
+1. In the Azure portal, click the **Create a resource** button found on the upper left-hand corner of the Azure portal.
 
-2. Click **Web** > **Logic App**.
+2. Click **Integration** > **Logic App (Consumption)**
  
 3. Then, type a value for **Name** like `TweetSentiment`, and use the settings as specified in the table.
 

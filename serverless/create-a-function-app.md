@@ -25,7 +25,8 @@ Functions provides a great way to offload processing tasks in a logic apps workf
     | **OS** | Windows | Choose Windows for .Net code.|
     | **Hosting Plan** | Consumption | Choose consumption to pay for only what you use.|
     | **Location** | South Central US | Use the location nearest you. |
-    | **Runtime Stack** | .Net Core | Choose .Net Core for this tutorial.|
+    | **Runtime Stack** | .NET | Choose .NET for this tutorial.|
+    | **Version** | 3.1 | Choose 3.1 for this tutorial.|
     | **Storage Account** | Create New | Create a new storage account for this function|
 
 1. Click **Create** to create your resource. 
@@ -36,11 +37,11 @@ Functions provides a great way to offload processing tasks in a logic apps workf
 
 ## Create an HTTP triggered function  
 
-1. Expand your function app and click the **+** button next to **Functions**. If this is the first function in your function app, select **In-portal**.
+1. Expand your function app and click the **+** button next to **Functions**. If this is the first function in your function app, select **Develop in portal**.
 
     ![Functions quickstart page in the Azure portal](media/05-function-app-create-portal.png)
 
-1. Next, select **Webhook + API** and click **Create**. 
+1. Next, select **HTTP trigger** and click **Add**. 
 
     ![Choose the HTTP trigger](./media/06-function-webhook.png)
 
@@ -85,7 +86,10 @@ Functions provides a great way to offload processing tasks in a logic apps workf
 
     ![Test the function in the Azure portal](./media/07-function-test.png)
 
-Now you have a function that categorizes sentiment scores. Next, you create a logic app that integrates your function with your Twitter and Cognitive Services API.   
+    ![Test the function in the Azure portal](./media/08-function-test.png)
+
+Now you have a function that categorizes sentiment scores. Next, you create a logic app that integrates your function with your Twitter and Cognitive Services API.
+
 <br>
 
 ### Next: [Create a Logic App](./create-a-logic-app.md) ###
