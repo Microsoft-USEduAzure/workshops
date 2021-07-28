@@ -46,6 +46,7 @@ You can now use the Logic Apps Designer to add services and triggers to your app
 First, create a connection to your Twitter account. The logic app polls for tweets, which trigger the app to run.
 
 1. In the designer, click the **Twitter** service, and click the **When a new tweet is posted** trigger. Sign in to your Twitter account and authorize Logic Apps to use your account.
+> On first connection, you may receive an error message stating that **Twitter.com is blocked** If this occurs, delete the **When a new tweet is posted** trigger and re-add it to the Logic Apps design.
 
 2. Use the Twitter trigger settings as specified in the table. 
 
@@ -64,7 +65,7 @@ Now your app is connected to Twitter. Next, you connect to text analytics to det
 ## Initialize and Set Variables
 #### [Back to top](#Tasks)
 
-1. Click **New Step**, and then **Add an action**.
+1. Click the **+** icon below **When a new tweet is posted** and then **Add an action**.
 
 1. In **Choose an action**, type **Variables**, and then click the **Initialize Variable** action.
 
@@ -77,7 +78,7 @@ Now your app is connected to Twitter. Next, you connect to text analytics to det
     | **Name** | tweet_text | The variable name to reference later. |
     | **Type** | String | The variable Type. |
 
-1. Click **New Step**, and then **Add an action**.
+1. Click the **+** icon and then **Add an action**.
 
 1. In **Choose an action**, type **Variables**, and then click the **Initialize Variable** action.
 
@@ -92,7 +93,7 @@ Now your app is connected to Twitter. Next, you connect to text analytics to det
 
     ![Set Initiate Variable values](media/variables-3.png)
 
-1. Click **New Step**, and then **Add an action**.
+1. Click the **+** icon and then **Add an action**.
 
 1. In **Choose an action**, type **Variables**, and then click the **Set Variable** action.
 
@@ -105,7 +106,7 @@ Now your app is connected to Twitter. Next, you connect to text analytics to det
 ## Detect Tweet Language
 #### [Back to top](#Tasks)
 
-1. Click **New Step**, and then **Add an action**.
+1. Click the **+** icon and then **Add an action**.
 
 1. In **Choose an action**, type **Translator**, and then click the **Detect Langauge** action.
    
@@ -122,9 +123,9 @@ Now your app is connected to Twitter. Next, you connect to text analytics to det
 ## Detect Sentiment
 #### [Back to top](#Tasks)
 
-1. Click **New Step**, and then **Add an action**.
+1. Click the **+** icon and then **Add an action**.
 
-1. In **Choose an action**, type **Text Analytics**, and then click the **Detect sentiment (preview)** action.
+1. In **Choose an action**, type **Text Analytics**, and then click the **Sentiment (V3.0)** action.
 
     ![Create and Sentiment action](media/11-detect-sentiment.png)
 
@@ -132,32 +133,22 @@ Now your app is connected to Twitter. Next, you connect to text analytics to det
 
     ![Add Sentiment connection](media/12-connection-settings.png)
 
-1. Click in the **Add new parameter** field and choose *Text*
-    
-    ![Add Text parameter](media/sentiment-4.png)
+1. Click in the **documents id** field, click the **Expression** tab header and type *rand(1, 1000)* into the function field.
+    ![Select Original tweet id from the Dynamic Content pop-up](media/sentiment-4.png)
 
-1. Click in the **Text** field and choose *tweet_text* from the  **Dynamic Content** pop-up.
+1. Click in the **documents text** field and choose *tweet_text* from the  **Dynamic Content** pop-up.
 
     ![Select tweet_text from the Dynamic Content pop-up](media/sentiment-5.png)
 
-1. Click in the **Add new parameter** field and choose *Language*
-
-    ![Select Language Parameter](media/sentiment-6.png)
-
-1. Click in the **Language** field, scroll down and choose *Enter custom value*.
+1. Click in the **documents language** field and choose *Language Code* from the  **Dynamic Content** pop-up.
 
     ![Choose Enter Custom Value for Language](media/sentiment-7.png)
-
-1. Next, choose **Language Code** from the **Dynamic Content** pop-up and enter **tweet_text** in the text box and then click on **New Step**.
-
-    ![Add Language Code and Text Value](media/sentiment-8.png)
-
 
 Now that sentiment detection is configured, you can add a connection to your function that consumes the sentiment score output.
 
 ## Connect sentiment output to your function
 #### [Back to top](#Tasks)
-1. In the Logic Apps Designer, click **New step** > **Add an action**, filter on **Azure Functions** and click **Choose an Azure function**.
+1. In the Logic Apps Designer, click the *+* icon > **Add an action**, filter on **Azure Functions** and click **Choose an Azure function**.
 
     ![Detect Sentiment](media/14-azure-functions.png)
   
@@ -169,7 +160,7 @@ Now that sentiment detection is configured, you can add a connection to your fun
 
     ![Select function](media/16-select-function.png)
 
-4. In **Request Body**, click **Score** and then **Save**.
+4. In **Request Body**, click **sentiment** and then **Save**.
 
     ![Score](media/17-function-input-score.png)
 
@@ -213,7 +204,7 @@ Explanation: If the language is not English, in the next step, you will translat
 
     ![Add Set Variable acction](media/translate-4.png)
 
-1. Set the **Name** to *translated_tweet*, Click on the **Value** textfield and choose *Translated Text* rom the **Dynamic Content** pop-up.
+1. Set the **Name** to *translated_text*, Click on the **Value** textfield and choose *Translated Text* rom the **Dynamic Content** pop-up.
 
     ![Set name and value of translated_tweet variable](media/translate-5.png)
 
@@ -224,7 +215,7 @@ Explanation: If the language is not English, in the next step, you will translat
 
     ![Add an action after the child conditions](media/condition-2.png)
 
-1. Search for *Outlook* and click on **Office 365 Outlook**, then **Send an Email** 
+1. Search for *Outlook* and click on **Office 365 Outlook**, then **Send an Email (V2)** 
     
     ![Create and Outlook Send Email action](media/email-1.png)
 
@@ -232,7 +223,7 @@ Explanation: If the language is not English, in the next step, you will translat
 
 1. Add yourself to the **To** line
 
-1. Set the **Subject** to *Negative #hookem  Tweet by:* followed by the *Tweeted by* value from the **Dynhamic Content** pop-up.
+1. Set the **Subject** to *Negative #Azure  Tweet By:* followed by the *Original tweet user name* value from the **Dynamic Content** pop-up.
    
    ![Set the To and Subject of email.](media/email-2.png)
 
@@ -240,22 +231,12 @@ Explanation: If the language is not English, in the next step, you will translat
 
     | Content      |  Source   |
     | ----------------- | ------------ |
-    | **translated_tweet** | Variables |
+    | **translated_text** | Variables |
     | **tweet_text** | Variables  |
     | **Language Name** | Detect Language |
     | **Location** | When a new tweet is posted |
     | **Created at** | When a new tweet is posted |
-    
-    *You copy and paste the code below into the Body to append labels in front of variables*  
-    ```ruby
-        @{variables('translated_tweet')}
-        Tweet: @{variables('tweet_text')}
-        Language: @{body('Detect_language')?['Name']}
-        Location: @{triggerBody()?['UserDetails']?['Location']}
-        Date: @{triggerBody()?['CreatedAtIso']} 
-    ```
-
-
+        
     ![Fill in Body of email](media/email-3.png)
 
 ## Create a Profanity Filter

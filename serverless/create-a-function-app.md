@@ -37,7 +37,7 @@ Functions provides a great way to offload processing tasks in a logic apps workf
 
 ## Create an HTTP triggered function  
 
-1. Expand your function app and click the **+** button next to **Functions**. If this is the first function in your function app, select **Develop in portal**.
+1. Expand your function app and click the **+ Add** button next to **Functions**. If this is the first function in your function app, select **Develop in portal**.
 
     ![Functions quickstart page in the Azure portal](media/05-function-app-create-portal.png)
 
@@ -45,7 +45,7 @@ Functions provides a great way to offload processing tasks in a logic apps workf
 
     ![Choose the HTTP trigger](./media/06-function-webhook.png)
 
-1. Replace the contents of the `run.csx` file with the following code, then click **Save**:
+1. Click **Code + Test** and replace the contents of the `run.csx` file with the following code, then click **Save**:
 
     ```csharp
     #r "Newtonsoft.Json"
@@ -64,13 +64,13 @@ Functions provides a great way to offload processing tasks in a logic apps workf
         string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
         log.LogInformation(string.Format("The sentiment score received is '{0}'.", requestBody));
     
-        double score = Convert.ToDouble(requestBody);
+        string sentiment = requestBody;
     
-        if(score < .5)
+        if(string.Equals(sentiment, "negative", StringComparison.CurrentCultureIgnoreCase))
         {
             category = "RED";
         }
-        else if (score < .6) 
+        else if (string.Equals(sentiment, "neutral", StringComparison.CurrentCultureIgnoreCase) || string.Equals(sentiment, "mixed", StringComparison.CurrentCultureIgnoreCase)) 
         {
             category = "YELLOW";
         }
@@ -82,7 +82,7 @@ Functions provides a great way to offload processing tasks in a logic apps workf
     ```
     This function code returns a color category based on the sentiment score received in the request. 
 
-1. To test the function, click **Test** at the far right to expand the Test tab. Type a value of `0.2` for the **Request body**, and then click **Run**. A value of **RED** is returned in the body of the response. 
+1. To test the function, click **Test/Run** in the code editor toolbar to expand the Test tab. Type a value of `Negative` for the **Body**, and then click **Run**. A value of **RED** is returned in the body of the response. 
 
     ![Test the function in the Azure portal](./media/07-function-test.png)
 

@@ -25,7 +25,7 @@ The Cognitive Services APIs are available in Azure as individual resources. Use 
     | --- | --- | --- |
     | **Name** | TwtrSentiment | Choose a unique account name. |
     | **Location** | South Central US | Use the location nearest you. |
-    | **Pricing tier** | F0 | Start with the lowest tier. If you run out of calls, scale to a higher tier.|
+    | **Pricing tier** | Standard S | Start with the lowest tier. If you run out of calls, scale to a higher tier.|
     | **Resource group** | ServerlessWrkshp | Use the same resource group for all services in this tutorial.|
 
     >**NOTE:** If you are prompted to select additional features, click the "Skip this step" button
@@ -47,7 +47,7 @@ The Cognitive Services APIs are available in Azure as individual resources. Use 
     | --- | --- | --- |
     | **Name** | TwtrTranslator | Choose a unique account name. |
     | **Subscription** | Your Subscription | The subscription associated with your account |
-    | **Pricing tier** | F0 | Start with the lowest tier. If you run out of calls, scale to a higher tier.|
+    | **Pricing tier** | Standard S1 | Start with the lowest tier. If you run out of calls, scale to a higher tier.|
     | **Resource group** | ServerlessWrkshp | Use the same resource group for all services in this tutorial.|
     
 1. Click **Create** to create your resource.  
@@ -58,7 +58,7 @@ The Cognitive Services APIs are available in Azure as individual resources. Use 
 
 ## Create a Content Moderation resource
 1. Click **Create a resource** in the upper left-hand corner of the Azure portal.
-1. In the Search field, type in "Content" and choose "Content Moderator"  
+1. In the Search field, type in "Content Moderator" and choose "Content Moderator"  
 ![Search for Content Moderator](media/content-moderator-1.png)
 1. Click the **Create** button and fill out the resource creation form
 
@@ -67,7 +67,7 @@ The Cognitive Services APIs are available in Azure as individual resources. Use 
     | **Name** | TwtrModerator | Choose a unique account name. |
     | **Subscription** | Your Subscription | The subscription associated with your account |
     | **Location** | South Central US | Use the location nearest you. |
-    | **Pricing tier** | S0 | S0 allows for up to 10 calls per second|
+    | **Pricing tier** | Standard S0 | Standard S0 allows for up to 10 calls per second|
     | **Resource group** | ServerlessWrkshp | Use the same resource group for all services in this tutorial.|
     
 1. Click **Create** to create your resource.  
