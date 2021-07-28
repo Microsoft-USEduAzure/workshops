@@ -46,7 +46,6 @@ You can now use the Logic Apps Designer to add services and triggers to your app
 First, create a connection to your Twitter account. The logic app polls for tweets, which trigger the app to run.
 
 1. In the designer, click the **Twitter** service, and click the **When a new tweet is posted** trigger. Sign in to your Twitter account and authorize Logic Apps to use your account.
-> On first connection, you may receive an error message stating that **Twitter.com is blocked** If this occurs, delete the **When a new tweet is posted** trigger and re-add it to the Logic Apps design.
 
 2. Use the Twitter trigger settings as specified in the table. 
 
