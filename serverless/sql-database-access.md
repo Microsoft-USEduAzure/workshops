@@ -29,7 +29,7 @@ We will need to configure firewall for access & add a database to collect the da
 ```sql
  CREATE TABLE [dbo].[TwitterDetails](
 	[CreatedAt] [datetime] NULL,
-	[SentimentScore] [float] NULL,
+	[SentimentScore] [varchar](300) NULL,
 	[TweetText] [varchar](300) NULL,
 	[TweetId] [varchar](300) NULL,
 	[Location] [varchar](300) NULL
