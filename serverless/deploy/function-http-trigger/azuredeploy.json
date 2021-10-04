@@ -158,7 +158,7 @@
               "direction": "in",
               "authLevel": "function",
               "methods": [
-                "get"
+                "get","post"
               ]
             },
             {
