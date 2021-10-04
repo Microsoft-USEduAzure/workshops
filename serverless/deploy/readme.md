@@ -13,7 +13,7 @@
 
 > * 3. Deploy the logic app ARM template.
 
-[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft-USEduAzure%2Fworkshop%2Fmaster%2Fserverless%2Fdeploy%2Fazuredeploy-logicApp-SentimentAnalysis.json)
+[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft-USEduAzure%2Fworkshops%2Fmaster%2Fserverless%2Fdeploy%2Fazuredeploy-logicApp-SentimentAnalysis.json)
 
             Note: The Logic App template has been created to allow for flexibility i.e. it creates the full workflow with all the API connection resources but does not require those resources to pre-exist for the template to deploy successfully. This is useful because not all the API connectors may be relevant to your use case - so this approach allows you to easily remove those connections from the provisioned logic app, instead of being forced to create all the API connectors prior to being able to provision the Logic App. This also reduces the number of parameters (e.g. API keys) needed at deploy time. This means that you can create the API resources after the fact and just configure the connection in the appropriate Logic App step.
 
