@@ -1,0 +1,518 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "logicAppName": {
+            "type": "string",
+            "defaultValue": "[concat('LogicApp-', uniqueString(resourceGroup().id))]",
+            "metadata": {
+                "description": "The name of your Logic App."
+            }
+        },
+        "functionAppName": {
+            "type": "string",
+            "defaultValue": "",
+            "metadata": {
+                "description": "The name of your Function App."
+            }
+        },
+        "functionName": {
+            "type": "string",
+            "defaultValue": "",
+            "metadata": {
+                "description": "The name of your Function."
+            }
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "location": "[resourceGroup().location]",
+            "name": "azureblob",
+            "properties": {
+                "api": {
+                    "id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azureblob')]"
+                },
+                "displayName": "Azure Blob Storage"                
+            }
+        },
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "location": "[resourceGroup().location]",
+            "name": "cognitiveservicescontentmoderator",
+            "properties": {
+                "api": {
+                    "id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/cognitiveservicescontentmoderator')]"
+                },
+                "displayName": "cognitiveservicescontentmoderator",
+                "parameterValues": {
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "location": "[resourceGroup().location]",
+            "name": "cognitiveservicestextanalytics",
+            "properties": {
+                "api": {
+                    "id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/cognitiveservicestextanalytics')]"
+                },
+                "displayName": "cognitiveservicestextanalytics",
+                "parameterValues": {
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "location": "[resourceGroup().location]",
+            "name": "office365",
+            "properties": {
+                "api": {
+                    "id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/office365')]"
+                },
+                "displayName": "office365",
+                "parameterValues": {
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "location": "[resourceGroup().location]",
+            "name": "sql",
+            "properties": {
+                "api": {
+                    "id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/sql')]"
+                },
+                "displayName": "sql",
+                "parameterValues": {
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "location": "[resourceGroup().location]",
+            "name": "translatorv2",
+            "properties": {
+                "api": {
+                    "id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/translatorv2')]"
+                },
+                "displayName": "translatorv2",
+                "parameterValues": {
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "location": "[resourceGroup().location]",
+            "name": "twitter",
+            "properties": {
+                "api": {
+                    "id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/twitter')]"
+                },
+                "displayName": "Twitter API",
+                "parameterValues": {
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Logic/workflows",
+            "apiVersion": "2017-07-01",
+            "name": "[parameters('logicAppName')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "state": "Enabled",
+                "definition": {
+                    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {
+                        "$connections": {
+                            "defaultValue": {},
+                            "type": "Object"
+                        }
+                    },
+                    "triggers": {
+                        "When_a_new_tweet_is_posted": {
+                            "recurrence": {
+                                "frequency": "Minute",
+                                "interval": 1
+                            },
+                            "evaluatedRecurrence": {
+                                "frequency": "Minute",
+                                "interval": 1
+                            },
+                            "splitOn": "@triggerBody()?['value']",
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['twitter']['connectionId']"
+                                    }
+                                },
+                                "method": "get",
+                                "path": "/onnewtweet",
+                                "queries": {
+                                    "searchQuery": "#PandoraPapers"
+                                }
+                            }
+                        }
+                    },
+                    "actions": {
+                        "Condition": {
+                            "actions": {
+                                "Condition_2": {
+                                    "actions": {
+                                        "Set_variable_2": {
+                                            "runAfter": {
+                                                "Translate_text": [
+                                                    "Succeeded"
+                                                ]
+                                            },
+                                            "type": "SetVariable",
+                                            "inputs": {
+                                                "name": "translated_text",
+                                                "value": "@body('Translate_text')"
+                                            }
+                                        },
+                                        "Translate_text": {
+                                            "runAfter": {},
+                                            "type": "ApiConnection",
+                                            "inputs": {
+                                                "body": {
+                                                    "Text": "@variables('tweet_text')"
+                                                },
+                                                "host": {
+                                                    "connection": {
+                                                        "name": "@parameters('$connections')['translatorv2']['connectionId']"
+                                                    }
+                                                },
+                                                "method": "post",
+                                                "path": "/Translate",
+                                                "queries": {
+                                                    "to": "en"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "runAfter": {},
+                                    "expression": {
+                                        "and": [
+                                            {
+                                                "not": {
+                                                    "equals": [
+                                                        "@body('Detect_language')?['Code']",
+                                                        "en"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "type": "If"
+                                },
+                                "Send_an_email": {
+                                    "runAfter": {
+                                        "Condition_2": [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type": "ApiConnection",
+                                    "inputs": {
+                                        "body": {
+                                            "Body": "@{variables('translated_text')}\n    Tweet: @{variables('tweet_text')}\n    Language: @{body('Detect_language')?['Name']}\n    Location: @{triggerBody()?['UserDetails']?['Location']}\n    Date: @{triggerBody()?['CreatedAtIso']} ",
+                                            "Subject": "Negative sentiment tweet from @{triggerBody()?['TweetedBy']}",
+                                            "To": "arbaner@microsoft.com"
+                                        },
+                                        "host": {
+                                            "connection": {
+                                                "name": "@parameters('$connections')['office365_1']['connectionId']"
+                                            }
+                                        },
+                                        "method": "post",
+                                        "path": "/Mail"
+                                    }
+                                }
+                            },
+                            "runAfter": {
+                                "Insert_row_(V2)_2": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "else": {
+                                "actions": {
+                                    "Condition_3": {
+                                        "actions": {
+                                            "Post_a_tweet": {
+                                                "runAfter": {},
+                                                "type": "ApiConnection",
+                                                "inputs": {
+                                                    "host": {
+                                                        "connection": {
+                                                            "name": "@parameters('$connections')['twitter']['connectionId']"
+                                                        }
+                                                    },
+                                                    "method": "post",
+                                                    "path": "/posttweet",
+                                                    "queries": {
+                                                        "tweetText": "@variables('tweet_text')"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "runAfter": {
+                                            "Detect_profanity_and_match_against_custom_and_shared_blacklists": [
+                                                "Succeeded"
+                                            ]
+                                        },
+                                        "expression": {
+                                            "and": [
+                                                {
+                                                    "equals": [
+                                                        "@body('Detect_profanity_and_match_against_custom_and_shared_blacklists')?['Terms']",
+                                                        null
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "type": "If"
+                                    },
+                                    "Detect_profanity_and_match_against_custom_and_shared_blacklists": {
+                                        "runAfter": {},
+                                        "type": "ApiConnection",
+                                        "inputs": {
+                                            "body": "@variables('tweet_text')",
+                                            "headers": {
+                                                "Content-Type": "text/plain"
+                                            },
+                                            "host": {
+                                                "connection": {
+                                                    "name": "@parameters('$connections')['cognitiveservicescontentmoderator']['connectionId']"
+                                                }
+                                            },
+                                            "method": "post",
+                                            "path": "/contentmoderator/moderate/v1.0/ProcessText/Screen/"
+                                        }
+                                    }
+                                }
+                            },
+                            "expression": {
+                                "and": [
+                                    {
+                                        "equals": [
+                                            "@body('HttpTrigger1')",
+                                            "RED"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "If"
+                        },
+                        "Create_block_blob_(V2)": {
+                            "runAfter": {
+                                "HttpTrigger1": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "body": "@triggerBody()?['TweetText']",
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['azureblob']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "/v2/codeless/datasets/@{encodeURIComponent('AccountNameFromSettings')}/CreateBlockBlob",
+                                "queries": {
+                                    "folderPath": "/tweets",
+                                    "name": "@triggerBody()?['CreatedAtIso']"
+                                }
+                            },
+                            "runtimeConfiguration": {
+                                "contentTransfer": {
+                                    "transferMode": "Chunked"
+                                }
+                            }
+                        },
+                        "Detect_Sentiment": {
+                            "runAfter": {
+                                "Detect_language": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "body": {
+                                    "language": "@body('Detect_language')?['Code']",
+                                    "text": "@variables('tweet_text')"
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['cognitiveservicestextanalytics']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "/text/analytics/v2.1/sentiment"
+                            }
+                        },
+                        "Detect_language": {
+                            "runAfter": {
+                                "Set_variable": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "body": {
+                                    "Text": "@variables('tweet_text')"
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['translatorv2']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "/Detect"
+                            }
+                        },
+                        "HttpTrigger1": {
+                            "runAfter": {
+                                "Detect_Sentiment": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Function",
+                            "inputs": {
+                                "body": "@body('Detect_Sentiment')?['score']",
+                                "function": {
+                                    "id": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/sites/', parameters('functionAppName'), '/functions/', parameters('functionName') )]"
+                                }
+                            }
+                        },
+                        "Initialize_variable": {
+                            "runAfter": {},
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "tweet_text",
+                                        "type": "String"
+                                    }
+                                ]
+                            }
+                        },
+                        "Initialize_variable_2": {
+                            "runAfter": {
+                                "Initialize_variable": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "translated_text",
+                                        "type": "String"
+                                    }
+                                ]
+                            }
+                        },
+                        "Insert_row_(V2)_2": {
+                            "runAfter": {
+                                "Create_block_blob_(V2)": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "body": {
+                                    "CreatedAt": "@triggerBody()?['CreatedAtIso']",
+                                    "Location": "@triggerBody()?['UserDetails']?['Location']",
+                                    "SentimentScore": "@{body('Detect_Sentiment')?['score']}",
+                                    "TweetId": "@triggerBody()?['OriginalTweet']?['TweetId']",
+                                    "TweetText": "@variables('tweet_text')"
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['sql']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "/v2/datasets/@{encodeURIComponent(encodeURIComponent('default'))},@{encodeURIComponent(encodeURIComponent('default'))}/tables/@{encodeURIComponent(encodeURIComponent('[dbo].[TwitterDetails]'))}/items"
+                            }
+                        },
+                        "Set_variable": {
+                            "runAfter": {
+                                "Initialize_variable_2": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "SetVariable",
+                            "inputs": {
+                                "name": "tweet_text",
+                                "value": "@triggerBody()?['TweetText']"
+                            }
+                        }
+                    },
+                    "outputs": {}
+                },
+                "parameters": {
+                    "$connections": {
+                        "value": {
+                            "azureblob": {
+                                "connectionId": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/azureblob')]",
+                                "connectionName": "azureblob",
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azureblob')]"
+                            },
+                            "cognitiveservicescontentmoderator": {
+                                "connectionId": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/cognitiveservicescontentmoderator')]",
+                                "connectionName": "cognitiveservicescontentmoderator",
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/cognitiveservicescontentmoderator')]"
+                            },
+                            "cognitiveservicestextanalytics": {
+                                "connectionId": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/cognitiveservicestextanalytics')]",
+                                "connectionName": "cognitiveservicestextanalytics",
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/cognitiveservicestextanalytics')]"
+                            },
+                            "office365": {
+                                "connectionId": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/office365')]",
+                                "connectionName": "office365",
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/office365')]"
+                            },
+                            "sql": {
+                                "connectionId": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/sql')]",
+                                "connectionName": "sql",
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/sql')]"
+                            },
+                            "translatorv2": {
+                                "connectionId": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/translatorv2')]",
+                                "connectionName": "translatorv2",
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/translatorv2')]"
+                            },
+                            "twitter": {
+                                "connectionId": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/twitter')]",
+                                "connectionName": "twitter",
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/twitter')]"
+                            }
+                        }
+                    }
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/connections', 'azureblob')]",
+                "[resourceId('Microsoft.Web/connections', 'cognitiveservicescontentmoderator')]",
+                "[resourceId('Microsoft.Web/connections', 'cognitiveservicestextanalytics')]",
+                "[resourceId('Microsoft.Web/connections', 'office365')]",
+                "[resourceId('Microsoft.Web/connections', 'sql')]",
+                "[resourceId('Microsoft.Web/connections', 'translatorv2')]",
+                "[resourceId('Microsoft.Web/connections', 'twitter')]"
+            ]
+        }
+    ]
+}
