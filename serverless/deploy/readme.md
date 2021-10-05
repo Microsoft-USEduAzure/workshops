@@ -19,13 +19,13 @@
             Note: The Logic App template has been created to allow for flexibility i.e. it creates the full workflow with all the API connection resources but does not require those resources to pre-exist for the template to deploy successfully. This is useful because not all the API connectors may be relevant to your use case - so this approach allows you to easily remove those connections from the provisioned logic app, instead of being forced to create all the API connectors prior to being able to provision the Logic App. This also reduces the number of parameters (e.g. API keys) needed at deploy time. This means that you can create the API resources after the fact and just configure the connection in the appropriate Logic App step.
 
 4. Create the API connection resources you want to keep (and remove the ones that you don't need from the provisioned Logic App)
-        e.g.
-            - Twitter (OAuth)
-            - Azure Blob
-            - Sql Server
-            - Cognitive Services - Text Analytics
-            - Cognitive Services - Language Translator
-            - Cognitive Services - Content Moderation
-            - Office365 (OAuth)
+        e.g.\
+            - Twitter (OAuth)]
+            - Azure Blob\
+            - Sql Server\
+            - Cognitive Services - Text Analytics\
+            - Cognitive Services - Language Translator\
+            - Cognitive Services - Content Moderation\
+            - Office365 (OAuth)\
 
 **Thats it! You are set to run your Logic App and do some Sentiment Analysis!**
