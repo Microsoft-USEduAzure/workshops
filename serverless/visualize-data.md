@@ -44,7 +44,7 @@ You will need two pieces of information about the SQL Database in the steps that
 
 > **NOTE:** Don't forget to delete your resource group.
 =======
-1. [Download template report](./media/Twittersentiment.pbit)
+1. [Download template report](./deploy/Twittersentiment.pbit)
 1. Open downloaded report   
 ![](media/open-report.png)
 1. User the following parameters
