@@ -2,7 +2,7 @@
 ## Instructions
 
 
-1. Deploy the Function app ARM template.
+1. Deploy the Function App ARM template.
 
 [![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft-USEduAzure%2Fworkshops%2Fmaster%2Fserverless%2Fdeploy%2Ffunction-http-trigger%2Fazuredeploy.json)
 
@@ -12,7 +12,7 @@
   
 2. Replace contents of the default **run.csx** file in the function app with the contents from the [**run.csx**](https://raw.githubusercontent.com/Microsoft-USEduAzure/workshops/master/serverless/deploy/function-http-trigger/run.csx) file in this repo.
 
-3. Deploy the logic app ARM template.
+3. Deploy the Logic App ARM template.
 
 [![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft-USEduAzure%2Fworkshops%2Fmaster%2Fserverless%2Fdeploy%2Fazuredeploy-logicApp-SentimentAnalysis.json)
 
@@ -20,12 +20,12 @@
 
 4. Create the API connection resources you want to keep (and remove the ones that you don't need from the provisioned Logic App)
         e.g.
-            Twitter - OAuth
-            Azure Blob
-            Sql Server
-            Cognitive Services - Text Analytics
-            Cognitive Services - Language Translator
-            Cognitive Services - Content Moderation
-            Office365
+            - Twitter (OAuth)
+            - Azure Blob
+            - Sql Server
+            - Cognitive Services - Text Analytics
+            - Cognitive Services - Language Translator
+            - Cognitive Services - Content Moderation
+            - Office365 (OAuth)
 
-Thats it! You are set to run your Logic App and do some Sentiment Analysis!
+**Thats it! You are set to run your Logic App and do some Sentiment Analysis!**
