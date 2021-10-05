@@ -2,6 +2,11 @@
 # Azure Serverless Workshop
 **Function Apps, Logic Apps, and Cognitive Services**
 
+###
+Note:
+For a quickstart deploy of this full solution, go [**HERE**](https://github.com/Microsoft-USEduAzure/workshops/tree/master/serverless/deploy).
+###
+
 Are you ready for a taste of serverless?
 
 This tutorial shows you how to use Azure Functions with Logic Apps and Cognitive Services to run language detection, sentiment analysis, language translation, and a profanity filter on Twitter tweets.  
