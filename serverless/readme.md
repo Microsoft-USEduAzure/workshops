@@ -2,10 +2,9 @@
 # Azure Serverless Workshop
 **Function Apps, Logic Apps, and Cognitive Services**
 
-###
-Note:
-For a quickstart deploy of this full solution, go [**HERE**](https://github.com/Microsoft-USEduAzure/workshops/tree/master/serverless/deploy).
-###
+
+### Note: For a quickstart deploy of this full solution, go [**HERE**](https://github.com/Microsoft-USEduAzure/workshops/tree/master/serverless/deploy). ###
+
 
 Are you ready for a taste of serverless?
 
