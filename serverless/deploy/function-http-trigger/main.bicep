@@ -14,7 +14,7 @@ var functionAppName = 'fn-${appNameSuffix}'
 var appServicePlanName = 'FunctionPlan'
 var appInsightsName = 'AppInsights'
 var storageAccountName = 'fnstor${replace(appNameSuffix, '-', '')}'
-var functionNameComputed = 'MyHttpTriggeredFunction'
+var functionNameComputed = 'HttpTrigger1'
 var functionRuntime = 'dotnet'
 var keyVaultName = 'kv${replace(appNameSuffix, '-', '')}'
 var functionAppKeySecretName = 'FunctionAppHostKey'
@@ -117,6 +117,7 @@ resource function 'Microsoft.Web/sites/functions@2020-12-01' = {
           authLevel: 'function'
           methods: [
             'get'
+            'post'
           ]
         }
         {
