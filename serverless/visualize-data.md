@@ -20,7 +20,7 @@ You will need two pieces of information about the SQL Database in the steps that
 1. Note the **Server name** at the top of the second column of information
 
 ## Download Power BI Sample Report
-1. [Download sample report](https://github.com/Microsoft-USEduAzure/workshops/blob/master/serverless/media/Twittersentiment.pbit?raw=true)
+1. [Download sample report](./deploy/powerbi-template/Twittersentiment.pbit)
 1. Open downloaded report   
 ![](media/open-report.png)
 1. Enter following parameters
