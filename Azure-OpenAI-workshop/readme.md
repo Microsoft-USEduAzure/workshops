@@ -1,1 +1,1 @@
-Azure OpenAI workshop
+# Azure OpenAI workshop for EDU
