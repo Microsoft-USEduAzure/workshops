@@ -69,7 +69,7 @@ Click on the **Transform** page, then click on the **Unpivot Columns icon** and 
 
     ![image](media/image022a.png)
 1. Once the privacy levels have been set, Click **OK**:
-![image](media/image022b.png?raw=true)
+![image](media/image022.png?raw=true)
 1. Once the tables are merged, scroll all the way to the last column on the right.  The column name will be **covid_deaths_usafacts** and the data in the column will be labled **Table**.  Click on the **Expand icon** to the right of the column name.  Unselect all columns, except **Deaths**.  Make sure the **Use original column name as prefix** checkbox is unchecked and click **OK**
 ![image](media/image022c.png?raw=true)
 1. Rename the new merged query table **US Covid** and click on **Close & Apply**:
