@@ -35,7 +35,7 @@ Enter **0** to keep rows where **countyFIPS** is greater than zero, click **OK**
 ![image](media/image008.png?raw=true)
 1. Notice that the data for each date is stored in a seperate column.  In order to create measures that aggregate row values by State and by County by Date, the date columns need to be unpivoted into rows.
 ![image](media/image009.png?raw=true)
-To unpivot the date columns, click on the column header for the first date column 2020-01-22).  Scroll all the way to the last column on the right and while holding down the **Shift** key, click on the last column header (2021-03-17 when this screen shot was taken):
+To unpivot the date columns, click on the column header for the first date column 2020-01-22).  Scroll all the way to the last column on the right and while holding down the **Shift** key, click on the last column header (2021-08-16 when this screen shot was taken):
 ![image](media/image010.png?raw=true)
 Click on the **Transform** page, then click on the **Unpivot Columns icon** and select **Unpivot Columns**:
 ![image](media/image011.png?raw=true)
