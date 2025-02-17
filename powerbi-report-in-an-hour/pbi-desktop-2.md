@@ -33,15 +33,11 @@
 
     ![image](media/image032.png?raw=true)
 1. Notice that some of the columns have an icon to the left of the column name.  The icons can indicate that the column is aggregated using a **Summarization** method or that they belong to a predefined **Data category**. Click on **Confirmed Cases** and review the **Summarization** and **Data category** located on the **Column tools** ribbon:
-
 ![image](media/image033.png?raw=true)
 1. Set the **Data catogory** for both the **County Name** and **State** columns by selecting the column and setting the **Data category** using the drop down selector:
-
-![image](media/image034.png?raw=true)
-
-![image](media/image035.png?raw=true)
+    ![image](media/image034.png?raw=true)
+    ![image](media/image035.png?raw=true)
 1. The **US Covid** table is now ready for report design:
-
 ![image](media/image036.png?raw=true)
 
 ### Design report
@@ -50,12 +46,10 @@ Power BI has incorporated many design features common to other office products, 
 ![image](media/image037.png?raw=true)
 
 1. The confirmed cases listing by state matrix will be the first visual added to the report.  Click on **Confirmed Cases**, drag and drop it onto the report canvas:
-
 ![image](media/image038.png?raw=true)
 1. There is a check next to **Confirmed Cases** in the **Fields** list.  The **Suggest a visual** panel shows the selected visual (card) and sum of **Confirmed Cases** in Data:
-
 ![image](media/image039.png?raw=true)
-1. Change the visualization to a **Matrix** by selecting the **Matrix icon** in the **Visualizations** panel:
+1. Change the visualization to a **Matrix** by expanding the **Suggestions** to reveal all visuals and select the **Matrix icon**:
 ![image](media/image040.png?raw=true)
 1. Click on **Deaths**, drag and drop it onto **Matrix** visual:
 ![image](media/image041.png?raw=true)
@@ -129,9 +123,9 @@ Power BI has incorporated many design features common to other office products, 
 1. Power BI has a feature called [**Quick Measures**](https://docs.microsoft.com/en-us/power-bi/desktop-quick-measures) that is a template driven feature for creating common time intelligence and other metrics.  Right click on the **US Covid** table and select **New quick measure**:
 
     ![image](media/image055.png?raw=true)
-1. Use the **Calculation** dropdown menu to select the template for **Divisioni**:
+1. Notice the new option to use [**Copilot**](https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction) to create measures using **natural language**.  Use the **Calculation** dropdown menu to select the template for **Division**:
 ![image](media/image056.png?raw=true)
-1. Drag and drop **Daily Deaths** onto the **Numerator** and **Daily Confirmed Cases** onto the **Denominator**.  Click **OK**:
+1. Drag and drop **Daily Deaths** onto the **Numerator** and **Daily Confirmed Cases** onto the **Denominator**.  Click **Add**:
 ![image](media/image057.png?raw=true)
 1. By default the **Quick Measures** feature will create a verbose name describing the new measure.  Right click on the new measure and select **Rename**
 
@@ -142,6 +136,10 @@ Power BI has incorporated many design features common to other office products, 
 ![image](media/image060.png?raw=true)
 1. Drag and drop **State** onto a blank area of the report canvas to the right of the state matrix:
 ![image](media/image061.png?raw=true)
+1. You may see a warning message indicating that filled map visuals are disabled:
+![image](media/image061a.png?raw=true)
+1. To enable filled map visuals you will need to go to **File > Options and settings > Options > Global > Security** and check **Use Map and Filled Map visuals**, click OK. You may also have to save the report, close Power BI Desktop and re-open the file for the changes to go into effect:
+![image](media/image061b.png?raw=true)
 1. Since the **Data category** for **State** is set, the default visual is a map.  Resize the map to take the top half of the canvas to the right of the state matrix:
 
     ![image](media/image062.png?raw=true)
@@ -160,18 +158,15 @@ Power BI has incorporated many design features common to other office products, 
 1. Click on the empty canvas to the right of the column chart and paste a new chart using **Ctrl-v**.  Change the **Values** of the new chart to use **Daily Deaths**:
 
     ![image](media/image068.png?raw=true)
-1. Click on the **paint roller icon** to modify the properties of the daily deaths column chart.  Expand **Data colors** and change the **Default color** to red:
+1. Click on the **paint brush icon** to the left of the daily deaths chart, then click on **More options** to display the full set of formatting options.  Enter **color** in the search field then scroll down until you find the **Lines** color options and change the **Color** to red:
 
     ![image](media/image069.png?raw=true)
 1. The charts include early dates where there is very little data. Resize the state matrix to create room for a new date slicer. Drag and drop **Date** onto the canvas just above the state matrix. Click on the **Slicer icon** in the **Visualizations** pane to create a date slicer: 
 ![image](media/image070.png)
 1. By default, a date hierarchy will automatically be created allowing users to drill up/down the hierarchy when interatcting with the visualization.  Click on the down arrow to the right of **Date** and select **Date** to remove the hierarchy and just use the date value for the axis:
 ![image](media/image070a.png)
-1. Click on the down arrow in the upper righthand corner of the date slicer:
+1. Click on the **paint brush icon** to the left of the date slicer, then click on **More options** to display the full set of formatting options.  Scroll down to the **Slicer settings** and set the **Style** to **Between**:
 ![image](media/image071.png?raw=true)
-1. Select **Between** to create a date range slicer:
-
-    ![image](media/image072.png?raw=true)
 1. Use the date slicer to set the starting date to August 1st, 2020.
 ![image](media/image073.png?raw=true)
 1. As a final step, modify the cross filtering behavior of the report.  The default cross filtering behavior is to highlight the contribution of a selected state instead of filtering the counts to only show data for a selected state.  Click on the shape map, then click on **Edit interactions** on the **Format** ribbon.  Click on the **Filter icons** above both of the column charts below the shape map:
