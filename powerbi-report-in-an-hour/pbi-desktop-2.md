@@ -151,7 +151,7 @@ Power BI has incorporated many design features common to other office products, 
 ![image](media/image065.png?raw=true)
 1. Resize so the right edge aligns with the middle of the shape map:
 ![image](media/image066.png?raw=true)
-1. Drag and drop **Date** to the **Axis** for the new column chart.  By default, a date hierarchy will automatically be created allowing users to drill up/down the hierarchy when interatcting with the visualization.  Click on the down arrow to the right of **Date** and select **Date** to remove the hierarchy and just use the date value for the axis:
+1. Drag and drop **Date** to the **Axis** for the new column chart.  By default, a date hierarchy will automatically be created allowing users to drill up/down the hierarchy when interatcting with the visualization.  Right click on **Date** and select **Date** to remove the hierarchy and just use the date value for the axis:
 ![image](media/image066a.png?raw=true)
 1. Right click on the new column chart and select **Copy**, then **Copy visual**:
 ![image](media/image067.png?raw=true)
@@ -163,7 +163,7 @@ Power BI has incorporated many design features common to other office products, 
     ![image](media/image069.png?raw=true)
 1. The charts include early dates where there is very little data. Resize the state matrix to create room for a new date slicer. Drag and drop **Date** onto the canvas just above the state matrix. Click on the **Slicer icon** in the **Visualizations** pane to create a date slicer: 
 ![image](media/image070.png)
-1. By default, a date hierarchy will automatically be created allowing users to drill up/down the hierarchy when interatcting with the visualization.  Click on the down arrow to the right of **Date** and select **Date** to remove the hierarchy and just use the date value for the axis:
+1. By default, a date hierarchy will automatically be created allowing users to drill up/down the hierarchy when interatcting with the visualization.  Right click on **Date** and select **Date** to remove the hierarchy and just use the date value for the slicer:
 ![image](media/image070a.png)
 1. Click on the **paint brush icon** to the left of the date slicer, then click on **More options** to display the full set of formatting options.  Scroll down to the **Slicer settings** and set the **Style** to **Between**:
 ![image](media/image071.png?raw=true)
