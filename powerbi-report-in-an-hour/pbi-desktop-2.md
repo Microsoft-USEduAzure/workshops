@@ -18,14 +18,14 @@
     Navigate to a folder where you want to save the file and name the file **US Covid-19**:
 
     ![image](media/image027.png?raw=true)
-1. The first step in preparing tables will be to hide the two tables that we merged.  Click on the **eyeball icon** to the right of the **covid_confirmed_usafacts** table to hide:
+1. The first step in preparing tables will be to hide the two tables that we merged.  Right click on **covid_confirmed_usafacts** table and select hide:
     
     ![image](media/image028.png?raw=true)
 
     Repeat the process to hide the **covid_deaths_usafacts** table:
     
     ![image](media/image030.png?raw=true)
-1. Some of the identifiers included in the imported data are not needed to perform analysis and can be hidden.  Click on the eyeball icon to the right of the **countyFIPS** column to hide:
+1. Some of the identifiers included in the imported data are not needed to perform analysis and can be hidden.  Right click on the **countyFIPS** column and select hide:
     
     ![image](media/image031.png?raw=true)
 
@@ -33,11 +33,15 @@
 
     ![image](media/image032.png?raw=true)
 1. Notice that some of the columns have an icon to the left of the column name.  The icons can indicate that the column is aggregated using a **Summarization** method or that they belong to a predefined **Data category**. Click on **Confirmed Cases** and review the **Summarization** and **Data category** located on the **Column tools** ribbon:
+
 ![image](media/image033.png?raw=true)
 1. Set the **Data catogory** for both the **County Name** and **State** columns by selecting the column and setting the **Data category** using the drop down selector:
+
 ![image](media/image034.png?raw=true)
+
 ![image](media/image035.png?raw=true)
 1. The **US Covid** table is now ready for report design:
+
 ![image](media/image036.png?raw=true)
 
 ### Design report
@@ -47,8 +51,9 @@ Power BI has incorporated many design features common to other office products, 
 
 1. The confirmed cases listing by state matrix will be the first visual added to the report.  Click on **Confirmed Cases**, drag and drop it onto the report canvas:
 
-    ![image](media/image038.png?raw=true)
-1. **Confirmed Cases** is now highlighted in the **Fields** list and place in the **Value** landing zone for the visualization.  A column chart (see icon highlighted in the **Visualizations** panel) was automatically selected as the default visualization for **Confirmed Cases** based on its properties:
+![image](media/image038.png?raw=true)
+1. There is a check next to **Confirmed Cases** in the **Fields** list.  The **Suggest a visual** panel shows the selected visual (card) and sum of **Confirmed Cases** in Data:
+
 ![image](media/image039.png?raw=true)
 1. Change the visualization to a **Matrix** by selecting the **Matrix icon** in the **Visualizations** panel:
 ![image](media/image040.png?raw=true)
