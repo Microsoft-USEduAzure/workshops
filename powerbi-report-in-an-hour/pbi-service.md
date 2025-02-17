@@ -10,7 +10,7 @@
 
 1. Open the final US Covid report using Power BI Desktop.  Click on **Publish** to publish the report to the Power BI Service:
 ![image](media/image076.png?raw=true)
-1. You may be promted to sign in before publishing the report.  Use your organizational credentials to sign on to Power BI (Same credentials used to sign on to Office 365):
+1. You may be promted to sign in before publishing the report.  Use your organizational credentials to sign on to Power BI (Same credentials used to sign on to M365):
 ![image](media/image077.png?raw=true)
 1. A list of **Workspaces** that you have been granted publishing rights to will be listed.  All Power BI users have access to **My workspace**, which is a personal sandbox for reviewing reports using the Power BI Service.  Click on **My workspace**, then click on **Select** to publish the report:
 ![image](media/image078.png?raw=true)
