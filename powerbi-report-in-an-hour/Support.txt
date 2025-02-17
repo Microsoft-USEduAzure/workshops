@@ -1,0 +1,9 @@
+USAFacts - Confirmed Cases
+https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv
+
+USAFacts - Deaths
+https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv
+
+Daily Confirmed Cases = VAR __CountyName = 'US Covid'[countyFIPS] VAR __stateFIPS = 'US Covid'[stateFIPS] VAR __Yesterday = DATEADD ( 'US Covid'[Date], -1, DAY ) VAR __TodaysCases = 'US Covid'[Confirmed Cases] RETURN __TodaysCases - CALCULATE ( SUM ( 'US Covid'[Confirmed Cases] ), FILTER ( 'US Covid', 'US Covid'[Date] = __Yesterday && 'US Covid'[countyFIPS] = __CountyName && 'US Covid'[stateFIPS] = __stateFIPS ) ) + 0
+
+Daily Deaths = VAR __CountyName = 'US Covid'[countyFIPS] VAR __stateFIPS = 'US Covid'[stateFIPS] VAR __Yesterday = DATEADD ( 'US Covid'[Date], -1, DAY ) VAR __TodaysCases = 'US Covid'[Deaths] RETURN __TodaysCases - CALCULATE ( SUM ( 'US Covid'[Deaths] ), FILTER ( 'US Covid', 'US Covid'[Date] = __Yesterday && 'US Covid'[countyFIPS] = __CountyName && 'US Covid'[stateFIPS] = __stateFIPS ) ) + 0
